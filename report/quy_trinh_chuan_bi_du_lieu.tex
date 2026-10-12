@@ -1,0 +1,355 @@
+% Bien dich bang: xelatex quy_trinh_chuan_bi_du_lieu.tex (chay 2 lan)
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage[vietnamese]{babel}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}[Scale=0.85]
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!60!black,
+  pdftitle={Quy trình chuẩn bị dữ liệu và xử lý nhãn cấu trúc},
+  pdfauthor={Nhóm 4}
+}
+\setstretch{1.15}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.25em}
+\renewcommand{\arraystretch}{1.15}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\nullvalue}{\texttt{null}}
+
+\title{\textbf{QUY TRÌNH CHUẨN BỊ DỮ LIỆU\\VÀ XỬ LÝ NHÃN CẤU TRÚC}}
+\author{Nhóm 4}
+\date{Tháng 8 năm 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Báo cáo trình bày quy trình chuẩn bị tập dữ liệu gồm tám văn bản quy phạm pháp
+luật trong lĩnh vực lao động và bảo hiểm xã hội. Quy trình bao gồm lựa chọn nguồn
+dữ liệu, trích xuất lớp văn bản hoặc nhận dạng ký tự quang học, làm sạch nội dung,
+khôi phục cấu trúc pháp lý, xử lý nhãn cấu trúc bị nhiễu, chia đoạn theo cấu trúc
+và gắn siêu dữ liệu. Kết quả thu được 668 đoạn dữ liệu ở định dạng JSON Lines từ
+476 trang PDF. Toàn bộ tám văn bản đều có dữ liệu, không có định danh đoạn trùng
+lặp và không có đoạn rỗng.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Mục tiêu và phạm vi}
+
+Mục tiêu của bước chuẩn bị dữ liệu là chuyển các văn bản pháp luật ở định dạng
+PDF thành tập dữ liệu có cấu trúc, phù hợp cho các bước phân tích hoặc huấn luyện
+mô hình về sau. Khác với tài liệu thông thường, ý nghĩa của một đoạn văn bản luật
+phụ thuộc mạnh vào vị trí của nó trong Phần, Chương, Mục, Điều, Khoản và Điểm.
+Vì vậy, quy trình không chia văn bản hoàn toàn theo độ dài cố định mà ưu tiên bảo
+toàn đơn vị pháp lý và ngữ cảnh phân cấp.
+
+Tập đầu vào gồm đúng tám tệp PDF được đánh số từ 01 đến 08 trong thư mục
+\code{data}. Ba tài liệu trong thư mục \code{data/tuychon} không được sử dụng.
+Danh sách đầu vào được khai báo tường minh thay vì quét thư mục đệ quy, nhờ đó
+kết quả có thể tái lập và không bị thay đổi khi xuất hiện tệp ngoài phạm vi.
+
+Trong báo cáo này, ``nhãn'' được hiểu là nhãn cấu trúc và nhãn siêu dữ liệu gắn
+cho đơn vị nội dung, chẳng hạn số Điều, danh sách Khoản, danh sách Điểm, loại đoạn
+và vị trí trang nguồn. Đây không phải là nhãn dự đoán nội dung pháp lý do con
+người gán thủ công.
+
+\section{Tổng quan quy trình}
+
+Quy trình được tổ chức thành các bước tuần tự như Hình~\ref{fig:pipeline}.
+Thông tin trang nguồn được duy trì xuyên suốt các bước để có thể đối chiếu một
+đoạn JSONL với PDF ban đầu.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    node distance=7mm,
+    box/.style={rectangle,rounded corners,draw=blue!60!black,fill=blue!5,
+      text width=10.5cm,align=center,minimum height=9mm},
+    arrow/.style={-{Latex[length=2.5mm]},thick,draw=blue!60!black}
+  ]
+    \node[box] (input) {Danh sách cố định 8 tệp PDF};
+    \node[box,below=of input] (extract) {Trích xuất text layer hoặc OCR tiếng Việt theo trang};
+    \node[box,below=of extract] (clean) {Loại nhiễu và chuẩn hóa Unicode, khoảng trắng, dấu câu};
+    \node[box,below=of clean] (parse) {Khôi phục Phần--Chương--Mục--Điều--Khoản--Điểm};
+    \node[box,below=of parse] (label) {Chuẩn hóa và kiểm tra nhãn cấu trúc};
+    \node[box,below=of label] (chunk) {Structure-aware chunking và gắn metadata};
+    \node[box,below=of chunk] (output) {JSONL, dữ liệu trung gian và báo cáo QA};
+    \draw[arrow] (input) -- (extract);
+    \draw[arrow] (extract) -- (clean);
+    \draw[arrow] (clean) -- (parse);
+    \draw[arrow] (parse) -- (label);
+    \draw[arrow] (label) -- (chunk);
+    \draw[arrow] (chunk) -- (output);
+  \end{tikzpicture}
+  \caption{Luồng chuẩn bị dữ liệu và xử lý nhãn cấu trúc.}
+  \label{fig:pipeline}
+\end{figure}
+
+\section{Chuẩn bị và trích xuất dữ liệu}
+
+\subsection{Kiểm tra lớp văn bản}
+
+Mỗi PDF được kiểm tra số trang và lượng ký tự có thể trích xuất. Kết quả cho thấy
+hai tài liệu 03 và 05 có lớp văn bản, trong khi sáu tài liệu 01, 02, 04, 06, 07
+và 08 là bản quét thuần ảnh. Do đó, việc chỉ sử dụng công cụ đọc PDF sẽ làm mất
+hoàn toàn nội dung của phần lớn tập dữ liệu.
+
+Với hai PDF có lớp văn bản, nội dung được trích xuất trực tiếp bằng \code{pypdf}.
+Với sáu PDF ảnh, từng ảnh trang được đưa vào Tesseract sử dụng mô hình tiếng Việt
+\code{vie.traineddata}. OCR chỉ đóng vai trò fallback trên trang không có chữ,
+nhờ đó không làm suy giảm chất lượng của các trang đã có lớp văn bản tốt. Kết quả
+được lưu theo từng trang với ba thành phần: số trang PDF, văn bản thô và danh sách
+dòng theo đúng thứ tự xuất hiện.
+
+\subsection{Kiểm soát lỗi trích xuất}
+
+Một tài liệu bị xem là lỗi nếu cả trích xuất trực tiếp và OCR không tạo được nội
+dung đủ dùng. Pipeline dừng thay vì âm thầm sinh tệp rỗng. Với mỗi trang, số trang
+PDF được giữ nguyên để các bước làm sạch, phân tích cấu trúc và chia đoạn có thể
+truyền tiếp phạm vi \code{page\_start}--\code{page\_end}.
+
+\section{Làm sạch và chuẩn hóa văn bản}
+
+\subsection{Loại bỏ nhiễu trình bày}
+
+Header và footer được phát hiện từ các dòng ngắn xuất hiện lặp lại tại ba dòng
+không rỗng đầu hoặc cuối của nhiều trang. Một dòng chỉ được xem là header/footer
+nếu xuất hiện ở ít nhất 60\% số trang của tài liệu. Các số trang đứng độc lập ở
+vùng lề cũng được loại bỏ. Mỗi dòng bị xóa được ghi lại cùng số trang, vị trí,
+nội dung gốc và nguyên nhân, giúp quá trình làm sạch có thể kiểm tra lại.
+
+Quy tắc loại nhiễu được thiết kế theo hướng bảo thủ. Số hiệu văn bản, ngày tháng,
+tỷ lệ phần trăm, số tiền, số Khoản và số Điểm không bị loại chỉ vì chúng chứa
+chữ số hoặc ký hiệu. Nội dung không khớp mẫu cấu trúc cũng không bị xóa tự động.
+
+\subsection{Chuẩn hóa ký tự và khoảng trắng}
+
+Văn bản được chuẩn hóa Unicode NFC, thay khoảng trắng không ngắt bằng khoảng
+trắng thông thường, loại ký tự điều khiển và gộp khoảng trắng liên tiếp. Khoảng
+trắng không cần thiết trước dấu câu được loại bỏ, nhưng dấu phẩy thập phân như
+\code{5,5\%} vẫn được giữ nguyên. Các dòng được ghép ở bước tạo đoạn, đồng thời
+ranh giới trang vẫn được lưu bằng metadata.
+
+\section{Khôi phục cấu trúc và xử lý nhãn}
+
+\subsection{Nhận diện cấu trúc phân cấp}
+
+Bộ phân tích đọc các dòng theo thứ tự và duy trì trạng thái cấu trúc hiện hành.
+Khi gặp nhãn \emph{Phần}, \emph{Chương}, \emph{Mục} hoặc \emph{Tiểu mục}, trạng
+thái tương ứng được cập nhật. Khi một \emph{Điều} mới xuất hiện, Điều trước đó
+được kết thúc và nhận bản sao của đường dẫn cấu trúc hiện hành. Các dòng bắt đầu
+bằng số thứ tự được nhận diện là Khoản; các dòng bắt đầu bằng chữ cái và dấu
+``)'' hoặc ``.'' được nhận diện là Điểm.
+
+Nội dung trước Điều đầu tiên được gắn nhãn \code{preamble}. Nội dung không nhận
+diện được cấp cấu trúc được giữ trong đơn vị hợp lệ gần nhất thay vì bị bỏ đi.
+Nhờ vậy, quá trình tạo nhãn không làm giảm độ bao phủ nội dung.
+
+\subsection{Các nhãn cấu trúc được thiết lập}
+
+Các nhãn cấu trúc được tạo theo hai mức: đường dẫn phân cấp của văn bản và đơn
+vị nội dung bên trong Điều. Bảng~\ref{tab:structure-labels} trình bày đúng các
+nhãn được cài đặt trong parser của dự án.
+
+\begin{longtable}{>{\ttfamily}p{2.8cm}p{3.0cm}p{8.0cm}}
+\caption{Các nhãn cấu trúc trong dự án.}\label{tab:structure-labels}\\
+\toprule
+\normalfont\textbf{Nhãn} & \textbf{Kiểu/giá trị} & \textbf{Ý nghĩa và cách thiết lập} \\
+\midrule
+\endfirsthead
+\toprule
+\normalfont\textbf{Nhãn} & \textbf{Kiểu/giá trị} & \textbf{Ý nghĩa và cách thiết lập} \\
+\midrule
+\endhead
+part & object hoặc null & Phần hiện hành, gồm \code{number} và \code{title}. Khi mở Phần mới, nhãn Chương và Mục cũ được đặt lại. \\
+chapter & object hoặc null & Chương hiện hành, gồm \code{number} và \code{title}. Số Chương chấp nhận số La Mã hoặc số Ả Rập; khi mở Chương mới, nhãn Mục cũ được đặt lại. \\
+section & object hoặc null & Mục hoặc Tiểu mục hiện hành, gồm \code{number} và \code{title}. Hai cấp này được ánh xạ vào cùng trường \code{section}. \\
+article & object hoặc null & Điều gốc, gồm \code{number} và \code{title}. Mọi chunk con của Điều đều giữ cùng object này; nội dung ngoài Điều nhận \nullvalue{}. \\
+clause\_ids & list[string] & Danh sách số Khoản thực sự xuất hiện trong chunk, nhận diện từ mẫu số Ả Rập ở đầu dòng như \code{1.} hoặc \code{1)}. \\
+point\_ids & list[string] & Danh sách ký hiệu Điểm thực sự xuất hiện trong chunk, nhận diện từ chữ cái đầu dòng như \code{a)} hoặc \code{a.}; ký hiệu được chuyển về chữ thường. \\
+unit\_type & article, preamble & Nhãn nội bộ trước bước chunking. \code{article} là một Điều; \code{preamble} là nội dung có ý nghĩa trước Điều đầu tiên. \\
+\bottomrule
+\end{longtable}
+
+Các object \code{part}, \code{chapter}, \code{section} và \code{article} sử dụng
+cùng cấu trúc \code{\{"number": ..., "title": ...\}}. Khi một cấp không tồn
+tại trong văn bản, trường tương ứng được đặt là \nullvalue{}, không suy diễn một
+nhãn giả. \code{clause\_ids} và \code{point\_ids} là danh sách rỗng nếu chunk
+không chứa Khoản hoặc Điểm được nhận diện.
+
+\subsection{Chuẩn hóa nhãn bị nhiễu do OCR}
+
+OCR có thể làm sai nhãn cấu trúc, ví dụ \code{Điều} thành \code{Điền}, hoặc đưa
+ký tự lề vào trước nhãn như \code{| Điều 14}, \code{\_ Điều 28} và
+\code{l Tủ Điều 23}. Bộ phân tích áp dụng nhận diện dung sai cho các biến thể đã
+quan sát và cho phép tối đa tám ký tự nhiễu trước từ khóa Điều. Metadata vẫn được
+chuẩn hóa về số Điều đúng, còn văn bản OCR trong trường \code{text} được giữ lại
+để không che giấu chất lượng nguồn. Mọi trường hợp chuẩn hóa nhãn đều được ghi
+thành cảnh báo trong báo cáo QA.
+
+\subsection{Loại nhãn Điều giả}
+
+Một câu viện dẫn có thể bắt đầu bằng cụm \code{Điều 151 và khoản 4 Điều 177...}
+nhưng không phải tiêu đề Điều. Để hạn chế gán nhãn sai, một ứng viên tiêu đề phải
+có dấu phân cách ``.'', ``:'' hoặc ``-'' ngay sau số Điều. Sau ứng viên đầu tiên,
+số Điều phải tăng theo trình tự hợp lý; ứng viên lùi số hoặc nhảy xa bị giữ như
+nội dung của Điều hiện hành và được ghi cảnh báo \code{Rejected Article-like
+reference}. Cách xử lý này đồng thời loại được các mẫu hợp đồng hoặc quyết định
+đính kèm có hệ thống Điều riêng, tránh trộn nhãn của phụ lục vào cấu trúc chính.
+
+\section{Chia đoạn theo cấu trúc và gắn metadata}
+
+Đơn vị chia ưu tiên là một Điều hoàn chỉnh. Ngưỡng mặc định là 6.000 ký tự.
+Nếu một Điều vượt ngưỡng, các Khoản liên tiếp được đóng gói vào các đoạn riêng.
+Nếu một Khoản vẫn quá dài, ranh giới Điểm được ưu tiên; ranh giới câu chỉ được
+dùng khi đơn vị nhỏ hơn vẫn vượt ngưỡng. Tiêu đề Điều và metadata Điều gốc được
+giữ trong mọi đoạn con.
+
+\subsection{Schema metadata của mỗi chunk}
+
+Mỗi dòng JSONL là một object độc lập và luôn phát ra đầy đủ các trường trong
+Bảng~\ref{tab:metadata-schema}. Trường không có giá trị dùng \nullvalue{} hoặc
+danh sách rỗng thay vì bị lược bỏ, nhờ đó schema nhất quán giữa tám văn bản.
+
+\begin{longtable}{>{\ttfamily}p{3.5cm}p{2.7cm}p{7.6cm}}
+\caption{Các trường metadata trong một dòng JSONL.}\label{tab:metadata-schema}\\
+\toprule
+\normalfont\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} \\
+\midrule
+\endfirsthead
+\toprule
+\normalfont\textbf{Trường} & \textbf{Kiểu dữ liệu} & \textbf{Mô tả} \\
+\midrule
+\endhead
+chunk\_id & string & Định danh ổn định và duy nhất của chunk, lấy 20 ký tự hexa đầu của SHA-256. \\
+document\_id & string & Định danh tài liệu từ \code{doc-01} đến \code{doc-08}. \\
+title & string & Tên đầy đủ của văn bản pháp luật. \\
+document\_number & string & Số, ký hiệu chính thức của văn bản, ví dụ \code{45/2019/QH14}. \\
+document\_type & string & Loại văn bản: \code{bộ luật}, \code{luật}, \code{nghị định} hoặc \code{thông tư}. \\
+source\_file & string & Đường dẫn tương đối đến PDF nguồn; dùng để truy vết và kiểm tra phạm vi dữ liệu. \\
+page\_start & integer & Trang PDF đầu tiên chứa nội dung chunk, đánh số từ 1. \\
+page\_end & integer & Trang PDF cuối cùng chứa nội dung chunk; luôn lớn hơn hoặc bằng \code{page\_start}. \\
+part & object/null & Nhãn Phần gồm \code{number}, \code{title}; \nullvalue{} nếu không có. \\
+chapter & object/null & Nhãn Chương gồm \code{number}, \code{title}; \nullvalue{} nếu không có. \\
+section & object/null & Nhãn Mục/Tiểu mục gồm \code{number}, \code{title}; \nullvalue{} nếu không có. \\
+article & object/null & Nhãn Điều gốc gồm \code{number}, \code{title}; \nullvalue{} đối với \code{preamble}. \\
+clause\_ids & list[string] & Các số Khoản có mặt trong riêng chunk này, theo thứ tự xuất hiện và không lặp. \\
+point\_ids & list[string] & Các ký hiệu Điểm có mặt trong riêng chunk này, theo thứ tự xuất hiện và không lặp. \\
+chunk\_type & string & Nhãn loại chunk: \code{preamble}, \code{article} hoặc \code{clause\_group}. \\
+chunk\_index & integer & Vị trí chunk trong tài liệu, bắt đầu từ 1 và tăng liên tục. \\
+article\_chunk\_index & integer/null & Vị trí chunk con trong Điều gốc; \nullvalue{} nếu nội dung không thuộc Điều. \\
+text & string & Nội dung đã làm sạch và chuẩn hóa dùng cho mô hình hoặc truy hồi. \\
+char\_count & integer & Số ký tự thực tế của trường \code{text}. \\
+token\_estimate & integer & Ước lượng nhanh bằng $\lceil\texttt{char\_count}/3\rceil$; không phải kết quả tokenizer của một mô hình cụ thể. \\
+split\_reason & string/null & Lý do chia: \nullvalue{}, \code{max\_size\_clause} hoặc \code{max\_size\_sentence}. \\
+processing\_version & string & Phiên bản pipeline đã tạo chunk; bộ dữ liệu hiện tại sử dụng \code{1.0.0}. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Ý nghĩa các nhãn chunk}
+
+\begin{longtable}{>{\ttfamily}p{3.8cm}p{10.0cm}}
+\caption{Tập giá trị nhãn chunk đang được triển khai.}\label{tab:chunk-labels}\\
+\toprule
+\normalfont\textbf{Giá trị nhãn} & \textbf{Điều kiện gán} \\
+\midrule
+\endfirsthead
+\toprule
+\normalfont\textbf{Giá trị nhãn} & \textbf{Điều kiện gán} \\
+\midrule
+\endhead
+preamble & Nội dung trước Điều đầu tiên; \code{article} và \code{article\_chunk\_index} nhận \nullvalue{}. \\
+article & Một Điều được giữ nguyên vì không vượt ngưỡng kích thước; \code{split\_reason} nhận \nullvalue{}. \\
+clause\_group & Một phần của Điều dài sau khi được chia thành các nhóm; metadata Điều gốc được lặp lại để giữ ngữ cảnh. \\
+max\_size\_clause & Giá trị của \code{split\_reason} khi Điều dài được chia theo ranh giới các Khoản. \\
+max\_size\_sentence & Giá trị fallback của \code{split\_reason} khi một nhóm đơn lẻ vẫn quá dài và phải chia theo câu. \\
+null & Không có thao tác chia; được biểu diễn bằng JSON \nullvalue{}, không phải chuỗi ký tự ``null''. \\
+\bottomrule
+\end{longtable}
+
+Định danh \code{chunk\_id} được tạo từ SHA-256 của định danh tài liệu, đơn vị
+cấu trúc, thứ tự đoạn con và nội dung; 20 ký tự hexa đầu tiên được sử dụng. Vì
+vậy, cùng dữ liệu và cấu hình sẽ sinh cùng định danh.
+
+\section{Kết quả và kiểm soát chất lượng}
+
+\begin{longtable}{>{\ttfamily}lrrrrr}
+\caption{Thống kê kết quả theo tài liệu.}\label{tab:results}\\
+\toprule
+ID & Trang & Ký tự sạch & Điều & Chunk & Dòng loại \\
+\midrule
+\endfirsthead
+\toprule
+ID & Trang & Ký tự sạch & Điều & Chunk & Dòng loại \\
+\midrule
+\endhead
+doc-01 & 83  & 191,045 & 220 & 226 & 0  \\
+doc-02 & 122 & 235,737 & 115 & 132 & 23 \\
+doc-03 & 19  & 33,336  & 12  & 19  & 18 \\
+doc-04 & 14  & 29,658  & 5   & 10  & 1  \\
+doc-05 & 88  & 187,010 & 141 & 148 & 0  \\
+doc-06 & 52  & 116,614 & 45  & 49  & 5  \\
+doc-07 & 15  & 15,728  & 9   & 11  & 5  \\
+doc-08 & 83  & 179,182 & 64  & 73  & 65 \\
+\midrule
+\textbf{Tổng} & \textbf{476} & \textbf{988,310} & \textbf{611} & \textbf{668} & \textbf{117} \\
+\bottomrule
+\end{longtable}
+
+Kiểm tra tự động trên đầu ra xác nhận đủ tám định danh tài liệu, không có đường
+dẫn thuộc \code{data/tuychon}, không có \code{chunk\_id} trùng và không có đoạn
+rỗng. Số Điều trong từng tài liệu tạo thành chuỗi liên tục: 1--220, 1--115,
+1--12, 1--5, 1--141, 1--45, 1--9 và 1--64. Chỉ số đoạn con trong mỗi Điều cũng
+liên tục từ 1. Bộ kiểm thử gồm 22 trường hợp đã được chạy thành công.
+
+Đầu ra được ghi qua tệp tạm và chỉ thay thế tệp đích sau khi tất cả dòng JSONL
+đọc lại hợp lệ. Ngoài tệp tổng hợp \code{legal\_chunks.jsonl}, quy trình còn sinh
+tệp riêng cho từng tài liệu, dữ liệu thô/sạch theo trang và báo cáo QA ở định
+dạng JSON và Markdown.
+
+\section{Hạn chế của dữ liệu}
+
+Việc chuẩn hóa nhãn cấu trúc không đồng nghĩa với sửa toàn bộ lỗi OCR trong nội
+dung. Một số từ vẫn có thể bị nhận sai, chẳng hạn \code{tổ chức} thành
+\code{tô chức}, hoặc xuất hiện ký tự lề như \code{¬}. Quy trình chủ động giữ nội
+dung OCR và chỉ chuẩn hóa biểu diễn metadata cần thiết cho phân đoạn. Cách làm
+này bảo đảm khả năng truy vết nhưng đòi hỏi bước rà soát hoặc sửa lỗi chính tả
+riêng nếu dữ liệu được dùng cho tác vụ nhạy cảm với từng ký tự.
+
+Quy tắc tuần tự số Điều phù hợp với tám văn bản chính trong phạm vi đề tài. Khi
+áp dụng cho phụ lục có hệ thống Điều độc lập, văn bản sửa đổi có Điều mang hậu
+tố phức tạp, hoặc tập trích đoạn không bắt đầu từ cấu trúc chính, cần điều chỉnh
+trạng thái parser và metadata loại tài liệu.
+
+\section{Kết luận}
+
+Quy trình đã chuyển đổi tám PDF không đồng nhất về lớp văn bản thành tập JSONL
+có cấu trúc và khả năng truy vết. Việc kết hợp trích xuất trực tiếp với OCR theo
+trang giúp bao phủ toàn bộ dữ liệu; parser dung sai giúp phục hồi nhãn Điều bị
+nhiễu nhưng vẫn loại các câu viện dẫn và cấu trúc phụ dễ gây gán nhãn sai.
+Structure-aware chunking bảo toàn ngữ cảnh pháp lý tốt hơn chia đoạn cố định,
+đồng thời metadata thống nhất tạo điều kiện cho tìm kiếm, huấn luyện và đánh giá
+ở các bước tiếp theo.
+
+\end{document}

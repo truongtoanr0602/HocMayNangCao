@@ -1,0 +1,19 @@
+# Local secrets; keep the configuration template.
+.env
+.env.*
+!.env.example
+
+# Python caches and virtual environments.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Temporary files and execution logs.
+*.tmp
+*.log
+~$*
+.DS_Store
+Thumbs.db
