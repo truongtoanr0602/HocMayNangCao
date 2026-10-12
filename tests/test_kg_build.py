@@ -127,12 +127,25 @@ def test_malformed_legacy_structure_reports_validation_error():
         build_graph([row(chapter="I")])
 
 
-def test_real_corpus_preserves_every_chunk_and_reports_legacy_limitations():
+def test_real_corpus_preserves_every_chunk_with_explicit_paths():
     rows = [json.loads(s) for s in Path("output/preprocessed/legal_chunks.jsonl").read_text(encoding="utf-8").splitlines()]
     graph = build_graph(rows)
     chunks = [n for n in graph.nodes if n.label == "Chunk"]
     assert {n.id for n in chunks} == {r["chunk_id"] for r in rows}
-    assert sum(n.properties["chunk_type"] == "clause_group" for n in chunks) == 48
+    assert sum(n.properties["chunk_type"] == "clause_group" for n in chunks) == sum(r["chunk_type"] == "clause_group" for r in rows)
     assert len([e for e in graph.edges if e.type == "HAS_CHUNK"]) == len(rows)
-    assert any("legacy" in w.lower() for w in graph.warnings)
-    assert any("7ba9c209da88cd49877a" in w for w in graph.warnings)
+    assert not graph.warnings
+    assert all(n.properties["metadata_mode"] == "explicit_path" for n in chunks)
+
+
+def test_explicit_table_keeps_headers_rows_and_source_spans_in_kg():
+    graph = build_graph([row(structure_path=[
+        {"type": "appendix", "number": "I", "title": "Danh mục"},
+        {"type": "table", "number": "block-10", "title": "Bảng"}],
+        table_id="block-10", table_headers=[["Tên", "Mức"]],
+        table_rows=[{"block_number": 10, "row_number": 1, "cells": ["A", "100"]}],
+        source_spans=[{"block_number": 10, "start": 0, "end": 7, "chunk_start": 0, "chunk_end": 7}])])
+    props = next(n.properties for n in graph.nodes if n.label == "Chunk")
+    assert json.loads(props["table_headers_json"]) == [["Tên", "Mức"]]
+    assert json.loads(props["table_rows_json"])[0]["cells"] == ["A", "100"]
+    assert json.loads(props["source_spans_json"])[0]["block_number"] == 10

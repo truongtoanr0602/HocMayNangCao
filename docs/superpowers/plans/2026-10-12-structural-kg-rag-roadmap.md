@@ -117,3 +117,11 @@ Triển khai Task 1 trước, xác nhận dữ liệu rồi Task 2. Task 3–5 l
 - Verification: `python -m pytest -q` → 60 passed, 1 skipped; `python -m legal_kg.cli build` → 1414 node, 1406 cạnh, 672 chunk; Compose config hợp lệ.
 - Chưa nạp Neo4j thật: Docker Desktop Linux engine không chạy. Integration opt-in còn skipped; không đánh dấu Task 2 hoàn tất phần integration.
 - Không xóa dữ liệu, không sửa DOCX hoặc `legal_chunks.jsonl`, không tạo commit vì workspace không có Git.
+## Cập nhật tiền xử lý v3 — 2026-10-12
+
+- Đã hoàn thành sửa phân loại phụ lục, bảng và chunking trên 8 DOCX; các ghi chú legacy trong nhật ký trước mô tả snapshot v2.
+- Phụ lục có đường dẫn riêng; tham chiếu phụ lục trong thân Điều không mở nhánh mới. Bảng giữ cột trống, tiêu đề và vị trí ô gộp.
+- Chunk tối đa 6.000 ký tự, có source_spans đối chiếu với nguồn đã làm sạch; QA kiểm tra độ phủ nội dung đã phân tích.
+- Đã tái tạo output/preprocessed và output/kg/structural_graph.json: 803 chunk, 1.623 node, 1.615 cạnh; graph không còn cảnh báo metadata legacy.
+- Kiểm tra cuối: python -m pytest -q → 78 passed, 1 skipped. Review độc lập không phát hiện vấn đề quan trọng.
+- Chưa kiểm thử tích hợp Neo4j thật vì Docker engine chưa chạy. Chưa commit hoặc push các thay đổi này.

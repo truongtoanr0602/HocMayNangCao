@@ -1,6 +1,6 @@
 {
-  "processing_version": "2.0.0",
-  "generated_at": "2026-09-12T19:27:15.349144+00:00",
+  "processing_version": "3.0.0",
+  "generated_at": "2026-10-12T16:11:26.691980+00:00",
   "max_chars": 6000,
   "documents": [
     {
@@ -13,14 +13,17 @@
       "clean_char_count": 187977,
       "removed_block_count": 0,
       "article_count": 220,
-      "chunk_count": 232,
+      "appendix_count": 0,
+      "table_count": 1,
+      "source_content_preserved": true,
+      "chunk_count": 233,
       "chunk_chars": {
         "min": 25,
-        "median": 667.5,
+        "median": 667,
         "max": 4880
       },
       "split_reasons": {
-        "none": 230,
+        "none": 231,
         "max_size_clause": 2
       },
       "warnings": [
@@ -32,43 +35,29 @@
     {
       "document_id": "doc-02",
       "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
-      "block_count": 1734,
+      "block_count": 1737,
       "paragraph_count": 1546,
-      "table_row_count": 188,
-      "raw_char_count": 234901,
-      "clean_char_count": 234724,
+      "table_row_count": 191,
+      "raw_char_count": 233519,
+      "clean_char_count": 232868,
       "removed_block_count": 0,
       "article_count": 115,
-      "chunk_count": 129,
+      "appendix_count": 6,
+      "table_count": 43,
+      "source_content_preserved": true,
+      "chunk_count": 221,
       "chunk_chars": {
-        "min": 182,
-        "median": 1346,
-        "max": 5999
+        "min": 13,
+        "median": 703,
+        "max": 5856
       },
       "split_reasons": {
-        "none": 113,
-        "max_size_clause": 16
+        "none": 215,
+        "max_size_clause": 4,
+        "max_size_sentence": 2
       },
       "warnings": [
-        "OCR chapter label normalized at block 1026: Chương XI -> Chương XII",
-        "Rejected Article-like reference at block 1189: Điều 1. Trích tiền từ tài khoản ký quỹ hoạt động cho thuê lạ",
-        "Rejected Article-like reference at block 1195: Điều 2. Giám đốc Sở Lao động - Thương binh và Xã hội tỉnh, t",
-        "Rejected Article-like reference at block 1196: Điều 3. Quyết định này có hiệu lực kể từ ngày...tháng năm /.",
-        "Rejected Article-like reference at block 1345: Điều 1. Thu hồi giấy phép hoạt động cho thuê lại lao động mã",
-        "Rejected Article-like reference at block 1347: Điều 2....(3)...thực hiện các trách nhiệm theo quy định tại ",
-        "Rejected Article-like reference at block 1348: Điều 3. Trách nhiệm tổ chức thực hiện...(6)..",
-        "Rejected Article-like reference at block 1349: Điều 4. Quyết định này có hiệu lực kể từ ngày...tháng.... nă",
-        "Rejected Article-like reference at block 1589: Điều 1. Thời hạn hợp đồng",
-        "Rejected Article-like reference at block 1593: Điều 2. Công việc và địa điểm làm việc",
-        "Rejected Article-like reference at block 1596: Điều 3. Tiền lương, thưởng và các khoản phụ cấp, bổ sung khá",
-        "Rejected Article-like reference at block 1606: Điều 4. Thời giờ làm việc, thời giờ nghỉ ngơi",
-        "Rejected Article-like reference at block 1612: Điều 5. Điều kiện làm việc",
-        "Rejected Article-like reference at block 1616: Điều 6. Quyền và nghĩa vụ của người lao động",
-        "Rejected Article-like reference at block 1626: Điều 7. Quyền và nghĩa vụ của người sử dụng lao động",
-        "Rejected Article-like reference at block 1635: Điều 8. Kỷ luật lao động",
-        "Rejected Article-like reference at block 1640: Điều 9. Bồi thường thiệt hại (nếu có)",
-        "Rejected Article-like reference at block 1643: Điều 10. Thỏa thuận khác (nếu có)",
-        "Rejected Article-like reference at block 1644: Điều 11. Điều khoản thi hành"
+        "OCR chapter label normalized at block 1026: Chương XI -> Chương XII"
       ]
     },
     {
@@ -81,15 +70,19 @@
       "clean_char_count": 33020,
       "removed_block_count": 0,
       "article_count": 12,
-      "chunk_count": 17,
+      "appendix_count": 1,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 19,
       "chunk_chars": {
         "min": 194,
-        "median": 1080,
-        "max": 5851
+        "median": 936,
+        "max": 5989
       },
       "split_reasons": {
-        "none": 15,
-        "max_size_clause": 2
+        "none": 14,
+        "max_size_clause": 2,
+        "max_size_sentence": 3
       },
       "warnings": []
     },
@@ -103,15 +96,18 @@
       "clean_char_count": 29160,
       "removed_block_count": 0,
       "article_count": 5,
-      "chunk_count": 10,
+      "appendix_count": 1,
+      "table_count": 3,
+      "source_content_preserved": true,
+      "chunk_count": 14,
       "chunk_chars": {
-        "min": 166,
-        "median": 1753.5,
-        "max": 5973
+        "min": 163,
+        "median": 968.5,
+        "max": 5839
       },
       "split_reasons": {
-        "none": 5,
-        "max_size_clause": 5
+        "none": 10,
+        "max_size_sentence": 4
       },
       "warnings": []
     },
@@ -121,18 +117,21 @@
       "block_count": 1182,
       "paragraph_count": 1179,
       "table_row_count": 3,
-      "raw_char_count": 181983,
-      "clean_char_count": 181915,
+      "raw_char_count": 181989,
+      "clean_char_count": 181919,
       "removed_block_count": 0,
       "article_count": 141,
-      "chunk_count": 148,
+      "appendix_count": 0,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 150,
       "chunk_chars": {
         "min": 25,
-        "median": 973.5,
+        "median": 960.5,
         "max": 5618
       },
       "split_reasons": {
-        "none": 146,
+        "none": 148,
         "max_size_clause": 2
       },
       "warnings": []
@@ -143,19 +142,22 @@
       "block_count": 579,
       "paragraph_count": 564,
       "table_row_count": 15,
-      "raw_char_count": 115471,
-      "clean_char_count": 115487,
+      "raw_char_count": 115031,
+      "clean_char_count": 115036,
       "removed_block_count": 0,
       "article_count": 45,
-      "chunk_count": 52,
+      "appendix_count": 2,
+      "table_count": 10,
+      "source_content_preserved": true,
+      "chunk_count": 71,
       "chunk_chars": {
-        "min": 63,
-        "median": 1846.0,
+        "min": 9,
+        "median": 1105,
         "max": 5958
       },
       "split_reasons": {
-        "none": 46,
-        "max_size_clause": 6
+        "none": 67,
+        "max_size_clause": 4
       },
       "warnings": [
         "Rejected Article-like reference at block 459: “Điều 39. Chi tổ chức và hoạt động bảo hiểm tai nạn lao động"
@@ -167,19 +169,21 @@
       "block_count": 361,
       "paragraph_count": 93,
       "table_row_count": 268,
-      "raw_char_count": 26367,
-      "clean_char_count": 26367,
+      "raw_char_count": 23154,
+      "clean_char_count": 22288,
       "removed_block_count": 0,
       "article_count": 9,
-      "chunk_count": 12,
+      "appendix_count": 3,
+      "table_count": 6,
+      "source_content_preserved": true,
+      "chunk_count": 21,
       "chunk_chars": {
         "min": 106,
-        "median": 961.0,
-        "max": 15240
+        "median": 635,
+        "max": 5276
       },
       "split_reasons": {
-        "none": 9,
-        "max_size_clause": 3
+        "none": 21
       },
       "warnings": []
     },
@@ -193,14 +197,17 @@
       "clean_char_count": 177624,
       "removed_block_count": 0,
       "article_count": 64,
-      "chunk_count": 72,
+      "appendix_count": 0,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 74,
       "chunk_chars": {
-        "min": 211,
-        "median": 2059.5,
+        "min": 159,
+        "median": 2016.0,
         "max": 5895
       },
       "split_reasons": {
-        "none": 60,
+        "none": 62,
         "max_size_clause": 12
       },
       "warnings": []
@@ -208,14 +215,18 @@
   ],
   "global": {
     "document_count": 8,
-    "chunk_count": 672,
+    "chunk_count": 803,
     "checks": {
       "expected_document_count": true,
       "unique_chunk_ids": true,
       "nonempty_text": true,
       "optional_files_excluded": true,
       "docx_sources": true,
-      "valid_paragraph_ranges": true
+      "within_max_chars": true,
+      "valid_structure_paths": true,
+      "valid_source_spans": true,
+      "valid_paragraph_ranges": true,
+      "source_content_preserved": true
     },
     "status": "passed"
   }

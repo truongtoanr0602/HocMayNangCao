@@ -24,9 +24,14 @@ Các cấp thiếu được bỏ qua. `article` và `clause_group` đều đư�
 ID cấu trúc dùng đầy đủ đường dẫn, ví dụ `doc-01/chapter-VII/section-2/article-111`;
 ID Chunk giữ nguyên JSONL. `clause_ids`/`point_ids` là thuộc tính, không tạo node Khoản/Điểm khi chưa có quan hệ cha–con đáng tin cậy.
 
-## 2. Giới hạn dữ liệu hiện tại
+## 2. Schema v3 và tương thích dữ liệu cũ
 
-Metadata cũ chưa tách phụ lục/bảng và có thể gắn nội dung phụ lục vào Điều cuối.
+Snapshot hiện tại có `structure_path` từ parser v3: phụ lục và bảng được tách riêng;
+803 chunk đều không vượt 6000 ký tự. Bảng giữ tiêu đề, ô trống và tọa độ ô gộp.
+KG lưu `source_spans_json`, `table_headers_json`, `table_rows_json` trên node Chunk để giữ
+metadata lồng nhau mà Neo4j không hỗ trợ trực tiếp làm property.
+
+Khi đọc đầu ra v2, metadata cũ chưa tách phụ lục/bảng và có thể gắn nội dung phụ lục vào Điều cuối.
 Module không sửa hay suy đoán nội dung nguồn. Graph xuất ra là bản phản ánh metadata để kiểm tra,
 không phải xác nhận cấu trúc pháp luật đã đúng. Cảnh báo `Legacy metadata` được ghi trong graph và in khi build/inspect.
 Chunk dài hơn 6000 ký tự cũng được cảnh báo, không bỏ hoặc tự chia lại trong KG.
@@ -43,7 +48,7 @@ Chunk dài hơn 6000 ký tự cũng được cảnh báo, không bỏ hoặc t�
 Các type hỗ trợ: `part`, `chapter`, `section`, `article`, `appendix`, `table`.
 Appendix bắt đầu nhánh riêng dưới văn bản; table có thể nằm dưới appendix hoặc đơn vị chính.
 `structure_path: []` nghĩa là chunk trực tiếp thuộc văn bản. Trường này phải đến từ bước tiền xử lý đã kiểm tra;
-chỉ thêm trường không đủ chứng minh cấu trúc đã đúng. Chưa triển khai sửa parser/chunking trong module này.
+chỉ thêm trường không đủ chứng minh cấu trúc đã đúng. Parser/chunking v3 thuộc `legal_preprocessing`.
 
 ## 3. Khởi động Neo4j và nạp dữ liệu
 
@@ -60,13 +65,13 @@ Mật khẩu cần ít nhất 8 ký tự. Docker Compose cũng có thể đọc 
 nhưng CLI Python chỉ đọc biến môi trường của tiến trình. Không đưa mật khẩu vào Git.
 Neo4j Browser: http://localhost:7474, user `neo4j`.
 
-Với dữ liệu hiện tại, chỉ nạp bản thử nghiệm sau khi đọc cảnh báo:
+Với snapshot v3 hiện tại:
 
 ```powershell
-python -m legal_kg.cli load --allow-legacy-metadata
+python -m legal_kg.cli load
 ```
 
-Sau khi tiền xử lý cung cấp `structure_path` đúng cho toàn corpus, dùng `load` không cần cờ này.
+Chỉ dùng `--allow-legacy-metadata` nếu chủ động nạp snapshot cũ để thử nghiệm sau khi đọc cảnh báo.
 Loader kiểm tra graph trước khi ghi; không nhận label/relationship ngoài allowlist.
 Các tham số kết nối: `--uri`, `--user`, `--database` hoặc `NEO4J_URI`, `NEO4J_USER`, `NEO4J_DATABASE`.
 Password chỉ lấy qua `NEO4J_PASSWORD`.

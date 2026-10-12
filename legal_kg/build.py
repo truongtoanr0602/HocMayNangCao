@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from urllib.parse import quote
 
 from .models import Edge, GraphPayload, Node, fingerprint
@@ -113,6 +114,14 @@ def build_graph(rows: list[dict]) -> GraphPayload:
                 raise ValueError(f"Invalid {key} for {chunk_id}")
             props[key] = list(item)
         props["processing_version"] = _text(row.get("processing_version", "unknown"), "processing_version")
+        if row.get("table_id") is not None:
+            props["table_id"] = _text(row["table_id"], "table_id")
+        # Neo4j properties cannot contain nested objects/lists; retain structured provenance as JSON.
+        for field in ("source_spans", "table_headers", "table_rows"):
+            if field in row:
+                if not isinstance(row[field], list):
+                    raise ValueError(f"Invalid {field}: expected a list")
+                props[f"{field}_json"] = json.dumps(row[field], ensure_ascii=False, sort_keys=True)
         add(Node(chunk_id, "Chunk", props))
         edges.add((parent, chunk_id, "HAS_CHUNK"))
     graph = GraphPayload(

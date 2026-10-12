@@ -55,3 +55,35 @@ def test_extract_docx_reports_corrupt_document_path(tmp_path):
 
     with pytest.raises(DocxExtractionError, match="broken.docx"):
         extract_docx(path)
+
+
+def test_tables_keep_empty_columns_merge_positions_and_headers(tmp_path):
+    path = tmp_path / "merged.docx"
+    document = Document()
+    table = document.add_table(rows=3, cols=3)
+    for index, value in enumerate(("Tên", "Cột giữa", "Giá trị")):
+        table.cell(0, index).text = value
+    table.cell(1, 0).merge(table.cell(1, 1)).text = "Ô gộp"
+    table.cell(1, 2).text = "100"
+    table.cell(2, 0).text = "Hàng cuối"
+    table.cell(2, 2).text = "200"
+    document.save(path)
+    blocks = extract_docx(path)
+    assert blocks[1].raw_text == "Ô gộp |  | 100"
+    assert blocks[2].raw_text == "Hàng cuối |  | 200"
+    assert blocks[1].cells == ("Ô gộp", "", "100")
+    assert blocks[1].table_id == blocks[2].table_id
+    assert blocks[1].row_number == 2
+    assert blocks[2].table_headers == (("Tên", "Cột giữa", "Giá trị"),)
+
+
+def test_vertical_merge_is_emitted_once_without_losing_column(tmp_path):
+    path = tmp_path / "vertical.docx"
+    document = Document()
+    table = document.add_table(rows=2, cols=2)
+    table.cell(0, 0).merge(table.cell(1, 0)).text = "Chủ thể chung"
+    table.cell(0, 1).text = "Dòng đầu"
+    table.cell(1, 1).text = "Dòng sau"
+    document.save(path)
+    blocks = extract_docx(path)
+    assert [b.raw_text for b in blocks] == ["Chủ thể chung | Dòng đầu", " | Dòng sau"]

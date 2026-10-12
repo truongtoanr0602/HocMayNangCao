@@ -114,3 +114,37 @@ def test_parser_retains_originating_block_range():
     article = next(unit for unit in result.units if unit.article)
     assert (article.paragraph_start, article.paragraph_end) == (3, 4)
     assert [line.block_number for line in article.lines] == [3, 4]
+
+
+def test_appendix_is_not_attached_to_last_article_or_parsed_as_main_articles():
+    result = parse_legal_units(pages(
+        ("Điều 1. Hiệu lực", "Nội dung điều chính."),
+        ("Phụ lục I",), ("BIỂU MẪU",),
+        ("Điều 1. Điều trong biểu mẫu", "Phần I", "Nội dung mẫu."),
+        ("Phụ lục II",), ("DANH MỤC",),
+    ))
+    articles = [u for u in result.units if u.unit_type == "article"]
+    assert len(articles) == 1
+    assert "biểu mẫu" not in "\n".join(l.text for l in articles[0].lines)
+    appendices = [u for u in result.units if u.unit_type == "appendix"]
+    assert {u.structure_path[0].number for u in appendices} == {"I", "II"}
+    assert all(u.article is None and u.chapter is None for u in appendices)
+    assert any("Điều 1. Điều trong biểu mẫu" in l.text for u in appendices for l in u.lines)
+
+
+def test_appendix_reference_in_body_does_not_start_appendix():
+    result = parse_legal_units(pages(("Điều 1. Bãi bỏ", "Phụ lục III ban hành kèm theo Nghị định số 135/2020/NĐ-CP;",
+                                     "Điều 2. Thi hành")))
+    assert [u.article.number for u in result.units if u.article] == ["1", "2"]
+    assert not any(u.unit_type == "appendix" for u in result.units)
+
+
+def test_table_retains_article_context_and_does_not_parse_cells_as_headings():
+    blocks = [SourceBlock(1, "paragraph", "Điều 1. Mức hưởng", ("Điều 1. Mức hưởng",)),
+              SourceBlock(2, "table_row", "Điều 99. Trong ô | 100", ("Điều 99. Trong ô | 100",)),
+              SourceBlock(3, "paragraph", "Đoạn tiếp của điều.", ("Đoạn tiếp của điều.",))]
+    result = parse_legal_units(blocks)
+    table = next(u for u in result.units if u.unit_type == "table")
+    assert [p.type for p in table.structure_path] == ["article", "table"]
+    assert table.article.number == "1"
+    assert all(u.article is None or u.article.number == "1" for u in result.units)

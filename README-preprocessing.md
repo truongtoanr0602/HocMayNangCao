@@ -21,3 +21,27 @@ Khối có thể là một đoạn văn hoặc một hàng bảng. Trong hàng b
 
 Pipeline chỉ hỗ trợ `.docx`. Tệp `.doc` cũ phải được chuyển sang `.docx` một lần
 trước khi chạy.
+
+## Schema v3: phụ lục, bảng và nguồn
+
+- Tiêu đề độc lập `Phụ lục`, `Phụ lục I`, `Phụ lục II`... mở nhánh riêng dưới văn bản.
+  Câu viện dẫn như `Phụ lục III ban hành kèm theo...` trong một điều không mở nhánh.
+  Chương/Điều trong biểu mẫu phụ lục được giữ làm nội dung, không nhập vào cấu trúc điều chính.
+- `chunk_type` có `preamble`, `article`, `clause_group`, `appendix`, `table`.
+  Bảng tách thành đơn vị riêng, giữ ngữ cảnh Điều hoặc Phụ lục chứa bảng.
+- `structure_path` là danh sách `{type, number, title}` dùng trực tiếp cho `legal_kg`.
+  Phụ lục không đánh số dùng `block-N`, bảng dùng `block-N` tại khối bắt đầu, không giả lập số pháp lý.
+- `source_spans` ghi `block_number`, `start`, `end` trong **khối sạch** và `chunk_start`, `chunk_end`
+  trong chunk. Offset tính theo ký tự Python, đầu bao gồm/cuối không bao gồm; không phải byte hoặc vị trí Word.
+- Bảng giữ `table_id`, `table_headers`, `table_rows` gồm số hàng, cells và cell_origins.
+  Cột trống giữ nguyên vị trí. Ô gộp chỉ phát nội dung ở vị trí đầu; các vị trí phủ còn lại trống
+  và trỏ về tọa độ `[hàng, cột]` bắt đầu từ 1. Header mặc định là hàng đầu và các hàng Word đánh dấu lặp.
+  Bảng lồng được giữ trong nội dung ô cha, chưa tạo node riêng cho bảng lồng.
+- Chunking ưu tiên Khoản hoặc mục đánh số trong phụ lục, rồi dòng/câu/khoảng trắng;
+  có fallback cắt chuỗi dài không có dấu câu. Tiêu đề Điều chỉ được lặp nếu còn chỗ cho nội dung.
+  Header bảng được giữ trong metadata mỗi chunk, không tự chèn lại vào text nguồn.
+- QA kiểm tra giới hạn ký tự, đường dẫn, span khớp khối sạch và đủ nội dung từ đơn vị parser đến chunk.
+  Điều này không xác nhận tính chính xác/hiệu lực pháp lý của nguồn. Các cảnh báo parser cần đối chiếu thủ công.
+
+Sau khi đổi cách chia hoặc metadata, chạy lại `python -m legal_kg.cli build`.
+Snapshot/hash sẽ thay đổi; embedding và BM25 phải dùng cùng bộ chunk mới khi được triển khai.

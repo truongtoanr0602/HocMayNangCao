@@ -22,10 +22,12 @@ python -m legal_kg.cli inspect --chunk-id 4b93eeaf2c2dce28ba84
 
 ## Trạng thái và giới hạn
 
-Snapshot hiện có gồm 672 chunk; graph xuất ra gồm 1.414 node và 1.406 cạnh.
-Metadata cũ chưa phân biệt đầy đủ phụ lục và còn chunk vượt giới hạn kích thước.
-Graph phản ánh metadata này và ghi cảnh báo; loader yêu cầu `--allow-legacy-metadata` khi nạp bản thử nghiệm.
-Cần sửa tiền xử lý trước khi dùng làm căn cứ tư vấn. Kiểm thử Neo4j thật được bật riêng, yêu cầu server đang chạy.
+Snapshot tiền xử lý v3 hiện có 803 chunk; graph có 1.623 node và 1.615 cạnh.
+Phụ lục tách khỏi Điều chính; bảng giữ cột trống, tọa độ ô gộp và tiêu đề.
+Chunk không vượt 6.000 ký tự, có `structure_path` và `source_spans` để đối chiếu nguồn.
+Loader dùng `load` bình thường cho snapshot này; cờ `--allow-legacy-metadata` chỉ dành cho dữ liệu cũ.
+Chưa mô hình hóa Khoản–Điểm hoặc kiểm chứng hiệu lực pháp lý tự động.
+Kiểm thử Neo4j thật được bật riêng, yêu cầu server đang chạy.
 
 `data/` chứa nguồn, `output/` chứa artifact hiện có; kết quả trích xuất ngữ nghĩa cũ trong
 `json_KG/` và `output/preprocessed/extraction_results*.jsonl` không được module KG cấu trúc sử dụng.

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import re
 import unicodedata
 
@@ -41,5 +41,8 @@ def clean_blocks(blocks: list[SourceBlock] | tuple[SourceBlock, ...]) -> CleanRe
         if not lines:
             removed.append(RemovedBlock(block.block_number, "empty_after_normalization", block.raw_text))
             continue
-        cleaned.append(SourceBlock(block.block_number, block.block_type, "\n".join(lines), lines))
+        cleaned.append(replace(block, raw_text="\n".join(lines), lines=lines,
+                               cells=tuple(normalize_text(cell) for cell in block.cells),
+                               table_headers=tuple(tuple(normalize_text(cell) for cell in header)
+                                                   for header in block.table_headers)))
     return CleanResult(tuple(cleaned), tuple(removed))

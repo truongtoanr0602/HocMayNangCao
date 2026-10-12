@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from dataclasses import asdict
 import json
 from pathlib import Path
 
@@ -27,6 +28,7 @@ def run_pipeline(root: Path, output_dir: Path, max_chars: int = 6000, *, extract
     output_dir.mkdir(parents=True, exist_ok=True)
     all_rows: list[dict] = []
     metrics = []
+    source_blocks = {}
     for spec in specs:
         raw_blocks = extractor(root / spec.source_file)
         cleaned = clean_blocks(raw_blocks)
@@ -35,17 +37,17 @@ def run_pipeline(root: Path, output_dir: Path, max_chars: int = 6000, *, extract
         if not chunks:
             raise ValueError(f"No chunks generated for {spec.document_id}")
         rows = [chunk.to_dict() for chunk in chunks]
+        source_blocks[spec.document_id] = {block.block_number: block.raw_text for block in cleaned.blocks}
         write_jsonl_atomic(output_dir / "by_document" / f"{spec.document_id}.jsonl", rows)
         _write_json(output_dir / "intermediate" / f"{spec.document_id}.blocks.json", {
-            "raw_blocks": [{"block_number": block.block_number, "block_type": block.block_type,
-                            "text": block.raw_text} for block in raw_blocks],
-            "clean_blocks": [{"block_number": block.block_number, "block_type": block.block_type,
-                              "text": block.raw_text} for block in cleaned.blocks],
+            "raw_blocks": [_block_dict(block) for block in raw_blocks],
+            "clean_blocks": [_block_dict(block) for block in cleaned.blocks],
             "removed_blocks": [item.__dict__ for item in cleaned.removed_blocks],
         })
         all_rows.extend(rows)
         metrics.append(document_metrics(spec, raw_blocks, cleaned, parsed, chunks))
-    checks = validate_chunks(all_rows, len(specs))
+    checks = validate_chunks(all_rows, len(specs), max_chars=max_chars, source_blocks=source_blocks)
+    checks["source_content_preserved"] = all(metric["source_content_preserved"] for metric in metrics)
     report = {
         "processing_version": __version__, "generated_at": datetime.now(timezone.utc).isoformat(),
         "max_chars": max_chars, "documents": metrics,
@@ -58,3 +60,10 @@ def run_pipeline(root: Path, output_dir: Path, max_chars: int = 6000, *, extract
     _write_json(output_dir / "qa_report.json", report)
     (output_dir / "qa_report.md").write_text(render_markdown(report), encoding="utf-8")
     return report
+
+
+def _block_dict(block) -> dict:
+    value = asdict(block)
+    value["text"] = value.pop("raw_text")
+    value.pop("lines")
+    return value

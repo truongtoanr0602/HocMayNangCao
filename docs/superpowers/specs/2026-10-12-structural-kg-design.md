@@ -55,3 +55,12 @@ Integration test Neo4j thật opt-in; không báo đã xác minh server thật k
 Người dùng yêu cầu dựng legal_kg sau khi xem roadmap. Triển khai module hiện tại trước bước sửa
 tiền xử lý, giữ cảnh báo và chặn load mặc định với metadata cũ. Chi phí: graph thử nghiệm vẫn phản ánh
 sai ngữ cảnh sẵn có nếu người chạy chủ động nạp legacy; phải sửa preprocessing và tạo snapshot mới trước dùng tư vấn.
+
+## Cập nhật tiền xử lý v3
+
+Theo yêu cầu tiếp theo, đã sửa parser/extractor/chunker ở `legal_preprocessing`:
+nhận tiêu đề phụ lục độc lập, giữ câu viện dẫn trong điều; bảng là đơn vị riêng;
+giữ cột trống và origin của ô gộp. Chunk có structure_path và source_spans chính xác trên khối sạch,
+được giới hạn cứng max_chars. Đầu ra mới thay snapshot cũ; guard legacy vẫn giữ để đọc v2 an toàn.
+Node Chunk lưu metadata lồng nhau dạng JSON string, không thay đổi ontology cấu trúc.
+Khoản–Điểm chưa thành node; nội dung biểu mẫu dưới phụ lục không tạo Article chính.
