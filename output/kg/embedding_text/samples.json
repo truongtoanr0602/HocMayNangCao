@@ -1,0 +1,1855 @@
+[
+  {
+    "node_id": "doc-07/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-07",
+    "source_file": "data/07_ND135-2020_Tuoi_nghi_huu.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 135/2020/NĐ-CP\nSố hiệu: 135/2020/NĐ-CP\nĐịa chỉ: Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết Điều 169 của Bộ luật Lao động về tuổi nghỉ hưu.",
+    "embedding_text_hash": "f9906c67335c7c26278d67fc34c7cc2eaf6c6538a2476883a1e1e6d80f9e69ef",
+    "char_count": 210,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết Điều 169 của Bộ luật Lao động về tuổi nghỉ hưu.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-07/article-1"
+    ],
+    "source_chunk_ids": [
+      "7ce5faf441b6bd1234be"
+    ],
+    "source_spans": [
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 79
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-08/chapter-IV/article-42",
+    "label": "Article",
+    "number": "42",
+    "document_id": "doc-08",
+    "source_file": "data/08_ND12-2022_Xu_phat_Lao_dong_BHXH.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 12/2022/NĐ-CP\nSố hiệu: 12/2022/NĐ-CP\nĐịa chỉ: Chương IV: HÀNH VI VI PHẠM, HÌNH THỨC XỬ PHẠT, MỨC XỬ PHẠT VÀ BIỆN PHÁP KHẮC PHỤC HẬU QUẢ ĐỐI VỚI HÀNH VI VI PHẠM TRONG LĨNH VỰC NGƯỜI LAO ĐỘNG VIỆT NAM ĐI LÀM VIỆC Ở NƯỚC NGOÀI THEO HỢP ĐỒNG > Điều 42: Vi phạm của doanh nghiệp hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng (sau đây viết tắt là doanh nghiệp dịch vụ)\nNội dung:\nĐiều 42. Vi phạm của doanh nghiệp hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng (sau đây viết tắt là doanh nghiệp dịch vụ)\n1. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng khi có một trong các hành vi sau đây:\na) Không niêm yết công khai bản sao Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp dịch vụ tại trụ sở chính hoặc không đăng tải trên trang thông tin điện tử của doanh nghiệp trong thời hạn 30 ngày kể từ ngày Giấy phép được cấp, cấp lại hoặc điều chỉnh thông tin;\nb) Chi nhánh của doanh nghiệp dịch vụ được giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng không niêm yết công khai quyết định của doanh nghiệp dịch vụ giao nhiệm vụ cho chi nhánh hoặc bản sao Giấy phép của doanh nghiệp dịch vụ tại trụ sở của chi nhánh;\nc) Không thông báo bằng văn bản cho Bộ Lao động - Thương binh và Xã hội hoặc không cập nhật thông tin về chi nhánh được giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định;\nd) Không đăng tải hoặc không cập nhật khi có sự thay đổi trên trang thông tin điện tử của doanh nghiệp dịch vụ theo quy định của pháp luật thông tin về: người đại diện theo pháp luật; danh sách nhân viên nghiệp vụ; địa chỉ trụ sở chính, địa điểm kinh doanh; cơ sở vật chất phục vụ hoạt động giáo dục định hướng cho người lao động trước khi đi làm việc ở nước ngoài; quyết định giao nhiệm vụ cho chi nhánh;\nđ) Không đăng tải trên trang thông tin điện tử của doanh nghiệp dịch vụ thông tin về: văn bản của Bộ Lao động - Thương binh và Xã hội chấp thuận về việc chuẩn bị nguồn lao động; thông tin đầy đủ, chính xác về số lượng hoặc tiêu chuẩn tuyển chọn hoặc điều kiện làm việc hoặc quyền lợi, nghĩa vụ của người lao động theo nội dung hợp đồng cung ứng lao động;\ne) Không báo cáo hoặc báo cáo không đầy đủ, không chính xác hoặc báo cáo không đúng thời hạn về tình hình hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật;\ng) Không cập nhật thông tin về người lao động do doanh nghiệp đưa đi trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng kể từ ngày người lao động xuất cảnh cho đến khi thanh lý hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài theo quy định của pháp luật;\nh) Không báo cáo hoặc báo cáo không trung thực với Bộ Lao động - Thương binh và Xã hội về tình hình của người lao động do doanh nghiệp đưa đi làm việc ở nước ngoài và phương án thực hiện các nghĩa vụ của doanh nghiệp trong hợp đồng cung ứng lao động, hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài còn hiệu lực và văn bản thỏa thuận với doanh nghiệp dịch vụ tiếp nhận quyền, nghĩa vụ trong trường hợp quy định tại điểm b khoản 1 Điều 28 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định;\ni) Không hướng dẫn người lao động tham gia bảo hiểm xã hội theo quy định của pháp luật về bảo hiểm xã hội;\nk) Đóng không đúng thời hạn vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật.\n2. Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng khi vi phạm với mỗi người lao động nhưng không quá 200.000.000 đồng khi có một trong các hành vi sau đây:\na) Không tổ chức giáo dục định hướng hoặc không cấp Giấy chứng nhận hoàn thành khóa học giáo dục định hướng cho người lao động trước khi đi làm việc ở nước ngoài theo quy định của pháp luật;\nb) Thỏa thuận mức tiền ký quỹ với người lao động cao hơn quy định của pháp luật;\nc) Không ký hoặc ký không đúng mẫu hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng với người lao động;\nd) Không ghi rõ thỏa thuận về tiền dịch vụ và chi phí khác của người lao động trong hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài ký với người lao động;\nđ) Không thanh lý hoặc thanh lý hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài với người lao động không theo quy định của pháp luật;\ne) Nội dung hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài không phù hợp với hợp đồng cung ứng lao động đã đăng ký.\n3. Phạt tiền từ 20% đến 30% tổng số tiền phải đóng vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật tại thời điểm lập biên bản vi phạm hành chính nhưng không quá 200.000.000 đồng khi có hành vi không đóng hoặc đóng không đầy đủ vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật.\n4. Phạt tiền từ 40% đến 50% tổng số tiền người lao động đóng vào Quỹ hỗ trợ việc làm ngoài nước thông qua doanh nghiệp dịch vụ mà doanh nghiệp dịch vụ không đóng hoặc đóng không đầy đủ vào Quỹ hỗ trợ việc làm ngoài nước tại thời điểm lập biên bản vi phạm hành chính nhưng không quá 200.000.000 đồng.\n5. Phạt tiền từ 50.000.000 đồng đến 70.000.000 đồng khi có một trong các hành vi sau đây:\na) Không duy trì một trong các điều kiện quy định tại Điều 10 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật trong suốt quá trình hoạt động;\nb) Không duy trì điều kiện quy định tại điểm b khoản 2 Điều 20 của Nghị định số 112/2021/NĐ-CP ngày 10 tháng 12 năm 2021 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trong suốt thời gian hoạt động dịch vụ đưa người lao động Việt Nam đi làm giúp việc gia đình ở nước ngoài và trong thời gian người lao động Việt Nam do doanh nghiệp đưa đi đang làm giúp việc gia đình ở nước ngoài;\nc) Thực hiện không đúng các nội dung hợp đồng cung ứng lao động đã đăng ký và được chấp thuận;\nd) Không bồi thường cho người lao động về những thiệt hại do doanh nghiệp hoặc chi nhánh của doanh nghiệp gây ra theo quy định của pháp luật;\nđ) Không tư vấn, hỗ trợ cho người lao động các thủ tục liên quan đến chấm dứt hợp đồng lao động, quyền lợi, chế độ và thủ tục về nước;\ne) Chuẩn bị nguồn lao động khi chưa có văn bản chấp thuận của Bộ Lao động - Thương binh và Xã hội;\ng) Không cam kết bằng văn bản việc ưu tiên tuyển chọn người lao động đã tham gia hoạt động chuẩn bị nguồn của doanh nghiệp;\nh) Quảng cáo, tư vấn, thông báo tuyển chọn hoặc cung cấp thông tin không chính xác với người lao động hoặc với chính quyền địa phương tại nơi tuyển chọn về một trong các nội dung: số lượng; tiêu chuẩn tuyển chọn; điều kiện làm việc; quyền lợi, nghĩa vụ của người lao động theo hợp đồng cung ứng lao động;\ni) Không cam kết bằng văn bản về thời gian chờ xuất cảnh sau khi người lao động trúng tuyển đi làm việc ở nước ngoài với thời hạn không quá 180 ngày kể từ ngày người lao động trúng tuyển hoặc không thực hiện đúng cam kết về thời gian chờ xuất cảnh.\n6. Phạt tiền từ 50.000.000 đồng đến 70.000.000 đồng khi vi phạm đối với mỗi người lao động nhưng không quá 200.000.000 đồng đối với hành vi lợi dụng hoạt động chuẩn bị nguồn lao động hoặc tuyển chọn người lao động Việt Nam đi làm việc ở nước ngoài hoặc hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài để thu tiền của người lao động trái pháp luật.\n7. Phạt tiền khi có hành vi đưa người lao động Việt Nam đi làm việc ở nước ngoài vượt quá số lượng người đã đăng ký theo Hợp đồng cung ứng lao động theo một trong các mức sau đây:\na) Từ 40.000.000 đồng đến 80.000.000 đồng khi vượt quá số lượng đăng ký từ 01 người đến 10 người;\nb) Từ 80.000.000 đồng đến 120.000.000 đồng khi vượt quá số lượng đăng ký từ 11 người đến 50 người;\nc) Từ 120.000.000 đồng đến 180.000.000 đồng khi vượt quá số lượng đăng ký trên 50 người.\n8. Phạt tiền từ 80.000.000 đồng đến 100.000.000 đồng khi có một trong các hành vi sau đây:\na) Thu tiền dịch vụ của người lao động không đúng quy định của pháp luật;\nb) Không hoàn trả hoặc hoàn trả không đầy đủ cho người lao động phần tiền dịch vụ và khoản tiền lãi theo tỷ lệ tương ứng với thời gian còn lại của Hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài trong trường hợp người lao động đã nộp tiền dịch vụ cho toàn bộ thời gian làm việc theo Hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài mà phải về nước trước thời hạn và không do lỗi của người lao động;\nc) Không tổ chức quản lý, bảo vệ quyền và lợi ích hợp pháp của người lao động do doanh nghiệp đưa đi làm việc ở nước ngoài theo quy định của pháp luật;\nd) Không cung cấp trợ giúp pháp lý trong trường hợp người lao động cần đến hỗ trợ pháp lý khi bị lạm dụng, bạo lực hoặc phân biệt đối xử trong thời gian làm việc ở nước ngoài;\nđ) Không thực hiện yêu cầu của cơ quan có thẩm quyền hoặc không phối hợp với cơ quan, tổ chức có liên quan của nước tiếp nhận lao động để giải quyết tranh chấp liên quan đến người lao động;\ne) Không giải quyết vấn đề phát sinh đối với người lao động theo một trong các trường hợp sau: chết; tai nạn lao động; bệnh nghề nghiệp; bị xâm phạm tính mạng; bị xâm phạm sức khỏe; bị xâm phạm danh dự, nhân phẩm; bị xâm phạm tài sản; thiên tai; dịch bệnh; chiến tranh; bất ổn chính trị; tình trạng khẩn cấp.\n9. Phạt tiền từ 150.000.000 đồng đến 180.000.000 đồng khi có một trong các hành vi sau đây:\na) Lợi dụng hoạt động đưa người lao động Việt Nam đi làm việc ở nước ngoài để tổ chức xuất cảnh trái phép, bóc lột hoặc cưỡng bức lao động nhưng chưa đến mức truy cứu trách nhiệm hình sự;\nb) Đưa người lao động Việt Nam đi làm việc ở nước ngoài theo một trong các trường hợp sau: ở khu vực bị cấm; công việc bị cấm; vi phạm đạo đức xã hội; vi phạm sức khỏe của người lao động hoặc cộng đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự; không được nước tiếp nhận lao động cho phép;\nc) Cưỡng ép, lôi kéo, dụ dỗ hoặc lừa gạt người lao động Việt Nam ở lại nước ngoài trái phép mà chưa đến mức truy cứu trách nhiệm hình sự;\nd) Phân biệt đối xử đối với người lao động hoặc xúc phạm danh dự, nhân phẩm của người lao động trong hoạt động đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nđ) Đưa người lao động Việt Nam đi làm việc ở nước ngoài nhưng không đăng ký Hợp đồng cung ứng lao động hoặc đã đăng ký Hợp đồng cung ứng lao động nhưng chưa được chấp thuận;\ne) Sửa chữa, làm sai lệch văn bản, tài liệu trong hồ sơ đề nghị cấp hoặc cấp lại Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự;\ng) Sửa chữa, làm sai lệch nội dung Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng đã được cấp nhưng chưa đến mức truy cứu trách nhiệm hình sự;\nh) Giả mạo văn bản, tài liệu trong hồ sơ đề nghị cấp hoặc cấp lại Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự;\ni) Đưa người lao động Việt Nam đi làm việc tại Đài Loan (Trung Quốc) hoặc Nhật Bản khi không được Bộ Lao động - Thương binh và Xã hội giới thiệu hoặc chấp thuận;\nk) Đưa người lao động đi làm giúp việc gia đình ở nước ngoài khi chưa có văn bản chấp thuận của Bộ Lao động - Thương binh và Xã hội để doanh nghiệp tham gia hoạt động dịch vụ đưa người lao động Việt Nam đi làm giúp việc gia đình tại nước ngoài.\n10. Phạt tiền từ 180.000.000 đồng đến 200.000.000 đồng khi có một trong các hành vi sau đây:\na) Sử dụng Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp khác để tổ chức đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nb) Cho tổ chức, cá nhân khác sử dụng Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp mình để đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nc) Giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng cho chi nhánh của doanh nghiệp không đúng quy định;\nd) Thực hiện hoạt động chuẩn bị nguồn lao động trong thời gian bị đình chỉ hoạt động chuẩn bị nguồn lao động; thực hiện hợp đồng cung ứng lao động trong thời gian bị đình chỉ thực hiện hợp đồng cung ứng lao động; thực hiện một trong các hoạt động quy định tại khoản 1, 2, 3, 4 Điều 9 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trong thời gian bị đình chỉ.\n11. Phạt tiền khi có hành vi đưa người lao động Việt Nam không có tên trong danh sách do Bộ Lao động - Thương binh và Xã hội xác nhận để đi làm việc tại Đài Loan (Trung Quốc) hoặc Nhật Bản theo một trong các mức sau đây:\na) Từ 20.000.000 đồng đến 40.000.000 đồng khi vi phạm từ 01 người đến 10 người lao động;\nb) Từ 60.000.000 đồng đến 100.000.000 đồng khi vi phạm từ 11 người đến 50 người lao động;\nc) Từ 150.000.000 đồng đến 180.000.000 đồng khi vi phạm trên 50 người lao động.\n12. Phạt tiền khi có hành vi đưa người lao động Việt Nam không có tên trong danh sách do Bộ Lao động - Thương binh và Xã hội xác nhận để đi làm giúp việc gia đình ở nước ngoài theo một trong các mức sau đây:\na) Từ 20.000.000 đồng đến 40.000.000 đồng khi vi phạm từ 01 người đến 10 người lao động;\nb) Từ 60.000.000 đồng đến 100.000.000 đồng khi vi phạm từ 11 người đến 50 người lao động;\nc) Từ 150.000.000 đồng đến 180.000.000 đồng khi vi phạm trên 50 người lao động.\n13. Hình thức xử phạt bổ sung\na) Đình chỉ việc thực hiện hợp đồng cung ứng lao động từ 01 tháng đến 03 tháng đối với hành vi vi phạm quy định tại điểm e khoản 2 Điều này;\nb) Đình chỉ các hoạt động quy định tại khoản 1, 2, 3, 4 Điều 9 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng từ 06 tháng đến 12 tháng khi có hành vi vi phạm quy định tại điểm a khoản 5, điểm đ khoản 8 Điều này;\nc) Đình chỉ hoạt động đưa người lao động Việt Nam đi làm giúp việc gia đình ở nước ngoài từ 06 tháng đến 12 tháng đối với hành vi vi phạm quy định tại điểm b khoản 5 Điều này;\nd) Đình chỉ hoạt động chuẩn bị nguồn lao động từ 12 tháng đến 24 tháng đối với hành vi vi phạm quy định tại điểm e khoản 5 Điều này;\nđ) Đình chỉ hoạt động chuẩn bị nguồn lao động từ 06 tháng đến 12 tháng đối với hành vi lợi dụng hoạt động chuẩn bị nguồn lao động để thu tiền của người lao động trái pháp luật quy định tại khoản 6 Điều này;\ne) Đình chỉ hoạt động tuyển chọn người lao động từ 06 tháng đến 12 tháng đối với hành vi lợi dụng hoạt động tuyển chọn người lao động để thu tiền của người lao động trái pháp luật quy định tại khoản 6 Điều này.\n14. Biện pháp khắc phục hậu quả\na) Buộc doanh nghiệp dịch vụ cập nhật thông tin về người lao động do doanh nghiệp đưa đi trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm g khoản 1 Điều này;\nb) Buộc doanh nghiệp dịch vụ đóng đủ số tiền phải đóng và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt vào Quỹ hỗ trợ việc làm ngoài nước khi có hành vi vi phạm quy định tại khoản 3 Điều này;\nc) Buộc doanh nghiệp dịch vụ đóng đủ số tiền người lao động đóng vào Quỹ hỗ trợ việc làm ngoài nước thông qua doanh nghiệp dịch vụ và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt vào Quỹ hỗ trợ việc làm ngoài nước khi có hành vi vi phạm quy định tại khoản 4 Điều này;\nd) Buộc doanh nghiệp dịch vụ bồi thường cho người lao động về những thiệt hại do doanh nghiệp, chi nhánh doanh nghiệp gây ra theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm d khoản 5 Điều này;\nđ) Buộc doanh nghiệp dịch vụ trả lại cho người lao động khoản tiền đã thu trái pháp luật của người lao động và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt khi có hành vi vi phạm quy định tại khoản 6, điểm a khoản 8 Điều này;\ne) Buộc doanh nghiệp dịch vụ hoàn trả đầy đủ cho người lao động phần tiền dịch vụ và tiền lãi theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm b khoản 8 Điều này;\ng) Buộc nộp lại giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng cho cơ quan có thẩm quyền đã cấp giấy phép đó khi có hành vi vi phạm quy định tại điểm g khoản 9 Điều này.",
+    "embedding_text_hash": "c8e96d9b3b3023b656a85ab392b9de19e17beaa344ee7b2701818462d82916ba",
+    "char_count": 16578,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": true,
+    "body_text": "Điều 42. Vi phạm của doanh nghiệp hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng (sau đây viết tắt là doanh nghiệp dịch vụ)\n1. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng khi có một trong các hành vi sau đây:\na) Không niêm yết công khai bản sao Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp dịch vụ tại trụ sở chính hoặc không đăng tải trên trang thông tin điện tử của doanh nghiệp trong thời hạn 30 ngày kể từ ngày Giấy phép được cấp, cấp lại hoặc điều chỉnh thông tin;\nb) Chi nhánh của doanh nghiệp dịch vụ được giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng không niêm yết công khai quyết định của doanh nghiệp dịch vụ giao nhiệm vụ cho chi nhánh hoặc bản sao Giấy phép của doanh nghiệp dịch vụ tại trụ sở của chi nhánh;\nc) Không thông báo bằng văn bản cho Bộ Lao động - Thương binh và Xã hội hoặc không cập nhật thông tin về chi nhánh được giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định;\nd) Không đăng tải hoặc không cập nhật khi có sự thay đổi trên trang thông tin điện tử của doanh nghiệp dịch vụ theo quy định của pháp luật thông tin về: người đại diện theo pháp luật; danh sách nhân viên nghiệp vụ; địa chỉ trụ sở chính, địa điểm kinh doanh; cơ sở vật chất phục vụ hoạt động giáo dục định hướng cho người lao động trước khi đi làm việc ở nước ngoài; quyết định giao nhiệm vụ cho chi nhánh;\nđ) Không đăng tải trên trang thông tin điện tử của doanh nghiệp dịch vụ thông tin về: văn bản của Bộ Lao động - Thương binh và Xã hội chấp thuận về việc chuẩn bị nguồn lao động; thông tin đầy đủ, chính xác về số lượng hoặc tiêu chuẩn tuyển chọn hoặc điều kiện làm việc hoặc quyền lợi, nghĩa vụ của người lao động theo nội dung hợp đồng cung ứng lao động;\ne) Không báo cáo hoặc báo cáo không đầy đủ, không chính xác hoặc báo cáo không đúng thời hạn về tình hình hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật;\ng) Không cập nhật thông tin về người lao động do doanh nghiệp đưa đi trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng kể từ ngày người lao động xuất cảnh cho đến khi thanh lý hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài theo quy định của pháp luật;\nh) Không báo cáo hoặc báo cáo không trung thực với Bộ Lao động - Thương binh và Xã hội về tình hình của người lao động do doanh nghiệp đưa đi làm việc ở nước ngoài và phương án thực hiện các nghĩa vụ của doanh nghiệp trong hợp đồng cung ứng lao động, hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài còn hiệu lực và văn bản thỏa thuận với doanh nghiệp dịch vụ tiếp nhận quyền, nghĩa vụ trong trường hợp quy định tại điểm b khoản 1 Điều 28 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định;\ni) Không hướng dẫn người lao động tham gia bảo hiểm xã hội theo quy định của pháp luật về bảo hiểm xã hội;\nk) Đóng không đúng thời hạn vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật.\n2. Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng khi vi phạm với mỗi người lao động nhưng không quá 200.000.000 đồng khi có một trong các hành vi sau đây:\na) Không tổ chức giáo dục định hướng hoặc không cấp Giấy chứng nhận hoàn thành khóa học giáo dục định hướng cho người lao động trước khi đi làm việc ở nước ngoài theo quy định của pháp luật;\nb) Thỏa thuận mức tiền ký quỹ với người lao động cao hơn quy định của pháp luật;\nc) Không ký hoặc ký không đúng mẫu hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng với người lao động;\nd) Không ghi rõ thỏa thuận về tiền dịch vụ và chi phí khác của người lao động trong hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài ký với người lao động;\nđ) Không thanh lý hoặc thanh lý hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài với người lao động không theo quy định của pháp luật;\ne) Nội dung hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài không phù hợp với hợp đồng cung ứng lao động đã đăng ký.\n3. Phạt tiền từ 20% đến 30% tổng số tiền phải đóng vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật tại thời điểm lập biên bản vi phạm hành chính nhưng không quá 200.000.000 đồng khi có hành vi không đóng hoặc đóng không đầy đủ vào Quỹ hỗ trợ việc làm ngoài nước theo quy định của pháp luật.\n4. Phạt tiền từ 40% đến 50% tổng số tiền người lao động đóng vào Quỹ hỗ trợ việc làm ngoài nước thông qua doanh nghiệp dịch vụ mà doanh nghiệp dịch vụ không đóng hoặc đóng không đầy đủ vào Quỹ hỗ trợ việc làm ngoài nước tại thời điểm lập biên bản vi phạm hành chính nhưng không quá 200.000.000 đồng.\n5. Phạt tiền từ 50.000.000 đồng đến 70.000.000 đồng khi có một trong các hành vi sau đây:\na) Không duy trì một trong các điều kiện quy định tại Điều 10 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật trong suốt quá trình hoạt động;\nb) Không duy trì điều kiện quy định tại điểm b khoản 2 Điều 20 của Nghị định số 112/2021/NĐ-CP ngày 10 tháng 12 năm 2021 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trong suốt thời gian hoạt động dịch vụ đưa người lao động Việt Nam đi làm giúp việc gia đình ở nước ngoài và trong thời gian người lao động Việt Nam do doanh nghiệp đưa đi đang làm giúp việc gia đình ở nước ngoài;\nc) Thực hiện không đúng các nội dung hợp đồng cung ứng lao động đã đăng ký và được chấp thuận;\nd) Không bồi thường cho người lao động về những thiệt hại do doanh nghiệp hoặc chi nhánh của doanh nghiệp gây ra theo quy định của pháp luật;\nđ) Không tư vấn, hỗ trợ cho người lao động các thủ tục liên quan đến chấm dứt hợp đồng lao động, quyền lợi, chế độ và thủ tục về nước;\ne) Chuẩn bị nguồn lao động khi chưa có văn bản chấp thuận của Bộ Lao động - Thương binh và Xã hội;\ng) Không cam kết bằng văn bản việc ưu tiên tuyển chọn người lao động đã tham gia hoạt động chuẩn bị nguồn của doanh nghiệp;\nh) Quảng cáo, tư vấn, thông báo tuyển chọn hoặc cung cấp thông tin không chính xác với người lao động hoặc với chính quyền địa phương tại nơi tuyển chọn về một trong các nội dung: số lượng; tiêu chuẩn tuyển chọn; điều kiện làm việc; quyền lợi, nghĩa vụ của người lao động theo hợp đồng cung ứng lao động;\ni) Không cam kết bằng văn bản về thời gian chờ xuất cảnh sau khi người lao động trúng tuyển đi làm việc ở nước ngoài với thời hạn không quá 180 ngày kể từ ngày người lao động trúng tuyển hoặc không thực hiện đúng cam kết về thời gian chờ xuất cảnh.\n6. Phạt tiền từ 50.000.000 đồng đến 70.000.000 đồng khi vi phạm đối với mỗi người lao động nhưng không quá 200.000.000 đồng đối với hành vi lợi dụng hoạt động chuẩn bị nguồn lao động hoặc tuyển chọn người lao động Việt Nam đi làm việc ở nước ngoài hoặc hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài để thu tiền của người lao động trái pháp luật.\n7. Phạt tiền khi có hành vi đưa người lao động Việt Nam đi làm việc ở nước ngoài vượt quá số lượng người đã đăng ký theo Hợp đồng cung ứng lao động theo một trong các mức sau đây:\na) Từ 40.000.000 đồng đến 80.000.000 đồng khi vượt quá số lượng đăng ký từ 01 người đến 10 người;\nb) Từ 80.000.000 đồng đến 120.000.000 đồng khi vượt quá số lượng đăng ký từ 11 người đến 50 người;\nc) Từ 120.000.000 đồng đến 180.000.000 đồng khi vượt quá số lượng đăng ký trên 50 người.\n8. Phạt tiền từ 80.000.000 đồng đến 100.000.000 đồng khi có một trong các hành vi sau đây:\na) Thu tiền dịch vụ của người lao động không đúng quy định của pháp luật;\nb) Không hoàn trả hoặc hoàn trả không đầy đủ cho người lao động phần tiền dịch vụ và khoản tiền lãi theo tỷ lệ tương ứng với thời gian còn lại của Hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài trong trường hợp người lao động đã nộp tiền dịch vụ cho toàn bộ thời gian làm việc theo Hợp đồng đưa người lao động Việt Nam đi làm việc ở nước ngoài mà phải về nước trước thời hạn và không do lỗi của người lao động;\nc) Không tổ chức quản lý, bảo vệ quyền và lợi ích hợp pháp của người lao động do doanh nghiệp đưa đi làm việc ở nước ngoài theo quy định của pháp luật;\nd) Không cung cấp trợ giúp pháp lý trong trường hợp người lao động cần đến hỗ trợ pháp lý khi bị lạm dụng, bạo lực hoặc phân biệt đối xử trong thời gian làm việc ở nước ngoài;\nđ) Không thực hiện yêu cầu của cơ quan có thẩm quyền hoặc không phối hợp với cơ quan, tổ chức có liên quan của nước tiếp nhận lao động để giải quyết tranh chấp liên quan đến người lao động;\ne) Không giải quyết vấn đề phát sinh đối với người lao động theo một trong các trường hợp sau: chết; tai nạn lao động; bệnh nghề nghiệp; bị xâm phạm tính mạng; bị xâm phạm sức khỏe; bị xâm phạm danh dự, nhân phẩm; bị xâm phạm tài sản; thiên tai; dịch bệnh; chiến tranh; bất ổn chính trị; tình trạng khẩn cấp.\n9. Phạt tiền từ 150.000.000 đồng đến 180.000.000 đồng khi có một trong các hành vi sau đây:\na) Lợi dụng hoạt động đưa người lao động Việt Nam đi làm việc ở nước ngoài để tổ chức xuất cảnh trái phép, bóc lột hoặc cưỡng bức lao động nhưng chưa đến mức truy cứu trách nhiệm hình sự;\nb) Đưa người lao động Việt Nam đi làm việc ở nước ngoài theo một trong các trường hợp sau: ở khu vực bị cấm; công việc bị cấm; vi phạm đạo đức xã hội; vi phạm sức khỏe của người lao động hoặc cộng đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự; không được nước tiếp nhận lao động cho phép;\nc) Cưỡng ép, lôi kéo, dụ dỗ hoặc lừa gạt người lao động Việt Nam ở lại nước ngoài trái phép mà chưa đến mức truy cứu trách nhiệm hình sự;\nd) Phân biệt đối xử đối với người lao động hoặc xúc phạm danh dự, nhân phẩm của người lao động trong hoạt động đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nđ) Đưa người lao động Việt Nam đi làm việc ở nước ngoài nhưng không đăng ký Hợp đồng cung ứng lao động hoặc đã đăng ký Hợp đồng cung ứng lao động nhưng chưa được chấp thuận;\ne) Sửa chữa, làm sai lệch văn bản, tài liệu trong hồ sơ đề nghị cấp hoặc cấp lại Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự;\ng) Sửa chữa, làm sai lệch nội dung Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng đã được cấp nhưng chưa đến mức truy cứu trách nhiệm hình sự;\nh) Giả mạo văn bản, tài liệu trong hồ sơ đề nghị cấp hoặc cấp lại Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng nhưng chưa đến mức truy cứu trách nhiệm hình sự;\ni) Đưa người lao động Việt Nam đi làm việc tại Đài Loan (Trung Quốc) hoặc Nhật Bản khi không được Bộ Lao động - Thương binh và Xã hội giới thiệu hoặc chấp thuận;\nk) Đưa người lao động đi làm giúp việc gia đình ở nước ngoài khi chưa có văn bản chấp thuận của Bộ Lao động - Thương binh và Xã hội để doanh nghiệp tham gia hoạt động dịch vụ đưa người lao động Việt Nam đi làm giúp việc gia đình tại nước ngoài.\n10. Phạt tiền từ 180.000.000 đồng đến 200.000.000 đồng khi có một trong các hành vi sau đây:\na) Sử dụng Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp khác để tổ chức đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nb) Cho tổ chức, cá nhân khác sử dụng Giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng của doanh nghiệp mình để đưa người lao động Việt Nam đi làm việc ở nước ngoài;\nc) Giao nhiệm vụ hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng cho chi nhánh của doanh nghiệp không đúng quy định;\nd) Thực hiện hoạt động chuẩn bị nguồn lao động trong thời gian bị đình chỉ hoạt động chuẩn bị nguồn lao động; thực hiện hợp đồng cung ứng lao động trong thời gian bị đình chỉ thực hiện hợp đồng cung ứng lao động; thực hiện một trong các hoạt động quy định tại khoản 1, 2, 3, 4 Điều 9 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng trong thời gian bị đình chỉ.\n11. Phạt tiền khi có hành vi đưa người lao động Việt Nam không có tên trong danh sách do Bộ Lao động - Thương binh và Xã hội xác nhận để đi làm việc tại Đài Loan (Trung Quốc) hoặc Nhật Bản theo một trong các mức sau đây:\na) Từ 20.000.000 đồng đến 40.000.000 đồng khi vi phạm từ 01 người đến 10 người lao động;\nb) Từ 60.000.000 đồng đến 100.000.000 đồng khi vi phạm từ 11 người đến 50 người lao động;\nc) Từ 150.000.000 đồng đến 180.000.000 đồng khi vi phạm trên 50 người lao động.\n12. Phạt tiền khi có hành vi đưa người lao động Việt Nam không có tên trong danh sách do Bộ Lao động - Thương binh và Xã hội xác nhận để đi làm giúp việc gia đình ở nước ngoài theo một trong các mức sau đây:\na) Từ 20.000.000 đồng đến 40.000.000 đồng khi vi phạm từ 01 người đến 10 người lao động;\nb) Từ 60.000.000 đồng đến 100.000.000 đồng khi vi phạm từ 11 người đến 50 người lao động;\nc) Từ 150.000.000 đồng đến 180.000.000 đồng khi vi phạm trên 50 người lao động.\n13. Hình thức xử phạt bổ sung\na) Đình chỉ việc thực hiện hợp đồng cung ứng lao động từ 01 tháng đến 03 tháng đối với hành vi vi phạm quy định tại điểm e khoản 2 Điều này;\nb) Đình chỉ các hoạt động quy định tại khoản 1, 2, 3, 4 Điều 9 của Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng từ 06 tháng đến 12 tháng khi có hành vi vi phạm quy định tại điểm a khoản 5, điểm đ khoản 8 Điều này;\nc) Đình chỉ hoạt động đưa người lao động Việt Nam đi làm giúp việc gia đình ở nước ngoài từ 06 tháng đến 12 tháng đối với hành vi vi phạm quy định tại điểm b khoản 5 Điều này;\nd) Đình chỉ hoạt động chuẩn bị nguồn lao động từ 12 tháng đến 24 tháng đối với hành vi vi phạm quy định tại điểm e khoản 5 Điều này;\nđ) Đình chỉ hoạt động chuẩn bị nguồn lao động từ 06 tháng đến 12 tháng đối với hành vi lợi dụng hoạt động chuẩn bị nguồn lao động để thu tiền của người lao động trái pháp luật quy định tại khoản 6 Điều này;\ne) Đình chỉ hoạt động tuyển chọn người lao động từ 06 tháng đến 12 tháng đối với hành vi lợi dụng hoạt động tuyển chọn người lao động để thu tiền của người lao động trái pháp luật quy định tại khoản 6 Điều này.\n14. Biện pháp khắc phục hậu quả\na) Buộc doanh nghiệp dịch vụ cập nhật thông tin về người lao động do doanh nghiệp đưa đi trên Hệ thống cơ sở dữ liệu về người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm g khoản 1 Điều này;\nb) Buộc doanh nghiệp dịch vụ đóng đủ số tiền phải đóng và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt vào Quỹ hỗ trợ việc làm ngoài nước khi có hành vi vi phạm quy định tại khoản 3 Điều này;\nc) Buộc doanh nghiệp dịch vụ đóng đủ số tiền người lao động đóng vào Quỹ hỗ trợ việc làm ngoài nước thông qua doanh nghiệp dịch vụ và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt vào Quỹ hỗ trợ việc làm ngoài nước khi có hành vi vi phạm quy định tại khoản 4 Điều này;\nd) Buộc doanh nghiệp dịch vụ bồi thường cho người lao động về những thiệt hại do doanh nghiệp, chi nhánh doanh nghiệp gây ra theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm d khoản 5 Điều này;\nđ) Buộc doanh nghiệp dịch vụ trả lại cho người lao động khoản tiền đã thu trái pháp luật của người lao động và khoản tiền lãi của số tiền này tính theo mức lãi suất tiền gửi không kỳ hạn cao nhất của các ngân hàng thương mại nhà nước công bố tại thời điểm xử phạt khi có hành vi vi phạm quy định tại khoản 6, điểm a khoản 8 Điều này;\ne) Buộc doanh nghiệp dịch vụ hoàn trả đầy đủ cho người lao động phần tiền dịch vụ và tiền lãi theo quy định của pháp luật khi có hành vi vi phạm quy định tại điểm b khoản 8 Điều này;\ng) Buộc nộp lại giấy phép hoạt động dịch vụ đưa người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng cho cơ quan có thẩm quyền đã cấp giấy phép đó khi có hành vi vi phạm quy định tại điểm g khoản 9 Điều này.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-08/chapter-IV",
+      "doc-08/chapter-IV/article-42"
+    ],
+    "source_chunk_ids": [
+      "00028f9911364c897a42",
+      "0136eb2b63d1f9398c7c",
+      "01747d9cf9af61ce4da8",
+      "0538edd7c7410b66acb6",
+      "09c2a4ff56e37082f6de",
+      "09f1a6065ed6f91c27b2",
+      "0ac2f5b77493d36ee5f3",
+      "0c0f60f9ae911224b50f",
+      "0c61a3c774522ce0d193",
+      "0f71d104b21e642e3ec0",
+      "0fb2024c9f578fd80bd0",
+      "243d65662d9cd8641550",
+      "2a853e0f92575a026213",
+      "2fbac302ffdf85c535fb",
+      "32b8e732ee4dc9706a83",
+      "383a96df11513f97cf87",
+      "3875fbe3a2e7eb709d35",
+      "457f059b5e69eba76780",
+      "4a4f08593eb17806164d",
+      "4aab820ee837c3bea4aa",
+      "4c48c816128898a6f2cf",
+      "509bd79e46671877d44a",
+      "58a0edddda1a72b4a82c",
+      "70505b5af35ef3f93c5d",
+      "72d5cb3bee6cfe877d36",
+      "75146149a69738c92d3e",
+      "7523302ed879590a4aba",
+      "78295cd29823393ce044",
+      "7d92ea091c246dab455a",
+      "8127bd11e24fcffbfeb8",
+      "857c15c039b4a70bc30a",
+      "8ef14bf4aaf2119fffbc",
+      "8f675eb19f6e4a36fa91",
+      "924a513a1ed8fa70c29c",
+      "9277cad541dc40b8e976",
+      "92c69b9e3a8b79ed2ea9",
+      "93815a6bf835b722e2fe",
+      "9efed9217e88a8b548ee",
+      "9f71f913434ece75471b",
+      "9f995ea5122aa50a4e4e",
+      "a208ee71e5603a53e913",
+      "ac66d0f560554f48eae1",
+      "afccf386722d26c237bb",
+      "b049ef001765b03f0153",
+      "b447b5b7bc1489cf6e9a",
+      "b4719525578475646763",
+      "b5c0d46380f03a186b7f",
+      "b80676923f6fb39dc47f",
+      "bc8239b4b72b80e4ad11",
+      "bd13bc13ec362eb28204",
+      "c655d4edf563c2f7dc0e",
+      "c98d600ed20d9a2c02de",
+      "ca6c59544c3bada75017",
+      "d3e0f9e3d1b31c365aab",
+      "d4e577fbb0198c1bb9a0",
+      "d7154c2ca38b4cdfe121",
+      "d75dbf17bad5e4a1523c",
+      "d77b166a420a8ce24117",
+      "dddbbf5d57681b09fb6e",
+      "e11c37d6236539091df7",
+      "e1f6ec249d7bb903abab",
+      "e2570a2c186e53d64f26",
+      "e3e9c34e8b61e99b5d07",
+      "e4be869ebeda503fd9dd",
+      "ef019c5cd85240128dcb",
+      "eff4fc62f70f968237c7",
+      "f295e04690e638e370cd",
+      "f74d3230a929aff58c8a",
+      "fb0bed7b7a0b614f7a4f",
+      "feacc62275e768d50b99"
+    ],
+    "source_spans": [
+      {
+        "block_number": 692,
+        "start": 0,
+        "end": 161
+      },
+      {
+        "block_number": 693,
+        "start": 0,
+        "end": 89
+      },
+      {
+        "block_number": 694,
+        "start": 0,
+        "end": 327
+      },
+      {
+        "block_number": 695,
+        "start": 0,
+        "end": 304
+      },
+      {
+        "block_number": 696,
+        "start": 0,
+        "end": 327
+      },
+      {
+        "block_number": 697,
+        "start": 0,
+        "end": 405
+      },
+      {
+        "block_number": 698,
+        "start": 0,
+        "end": 354
+      },
+      {
+        "block_number": 699,
+        "start": 0,
+        "end": 219
+      },
+      {
+        "block_number": 700,
+        "start": 0,
+        "end": 310
+      },
+      {
+        "block_number": 701,
+        "start": 0,
+        "end": 538
+      },
+      {
+        "block_number": 702,
+        "start": 0,
+        "end": 106
+      },
+      {
+        "block_number": 703,
+        "start": 0,
+        "end": 91
+      },
+      {
+        "block_number": 704,
+        "start": 0,
+        "end": 157
+      },
+      {
+        "block_number": 705,
+        "start": 0,
+        "end": 190
+      },
+      {
+        "block_number": 706,
+        "start": 0,
+        "end": 80
+      },
+      {
+        "block_number": 707,
+        "start": 0,
+        "end": 130
+      },
+      {
+        "block_number": 708,
+        "start": 0,
+        "end": 168
+      },
+      {
+        "block_number": 709,
+        "start": 0,
+        "end": 147
+      },
+      {
+        "block_number": 710,
+        "start": 0,
+        "end": 130
+      },
+      {
+        "block_number": 711,
+        "start": 0,
+        "end": 305
+      },
+      {
+        "block_number": 712,
+        "start": 0,
+        "end": 299
+      },
+      {
+        "block_number": 713,
+        "start": 0,
+        "end": 89
+      },
+      {
+        "block_number": 714,
+        "start": 0,
+        "end": 193
+      },
+      {
+        "block_number": 715,
+        "start": 0,
+        "end": 468
+      },
+      {
+        "block_number": 716,
+        "start": 0,
+        "end": 94
+      },
+      {
+        "block_number": 717,
+        "start": 0,
+        "end": 141
+      },
+      {
+        "block_number": 718,
+        "start": 0,
+        "end": 134
+      },
+      {
+        "block_number": 719,
+        "start": 0,
+        "end": 98
+      },
+      {
+        "block_number": 720,
+        "start": 0,
+        "end": 123
+      },
+      {
+        "block_number": 721,
+        "start": 0,
+        "end": 304
+      },
+      {
+        "block_number": 722,
+        "start": 0,
+        "end": 248
+      },
+      {
+        "block_number": 723,
+        "start": 0,
+        "end": 370
+      },
+      {
+        "block_number": 724,
+        "start": 0,
+        "end": 179
+      },
+      {
+        "block_number": 725,
+        "start": 0,
+        "end": 97
+      },
+      {
+        "block_number": 726,
+        "start": 0,
+        "end": 98
+      },
+      {
+        "block_number": 727,
+        "start": 0,
+        "end": 88
+      },
+      {
+        "block_number": 728,
+        "start": 0,
+        "end": 90
+      },
+      {
+        "block_number": 729,
+        "start": 0,
+        "end": 73
+      },
+      {
+        "block_number": 730,
+        "start": 0,
+        "end": 425
+      },
+      {
+        "block_number": 731,
+        "start": 0,
+        "end": 151
+      },
+      {
+        "block_number": 732,
+        "start": 0,
+        "end": 175
+      },
+      {
+        "block_number": 733,
+        "start": 0,
+        "end": 189
+      },
+      {
+        "block_number": 734,
+        "start": 0,
+        "end": 308
+      },
+      {
+        "block_number": 735,
+        "start": 0,
+        "end": 91
+      },
+      {
+        "block_number": 736,
+        "start": 0,
+        "end": 187
+      },
+      {
+        "block_number": 737,
+        "start": 0,
+        "end": 295
+      },
+      {
+        "block_number": 738,
+        "start": 0,
+        "end": 137
+      },
+      {
+        "block_number": 739,
+        "start": 0,
+        "end": 164
+      },
+      {
+        "block_number": 740,
+        "start": 0,
+        "end": 173
+      },
+      {
+        "block_number": 741,
+        "start": 0,
+        "end": 224
+      },
+      {
+        "block_number": 742,
+        "start": 0,
+        "end": 190
+      },
+      {
+        "block_number": 743,
+        "start": 0,
+        "end": 209
+      },
+      {
+        "block_number": 744,
+        "start": 0,
+        "end": 161
+      },
+      {
+        "block_number": 745,
+        "start": 0,
+        "end": 244
+      },
+      {
+        "block_number": 746,
+        "start": 0,
+        "end": 92
+      },
+      {
+        "block_number": 747,
+        "start": 0,
+        "end": 192
+      },
+      {
+        "block_number": 748,
+        "start": 0,
+        "end": 210
+      },
+      {
+        "block_number": 749,
+        "start": 0,
+        "end": 153
+      },
+      {
+        "block_number": 750,
+        "start": 0,
+        "end": 384
+      },
+      {
+        "block_number": 751,
+        "start": 0,
+        "end": 220
+      },
+      {
+        "block_number": 752,
+        "start": 0,
+        "end": 88
+      },
+      {
+        "block_number": 753,
+        "start": 0,
+        "end": 89
+      },
+      {
+        "block_number": 754,
+        "start": 0,
+        "end": 79
+      },
+      {
+        "block_number": 755,
+        "start": 0,
+        "end": 207
+      },
+      {
+        "block_number": 756,
+        "start": 0,
+        "end": 88
+      },
+      {
+        "block_number": 757,
+        "start": 0,
+        "end": 89
+      },
+      {
+        "block_number": 758,
+        "start": 0,
+        "end": 79
+      },
+      {
+        "block_number": 759,
+        "start": 0,
+        "end": 29
+      },
+      {
+        "block_number": 760,
+        "start": 0,
+        "end": 140
+      },
+      {
+        "block_number": 761,
+        "start": 0,
+        "end": 236
+      },
+      {
+        "block_number": 762,
+        "start": 0,
+        "end": 175
+      },
+      {
+        "block_number": 763,
+        "start": 0,
+        "end": 132
+      },
+      {
+        "block_number": 764,
+        "start": 0,
+        "end": 206
+      },
+      {
+        "block_number": 765,
+        "start": 0,
+        "end": 210
+      },
+      {
+        "block_number": 766,
+        "start": 0,
+        "end": 31
+      },
+      {
+        "block_number": 767,
+        "start": 0,
+        "end": 271
+      },
+      {
+        "block_number": 768,
+        "start": 0,
+        "end": 299
+      },
+      {
+        "block_number": 769,
+        "start": 0,
+        "end": 375
+      },
+      {
+        "block_number": 770,
+        "start": 0,
+        "end": 213
+      },
+      {
+        "block_number": 771,
+        "start": 0,
+        "end": 333
+      },
+      {
+        "block_number": 772,
+        "start": 0,
+        "end": 182
+      },
+      {
+        "block_number": 773,
+        "start": 0,
+        "end": 217
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-01/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-01",
+    "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Bộ luật Lao động 2019\nSố hiệu: 45/2019/QH14\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nBộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa vụ, trách nhiệm của người lao động, người sử dụng lao động, tổ chức đại diện người lao động tại cơ sở, tổ chức đại diện người sử dụng lao động trong quan hệ lao động và các quan hệ khác liên quan trực tiếp đến quan hệ lao động; quản lý nhà nước về lao động.",
+    "embedding_text_hash": "8e3dbce4e06359a297dc8ec7ffa9109f47b6aecea2d042600d370cd735ef3765",
+    "char_count": 476,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nBộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa vụ, trách nhiệm của người lao động, người sử dụng lao động, tổ chức đại diện người lao động tại cơ sở, tổ chức đại diện người sử dụng lao động trong quan hệ lao động và các quan hệ khác liên quan trực tiếp đến quan hệ lao động; quản lý nhà nước về lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-01/chapter-I",
+      "doc-01/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "31ac1be6ab490f3d37b5"
+    ],
+    "source_spans": [
+      {
+        "block_number": 7,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 8,
+        "start": 0,
+        "end": 317
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-02/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-02",
+    "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 145/2020/NĐ-CP\nSố hiệu: 145/2020/NĐ-CP\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết và hướng dẫn thi hành một số nội dung về điều kiện lao động và quan hệ lao động theo các điều, khoản sau đây của Bộ luật Lao động:\n1. Quản lý lao động theo khoản 3 Điều 12.\n2. Hợp đồng lao động theo khoản 4 Điều 21; điểm d khoản 1 Điều 35, điểm d khoản 2 Điều 36; khoản 4 Điều 46; khoản 4 Điều 47; khoản 3 Điều 51.\n3. Cho thuê lại lao động theo khoản 2 Điều 54.\n4. Tổ chức đối thoại và thực hiện quy chế dân chủ ở cơ sở tại nơi làm việc theo khoản 4 Điều 63.\n5. Tiền lương theo khoản 3 Điều 92; khoản 3 Điều 96; khoản 4 Điều 98.\n6. Thời giờ làm việc, thời giờ nghỉ ngơi theo khoản 5 Điều 107, khoản 7 Điều 113, Điều 116.\n7. Kỷ luật lao động, trách nhiệm vật chất theo khoản 5 Điều 118; khoản 6 Điều 122; khoản 2 Điều 130; Điều 131.\n8. Lao động nữ và bảo đảm bình đẳng giới theo khoản 6 Điều 135.\n9. Lao động là người giúp việc gia đình theo khoản 2 Điều 161.\n10. Giải quyết tranh chấp lao động theo khoản 2 Điều 184; khoản 6 Điều 185; khoản 2 Điều 209; khoản 2 Điều 210.",
+    "embedding_text_hash": "1613188d41c0558f2977c976c0068f10f87af281a2ec35aef95c544a6d570823",
+    "char_count": 1166,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết và hướng dẫn thi hành một số nội dung về điều kiện lao động và quan hệ lao động theo các điều, khoản sau đây của Bộ luật Lao động:\n1. Quản lý lao động theo khoản 3 Điều 12.\n2. Hợp đồng lao động theo khoản 4 Điều 21; điểm d khoản 1 Điều 35, điểm d khoản 2 Điều 36; khoản 4 Điều 46; khoản 4 Điều 47; khoản 3 Điều 51.\n3. Cho thuê lại lao động theo khoản 2 Điều 54.\n4. Tổ chức đối thoại và thực hiện quy chế dân chủ ở cơ sở tại nơi làm việc theo khoản 4 Điều 63.\n5. Tiền lương theo khoản 3 Điều 92; khoản 3 Điều 96; khoản 4 Điều 98.\n6. Thời giờ làm việc, thời giờ nghỉ ngơi theo khoản 5 Điều 107, khoản 7 Điều 113, Điều 116.\n7. Kỷ luật lao động, trách nhiệm vật chất theo khoản 5 Điều 118; khoản 6 Điều 122; khoản 2 Điều 130; Điều 131.\n8. Lao động nữ và bảo đảm bình đẳng giới theo khoản 6 Điều 135.\n9. Lao động là người giúp việc gia đình theo khoản 2 Điều 161.\n10. Giải quyết tranh chấp lao động theo khoản 2 Điều 184; khoản 6 Điều 185; khoản 2 Điều 209; khoản 2 Điều 210.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-02/chapter-I",
+      "doc-02/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "6871ff7fbf87698cec67",
+      "6a500847d6676481a128",
+      "6cd40e469244087e86a9",
+      "761a992ef57b2f0790b2",
+      "7a4cd56a99fd91268dbb",
+      "a8f1078a59b4390fbd01",
+      "b13e2b864349ffb239f0",
+      "b64815800c106fdf74ca",
+      "d40f280ec76a146fb10f",
+      "f054e30f2ba040524fa5"
+    ],
+    "source_spans": [
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 162
+      },
+      {
+        "block_number": 15,
+        "start": 0,
+        "end": 41
+      },
+      {
+        "block_number": 16,
+        "start": 0,
+        "end": 141
+      },
+      {
+        "block_number": 17,
+        "start": 0,
+        "end": 46
+      },
+      {
+        "block_number": 18,
+        "start": 0,
+        "end": 96
+      },
+      {
+        "block_number": 19,
+        "start": 0,
+        "end": 69
+      },
+      {
+        "block_number": 20,
+        "start": 0,
+        "end": 91
+      },
+      {
+        "block_number": 21,
+        "start": 0,
+        "end": 110
+      },
+      {
+        "block_number": 22,
+        "start": 0,
+        "end": 63
+      },
+      {
+        "block_number": 23,
+        "start": 0,
+        "end": 62
+      },
+      {
+        "block_number": 24,
+        "start": 0,
+        "end": 111
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-03/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-03",
+    "source_file": "data/03_TT10-2020_Noi_dung_Hop_dong_Lao_dong.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Thông tư 10/2020/TT-BLĐTBXH\nSố hiệu: 10/2020/TT-BLĐTBXH\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nThông tư này quy định chi tiết và hướng dẫn thi hành một số điều, khoản sau đây của Bộ luật Lao động:\n1. Nội dung của hợp đồng lao động theo khoản 1, 2 và 3 Điều 21.\n2. Chức năng, nhiệm vụ và hoạt động của Hội đồng thương lượng tập thể theo khoản 4 Điều 73.\n3. Danh mục nghề, công việc có ảnh hưởng xấu tới chức năng sinh sản và nuôi con theo khoản 1 Điều 142.",
+    "embedding_text_hash": "f2595e4f2f4dbe0668ff5e4c6c774b16d1e571ac13c48a8111185dc15cf1136c",
+    "char_count": 531,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nThông tư này quy định chi tiết và hướng dẫn thi hành một số điều, khoản sau đây của Bộ luật Lao động:\n1. Nội dung của hợp đồng lao động theo khoản 1, 2 và 3 Điều 21.\n2. Chức năng, nhiệm vụ và hoạt động của Hội đồng thương lượng tập thể theo khoản 4 Điều 73.\n3. Danh mục nghề, công việc có ảnh hưởng xấu tới chức năng sinh sản và nuôi con theo khoản 1 Điều 142.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-03/chapter-I",
+      "doc-03/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "6802ef7113d09c56906c",
+      "92f75727267beebc6483",
+      "f2c82bca58012f0cdaf4"
+    ],
+    "source_spans": [
+      {
+        "block_number": 10,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 101
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 63
+      },
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 91
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 102
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-04/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-04",
+    "source_file": "data/04_ND293-2025_Luong_toi_thieu_2026.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 293/2025/NĐ-CP\nSố hiệu: 293/2025/NĐ-CP\nĐịa chỉ: Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nNghị định này quy định mức lương tối thiểu tháng và mức lương tối thiểu giờ áp dụng đối với người lao động làm việc theo hợp đồng lao động.",
+    "embedding_text_hash": "4bf5caa8574d96818071933971a4d2ba730ed9dab387b871d7b55eb40a7bc40a",
+    "char_count": 270,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nNghị định này quy định mức lương tối thiểu tháng và mức lương tối thiểu giờ áp dụng đối với người lao động làm việc theo hợp đồng lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-04/article-1"
+    ],
+    "source_chunk_ids": [
+      "a30697b041eea2ab5374"
+    ],
+    "source_spans": [
+      {
+        "block_number": 9,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 10,
+        "start": 0,
+        "end": 139
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-05/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-05",
+    "source_file": "data/05_Luat_BHXH_2024_41-2024-QH15.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Luật Bảo hiểm xã hội 2024\nSố hiệu: 41/2024/QH15\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nLuật này quy định về quyền, trách nhiệm của cơ quan, tổ chức, cá nhân đối với bảo hiểm xã hội và tổ chức thực hiện bảo hiểm xã hội; trợ cấp hưu trí xã hội; đăng ký tham gia và quản lý thu, đóng bảo hiểm xã hội; các chế độ, chính sách bảo hiểm xã hội bắt buộc, bảo hiểm xã hội tự nguyện; quỹ bảo hiểm xã hội; bảo hiểm hưu trí bổ sung; khiếu nại, tố cáo và xử lý vi phạm về bảo hiểm xã hội; quản lý nhà nước về bảo hiểm xã hội.",
+    "embedding_text_hash": "4000ee5a32a1f3abe2ec8f4205d131f43e86036184fd666a88b05187033df56a",
+    "char_count": 588,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nLuật này quy định về quyền, trách nhiệm của cơ quan, tổ chức, cá nhân đối với bảo hiểm xã hội và tổ chức thực hiện bảo hiểm xã hội; trợ cấp hưu trí xã hội; đăng ký tham gia và quản lý thu, đóng bảo hiểm xã hội; các chế độ, chính sách bảo hiểm xã hội bắt buộc, bảo hiểm xã hội tự nguyện; quỹ bảo hiểm xã hội; bảo hiểm hưu trí bổ sung; khiếu nại, tố cáo và xử lý vi phạm về bảo hiểm xã hội; quản lý nhà nước về bảo hiểm xã hội.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-05/chapter-I",
+      "doc-05/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "48e5829e85f5ba57a7ef"
+    ],
+    "source_spans": [
+      {
+        "block_number": 9,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 10,
+        "start": 0,
+        "end": 425
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-06/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-06",
+    "source_file": "data/06_ND158-2025_BHXH_bat_buoc.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 158/2025/NĐ-CP\nSố hiệu: 158/2025/NĐ-CP\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm xã hội về bảo hiểm xã hội bắt buộc và chế độ đối với người lao động không đủ điều kiện hưởng lương hưu và chưa đủ tuổi hưởng trợ cấp hưu trí xã hội; điểm 13 của Nghị quyết số 142/2024/QH15 ngày 29 tháng 6 năm 2024 của Quốc hội về Nghị quyết kỳ họp thứ 7, Quốc hội Khóa XV.",
+    "embedding_text_hash": "d12d9767c7e71aa72b082a6b3be558d7265c5b89d7e636a6118698792ce435da",
+    "char_count": 520,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nNghị định này quy định chi tiết và hướng dẫn thi hành một số điều của Luật Bảo hiểm xã hội về bảo hiểm xã hội bắt buộc và chế độ đối với người lao động không đủ điều kiện hưởng lương hưu và chưa đủ tuổi hưởng trợ cấp hưu trí xã hội; điểm 13 của Nghị quyết số 142/2024/QH15 ngày 29 tháng 6 năm 2024 của Quốc hội về Nghị quyết kỳ họp thứ 7, Quốc hội Khóa XV.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-06/chapter-I",
+      "doc-06/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "c04e022242fda4deca70"
+    ],
+    "source_spans": [
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 356
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-08/chapter-I/article-1",
+    "label": "Article",
+    "number": "1",
+    "document_id": "doc-08",
+    "source_file": "data/08_ND12-2022_Xu_phat_Lao_dong_BHXH.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 12/2022/NĐ-CP\nSố hiệu: 12/2022/NĐ-CP\nĐịa chỉ: Chương I: QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh\nNội dung:\nĐiều 1. Phạm vi điều chỉnh\nNghị định này quy định về hành vi vi phạm, hình thức xử phạt, mức xử phạt, biện pháp khắc phục hậu quả, đối tượng xử phạt, thẩm quyền xử phạt, thẩm quyền lập biên bản, thủ tục xử phạt, việc thi hành các hình thức xử phạt, các biện pháp khắc phục hậu quả trong lĩnh vực lao động, bảo hiểm xã hội và người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng.",
+    "embedding_text_hash": "e9bcdc1a9c6068d6f17b8d57c57a8d3c936f56965a32ac985eb6036bdc8f748c",
+    "char_count": 517,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "Điều 1. Phạm vi điều chỉnh\nNghị định này quy định về hành vi vi phạm, hình thức xử phạt, mức xử phạt, biện pháp khắc phục hậu quả, đối tượng xử phạt, thẩm quyền xử phạt, thẩm quyền lập biên bản, thủ tục xử phạt, việc thi hành các hình thức xử phạt, các biện pháp khắc phục hậu quả trong lĩnh vực lao động, bảo hiểm xã hội và người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-08/chapter-I",
+      "doc-08/chapter-I/article-1"
+    ],
+    "source_chunk_ids": [
+      "a7eac12cc36f54f3aa70"
+    ],
+    "source_spans": [
+      {
+        "block_number": 17,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 18,
+        "start": 0,
+        "end": 361
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-01/chapter-I/article-2/clause-2",
+    "label": "Clause",
+    "number": "2",
+    "document_id": "doc-01",
+    "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Bộ luật Lao động 2019\nSố hiệu: 45/2019/QH14\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 2: Đối tượng áp dụng > Khoản 2\nNội dung:\n2. Người sử dụng lao động.",
+    "embedding_text_hash": "8c919a989aa4aba0ea66c2107a493ecfe97ecae79ad37a20bc5e660e7821d6fb",
+    "char_count": 167,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "2. Người sử dụng lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-01/chapter-I",
+      "doc-01/chapter-I/article-2",
+      "doc-01/chapter-I/article-2/clause-2"
+    ],
+    "source_chunk_ids": [
+      "a1fbd3f0e193fdf4de3d"
+    ],
+    "source_spans": [
+      {
+        "block_number": 9,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 26
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-02/chapter-III/section-2/article-8/clause-4",
+    "label": "Clause",
+    "number": "4",
+    "document_id": "doc-02",
+    "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 145/2020/NĐ-CP\nSố hiệu: 145/2020/NĐ-CP\nĐịa chỉ: Chương III: HỢP ĐỒNG LAO ĐỘNG > Mục 2: CHẤM DỨT HỢP ĐỒNG LAO ĐỘNG > Điều 8: Trợ cấp thôi việc, trợ cấp mất việc làm > Khoản 4\nNội dung:\n4. Xác định thời gian người lao động đã làm việc thực tế cho người sử dụng lao động quy định tại điểm a khoản 3 Điều này trong một số trường hợp đặc biệt:\na) Đối với doanh nghiệp 100% vốn nhà nước hoặc doanh nghiệp cổ phần hóa từ doanh nghiệp nhà nước, khi chấm dứt hợp đồng lao động với người lao động mà người lao động có thời gian làm việc ở các cơ quan, tổ chức, đơn vị, doanh nghiệp thuộc khu vực nhà nước và chuyển đến làm việc tại doanh nghiệp đó trước ngày 01 tháng 01 năm 1995 nhưng chưa nhận trợ cấp thôi việc hoặc trợ cấp mất việc làm hoặc trợ cấp một lần khi phục viên hoặc trợ cấp xuất ngũ, chuyển ngành thì người sử dụng lao động có trách nhiệm tính cả thời gian người lao động đã làm việc thực tế cho mình và thời gian người lao động đã làm việc thực tế ở khu vực nhà nước trước đó.\nThời gian làm việc thực tế ở các cơ quan, tổ chức, đơn vị, doanh nghiệp thuộc khu vực nhà nước trước ngày 01 tháng 01 năm 1995 gồm: thời gian làm việc thực tế ở cơ quan nhà nước; đơn vị sự nghiệp công lập; tổ chức chính trị; tổ chức chính trị - xã hội; đơn vị thuộc lực lượng vũ trang hưởng lương từ ngân sách nhà nước; thời gian làm việc ở doanh nghiệp nhà nước.\nb) Trường hợp người lao động làm việc cho người sử dụng lao động theo nhiều hợp đồng lao động kế tiếp nhau theo quy định tại khoản 2 Điều 20 của Bộ luật Lao động mà khi chấm dứt từng hợp đồng lao động chưa được chi trả trợ cấp thôi việc, trợ cấp mất việc làm thì thời gian thực tế làm việc cho người sử dụng lao động là tổng thời gian làm việc theo các hợp đồng lao động trừ thời gian làm việc thực tế theo hợp đồng lao động bị tuyên bố vô hiệu toàn bộ do toàn bộ nội dung của hợp đồng lao động vi phạm pháp luật hoặc công việc đã giao kết trong hợp đồng lao động là công việc mà pháp luật cấm, hợp đồng lao động mà người lao động bị xử lý kỷ luật lao động sa thải, hợp đồng lao động mà người lao động đơn phương chấm dứt trái pháp luật (nếu có).\nc) Trường hợp người lao động tiếp tục làm việc tại doanh nghiệp, hợp tác xã theo phương án sử dụng lao động quy định tại khoản 1 Điều 44 của Bộ luật Lao động sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản thì người sử dụng lao động có trách nhiệm xác định thời gian người lao động đã làm việc thực tế cho người sử dụng lao động để tính trả trợ cấp thôi việc, trợ cấp mất việc làm như sau:\nc1) Trường hợp hợp đồng lao động chấm dứt theo quy định tại các khoản 1, 2, 3, 4, 6, 7, 9 và 10 Điều 34 của Bộ luật Lao động thì thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp thôi việc là tổng thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động trước và sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản.\nc2) Trường hợp hợp đồng lao động chấm dứt theo quy định tại khoản 11 Điều 34 của Bộ luật Lao động thì thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp mất việc làm là tổng thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản. Thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp thôi việc là thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động trước khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản.\nc3) Người sử dụng lao động có trách nhiệm chi trả trợ cấp thôi việc đối với cả thời gian người lao động làm việc tại khu vực nhà nước mà được tuyển dụng lần cuối trước ngày 01 tháng 01 năm 1995 vào doanh nghiệp trước khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản theo quy định tại điểm a khoản này.",
+    "embedding_text_hash": "45c3dbc387adcfa34e82ae33f1a49c4c00b300d9b8475045b4502818da5d40ff",
+    "char_count": 4224,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "4. Xác định thời gian người lao động đã làm việc thực tế cho người sử dụng lao động quy định tại điểm a khoản 3 Điều này trong một số trường hợp đặc biệt:\na) Đối với doanh nghiệp 100% vốn nhà nước hoặc doanh nghiệp cổ phần hóa từ doanh nghiệp nhà nước, khi chấm dứt hợp đồng lao động với người lao động mà người lao động có thời gian làm việc ở các cơ quan, tổ chức, đơn vị, doanh nghiệp thuộc khu vực nhà nước và chuyển đến làm việc tại doanh nghiệp đó trước ngày 01 tháng 01 năm 1995 nhưng chưa nhận trợ cấp thôi việc hoặc trợ cấp mất việc làm hoặc trợ cấp một lần khi phục viên hoặc trợ cấp xuất ngũ, chuyển ngành thì người sử dụng lao động có trách nhiệm tính cả thời gian người lao động đã làm việc thực tế cho mình và thời gian người lao động đã làm việc thực tế ở khu vực nhà nước trước đó.\nThời gian làm việc thực tế ở các cơ quan, tổ chức, đơn vị, doanh nghiệp thuộc khu vực nhà nước trước ngày 01 tháng 01 năm 1995 gồm: thời gian làm việc thực tế ở cơ quan nhà nước; đơn vị sự nghiệp công lập; tổ chức chính trị; tổ chức chính trị - xã hội; đơn vị thuộc lực lượng vũ trang hưởng lương từ ngân sách nhà nước; thời gian làm việc ở doanh nghiệp nhà nước.\nb) Trường hợp người lao động làm việc cho người sử dụng lao động theo nhiều hợp đồng lao động kế tiếp nhau theo quy định tại khoản 2 Điều 20 của Bộ luật Lao động mà khi chấm dứt từng hợp đồng lao động chưa được chi trả trợ cấp thôi việc, trợ cấp mất việc làm thì thời gian thực tế làm việc cho người sử dụng lao động là tổng thời gian làm việc theo các hợp đồng lao động trừ thời gian làm việc thực tế theo hợp đồng lao động bị tuyên bố vô hiệu toàn bộ do toàn bộ nội dung của hợp đồng lao động vi phạm pháp luật hoặc công việc đã giao kết trong hợp đồng lao động là công việc mà pháp luật cấm, hợp đồng lao động mà người lao động bị xử lý kỷ luật lao động sa thải, hợp đồng lao động mà người lao động đơn phương chấm dứt trái pháp luật (nếu có).\nc) Trường hợp người lao động tiếp tục làm việc tại doanh nghiệp, hợp tác xã theo phương án sử dụng lao động quy định tại khoản 1 Điều 44 của Bộ luật Lao động sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản thì người sử dụng lao động có trách nhiệm xác định thời gian người lao động đã làm việc thực tế cho người sử dụng lao động để tính trả trợ cấp thôi việc, trợ cấp mất việc làm như sau:\nc1) Trường hợp hợp đồng lao động chấm dứt theo quy định tại các khoản 1, 2, 3, 4, 6, 7, 9 và 10 Điều 34 của Bộ luật Lao động thì thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp thôi việc là tổng thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động trước và sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản.\nc2) Trường hợp hợp đồng lao động chấm dứt theo quy định tại khoản 11 Điều 34 của Bộ luật Lao động thì thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp mất việc làm là tổng thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động sau khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản. Thời gian người lao động đã làm việc thực tế cho người sử dụng lao động được tính trả trợ cấp thôi việc là thời gian làm việc thực tế theo các hợp đồng lao động cho người sử dụng lao động trước khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản.\nc3) Người sử dụng lao động có trách nhiệm chi trả trợ cấp thôi việc đối với cả thời gian người lao động làm việc tại khu vực nhà nước mà được tuyển dụng lần cuối trước ngày 01 tháng 01 năm 1995 vào doanh nghiệp trước khi chia, tách, hợp nhất, sáp nhập; bán, cho thuê, chuyển đổi loại hình doanh nghiệp; chuyển nhượng quyền sở hữu, quyền sử dụng tài sản theo quy định tại điểm a khoản này.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-02/chapter-III",
+      "doc-02/chapter-III/section-2",
+      "doc-02/chapter-III/section-2/article-8",
+      "doc-02/chapter-III/section-2/article-8/clause-4"
+    ],
+    "source_chunk_ids": [
+      "434f52085560d3ea2500",
+      "581b6b5a62cb9f690c80",
+      "cf13636228723a962b36"
+    ],
+    "source_spans": [
+      {
+        "block_number": 86,
+        "start": 0,
+        "end": 47
+      },
+      {
+        "block_number": 96,
+        "start": 0,
+        "end": 154
+      },
+      {
+        "block_number": 97,
+        "start": 0,
+        "end": 642
+      },
+      {
+        "block_number": 98,
+        "start": 0,
+        "end": 363
+      },
+      {
+        "block_number": 99,
+        "start": 0,
+        "end": 746
+      },
+      {
+        "block_number": 100,
+        "start": 0,
+        "end": 481
+      },
+      {
+        "block_number": 101,
+        "start": 0,
+        "end": 471
+      },
+      {
+        "block_number": 102,
+        "start": 0,
+        "end": 769
+      },
+      {
+        "block_number": 103,
+        "start": 0,
+        "end": 388
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-01/chapter-I/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-01",
+    "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Bộ luật Lao động 2019\nSố hiệu: 45/2019/QH14\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 2: Đối tượng áp dụng > Khoản 1\nNội dung:\n1. Người lao động, người học nghề, người tập nghề và người làm việc không có quan hệ lao động.",
+    "embedding_text_hash": "a68e38792d4918d1971e078e9cb1816a6effed8f5b5175565a082b4e480bfee2",
+    "char_count": 235,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người lao động, người học nghề, người tập nghề và người làm việc không có quan hệ lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-01/chapter-I",
+      "doc-01/chapter-I/article-2",
+      "doc-01/chapter-I/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "862983834c95dec7149c"
+    ],
+    "source_spans": [
+      {
+        "block_number": 9,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 10,
+        "start": 0,
+        "end": 94
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-02/chapter-I/article-1/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-02",
+    "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 145/2020/NĐ-CP\nSố hiệu: 145/2020/NĐ-CP\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh > Khoản 1\nPhần dẫn: Nghị định này quy định chi tiết và hướng dẫn thi hành một số nội dung về điều kiện lao động và quan hệ lao động theo các điều, khoản sau đây của Bộ luật Lao động:\nNội dung:\n1. Quản lý lao động theo khoản 3 Điều 12.",
+    "embedding_text_hash": "cf7332ffc7d7c7bf498fd973f1398c03823b6534db6c7590b2129ee2c7882083",
+    "char_count": 361,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Quản lý lao động theo khoản 3 Điều 12.",
+    "context_text": "Nghị định này quy định chi tiết và hướng dẫn thi hành một số nội dung về điều kiện lao động và quan hệ lao động theo các điều, khoản sau đây của Bộ luật Lao động:",
+    "path_node_ids": [
+      "doc-02/chapter-I",
+      "doc-02/chapter-I/article-1",
+      "doc-02/chapter-I/article-1/clause-1"
+    ],
+    "source_chunk_ids": [
+      "6871ff7fbf87698cec67"
+    ],
+    "source_spans": [
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 162
+      },
+      {
+        "block_number": 15,
+        "start": 0,
+        "end": 41
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-03/chapter-I/article-1/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-03",
+    "source_file": "data/03_TT10-2020_Noi_dung_Hop_dong_Lao_dong.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Thông tư 10/2020/TT-BLĐTBXH\nSố hiệu: 10/2020/TT-BLĐTBXH\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 1: Phạm vi điều chỉnh > Khoản 1\nPhần dẫn: Thông tư này quy định chi tiết và hướng dẫn thi hành một số điều, khoản sau đây của Bộ luật Lao động:\nNội dung:\n1. Nội dung của hợp đồng lao động theo khoản 1, 2 và 3 Điều 21.",
+    "embedding_text_hash": "25efbaac4e6583478ac80652e5bcfc4cc12ad3e393243a9669c1058fdb24fa06",
+    "char_count": 329,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Nội dung của hợp đồng lao động theo khoản 1, 2 và 3 Điều 21.",
+    "context_text": "Thông tư này quy định chi tiết và hướng dẫn thi hành một số điều, khoản sau đây của Bộ luật Lao động:",
+    "path_node_ids": [
+      "doc-03/chapter-I",
+      "doc-03/chapter-I/article-1",
+      "doc-03/chapter-I/article-1/clause-1"
+    ],
+    "source_chunk_ids": [
+      "f2c82bca58012f0cdaf4"
+    ],
+    "source_spans": [
+      {
+        "block_number": 10,
+        "start": 0,
+        "end": 26
+      },
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 101
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 63
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-04/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-04",
+    "source_file": "data/04_ND293-2025_Luong_toi_thieu_2026.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 293/2025/NĐ-CP\nSố hiệu: 293/2025/NĐ-CP\nĐịa chỉ: Điều 2: Đối tượng áp dụng > Khoản 1\nNội dung:\n1. Người lao động làm việc theo hợp đồng lao động theo quy định của Bộ luật Lao động.",
+    "embedding_text_hash": "7722ef711032dad4d6858a44903ff015205dff7575e15c332f9f491664bdc121",
+    "char_count": 198,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người lao động làm việc theo hợp đồng lao động theo quy định của Bộ luật Lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-04/article-2",
+      "doc-04/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "aa65e91feef0b4753c67"
+    ],
+    "source_spans": [
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 85
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-05/chapter-I/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-05",
+    "source_file": "data/05_Luat_BHXH_2024_41-2024-QH15.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Luật Bảo hiểm xã hội 2024\nSố hiệu: 41/2024/QH15\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 2: Đối tượng tham gia bảo hiểm xã hội bắt buộc và bảo hiểm xã hội tự nguyện > Khoản 1\nNội dung:\n1. Người lao động là công dân Việt Nam thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc bao gồm:\na) Người làm việc theo hợp đồng lao động không xác định thời hạn, hợp đồng lao động xác định thời hạn có thời hạn từ đủ 01 tháng trở lên, kể cả trường hợp người lao động và người sử dụng lao động thỏa thuận bằng tên gọi khác nhưng có nội dung thể hiện về việc làm có trả công, tiền lương và sự quản lý, điều hành, giám sát của một bên;\nb) Cán bộ, công chức, viên chức;\nc) Công nhân và viên chức quốc phòng, công nhân công an, người làm công tác khác trong tổ chức cơ yếu;\nd) Sĩ quan, quân nhân chuyên nghiệp quân đội nhân dân; sĩ quan, hạ sĩ quan nghiệp vụ, sĩ quan, hạ sĩ quan chuyên môn kỹ thuật công an nhân dân; người làm công tác cơ yếu hưởng lương như đối với quân nhân;\nđ) Hạ sĩ quan, binh sĩ quân đội nhân dân; hạ sĩ quan, chiến sĩ nghĩa vụ công an nhân dân; học viên quân đội, công an, cơ yếu đang theo học được hưởng sinh hoạt phí;\ne) Dân quân thường trực;\ng) Người lao động đi làm việc ở nước ngoài theo hợp đồng quy định tại Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng, trừ trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác;\nh) Vợ hoặc chồng không hưởng lương từ ngân sách nhà nước được cử đi công tác nhiệm kỳ cùng thành viên cơ quan đại diện nước Cộng hòa xã hội chủ nghĩa Việt Nam ở nước ngoài được hưởng chế độ sinh hoạt phí;\ni) Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; thành viên Hội đồng quản trị, Tổng giám đốc, Giám đốc, thành viên Ban kiểm soát hoặc kiểm soát viên và các chức danh quản lý khác được bầu của hợp tác xã, liên hiệp hợp tác xã theo quy định của Luật Hợp tác xã có hưởng tiền lương;\nk) Người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố;\nl) Đối tượng quy định tại điểm a khoản này làm việc không trọn thời gian, có tiền lương trong tháng bằng hoặc cao hơn tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc thấp nhất;\nm) Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh tham gia theo quy định của Chính phủ;\nn) Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; thành viên Hội đồng quản trị, Tổng giám đốc, Giám đốc, thành viên Ban kiểm soát hoặc kiểm soát viên và các chức danh quản lý khác được bầu của hợp tác xã, liên hiệp hợp tác xã theo quy định của Luật Hợp tác xã không hưởng tiền lương.",
+    "embedding_text_hash": "e10477659186d08bb9eab54507d44d9001376eac84f8705af3e89b877e0d5377",
+    "char_count": 2730,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người lao động là công dân Việt Nam thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc bao gồm:\na) Người làm việc theo hợp đồng lao động không xác định thời hạn, hợp đồng lao động xác định thời hạn có thời hạn từ đủ 01 tháng trở lên, kể cả trường hợp người lao động và người sử dụng lao động thỏa thuận bằng tên gọi khác nhưng có nội dung thể hiện về việc làm có trả công, tiền lương và sự quản lý, điều hành, giám sát của một bên;\nb) Cán bộ, công chức, viên chức;\nc) Công nhân và viên chức quốc phòng, công nhân công an, người làm công tác khác trong tổ chức cơ yếu;\nd) Sĩ quan, quân nhân chuyên nghiệp quân đội nhân dân; sĩ quan, hạ sĩ quan nghiệp vụ, sĩ quan, hạ sĩ quan chuyên môn kỹ thuật công an nhân dân; người làm công tác cơ yếu hưởng lương như đối với quân nhân;\nđ) Hạ sĩ quan, binh sĩ quân đội nhân dân; hạ sĩ quan, chiến sĩ nghĩa vụ công an nhân dân; học viên quân đội, công an, cơ yếu đang theo học được hưởng sinh hoạt phí;\ne) Dân quân thường trực;\ng) Người lao động đi làm việc ở nước ngoài theo hợp đồng quy định tại Luật Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng, trừ trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác;\nh) Vợ hoặc chồng không hưởng lương từ ngân sách nhà nước được cử đi công tác nhiệm kỳ cùng thành viên cơ quan đại diện nước Cộng hòa xã hội chủ nghĩa Việt Nam ở nước ngoài được hưởng chế độ sinh hoạt phí;\ni) Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; thành viên Hội đồng quản trị, Tổng giám đốc, Giám đốc, thành viên Ban kiểm soát hoặc kiểm soát viên và các chức danh quản lý khác được bầu của hợp tác xã, liên hiệp hợp tác xã theo quy định của Luật Hợp tác xã có hưởng tiền lương;\nk) Người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố;\nl) Đối tượng quy định tại điểm a khoản này làm việc không trọn thời gian, có tiền lương trong tháng bằng hoặc cao hơn tiền lương làm căn cứ đóng bảo hiểm xã hội bắt buộc thấp nhất;\nm) Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh tham gia theo quy định của Chính phủ;\nn) Người quản lý doanh nghiệp, kiểm soát viên, người đại diện phần vốn nhà nước, người đại diện phần vốn của doanh nghiệp theo quy định của pháp luật; thành viên Hội đồng quản trị, Tổng giám đốc, Giám đốc, thành viên Ban kiểm soát hoặc kiểm soát viên và các chức danh quản lý khác được bầu của hợp tác xã, liên hiệp hợp tác xã theo quy định của Luật Hợp tác xã không hưởng tiền lương.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-05/chapter-I",
+      "doc-05/chapter-I/article-2",
+      "doc-05/chapter-I/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "014f35670d84a9cb0b70",
+      "1f0563bb3663914b8ea2",
+      "2b883a3c2d63e520ba23",
+      "3b73ebca5ee2a8b58bd0",
+      "74cd728d0ccc8b0e287b",
+      "875acba2e0dc1b122814",
+      "99ab3f2787ea492907df",
+      "9e05dca4fb8d5730dd8e",
+      "aff146c5ccd8844bd0ec",
+      "b985a19cf4d774c0faed",
+      "c33447edbd0fd171be89",
+      "d3389eaa9edcf8357286",
+      "ee707e01ef5fbb9512de"
+    ],
+    "source_spans": [
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 80
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 97
+      },
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 335
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 32
+      },
+      {
+        "block_number": 15,
+        "start": 0,
+        "end": 102
+      },
+      {
+        "block_number": 16,
+        "start": 0,
+        "end": 204
+      },
+      {
+        "block_number": 17,
+        "start": 0,
+        "end": 164
+      },
+      {
+        "block_number": 18,
+        "start": 0,
+        "end": 24
+      },
+      {
+        "block_number": 19,
+        "start": 0,
+        "end": 245
+      },
+      {
+        "block_number": 20,
+        "start": 0,
+        "end": 204
+      },
+      {
+        "block_number": 21,
+        "start": 0,
+        "end": 381
+      },
+      {
+        "block_number": 22,
+        "start": 0,
+        "end": 67
+      },
+      {
+        "block_number": 23,
+        "start": 0,
+        "end": 180
+      },
+      {
+        "block_number": 24,
+        "start": 0,
+        "end": 98
+      },
+      {
+        "block_number": 25,
+        "start": 0,
+        "end": 384
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-06/chapter-I/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-06",
+    "source_file": "data/06_ND158-2025_BHXH_bat_buoc.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 158/2025/NĐ-CP\nSố hiệu: 158/2025/NĐ-CP\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 2: Đối tượng áp dụng > Khoản 1\nNội dung:\n1. Người lao động quy định tại các điểm a, b, c, g, h, i, k, l, m và n khoản 1 và khoản 2 Điều 2 của Luật Bảo hiểm xã hội.",
+    "embedding_text_hash": "8c4c75becdb50df90c8303086ddb070a764eb048056fbbc1d2a8a77653d24754",
+    "char_count": 268,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người lao động quy định tại các điểm a, b, c, g, h, i, k, l, m và n khoản 1 và khoản 2 Điều 2 của Luật Bảo hiểm xã hội.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-06/chapter-I",
+      "doc-06/chapter-I/article-2",
+      "doc-06/chapter-I/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "43d5b835e9fb53d6b4e1"
+    ],
+    "source_spans": [
+      {
+        "block_number": 15,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 16,
+        "start": 0,
+        "end": 122
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-07/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-07",
+    "source_file": "data/07_ND135-2020_Tuoi_nghi_huu.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 135/2020/NĐ-CP\nSố hiệu: 135/2020/NĐ-CP\nĐịa chỉ: Điều 2: Đối tượng áp dụng > Khoản 1\nNội dung:\n1. Người lao động và người sử dụng lao động quy định tại các khoản 1, 2 và 3 Điều 2 của Bộ luật Lao động.",
+    "embedding_text_hash": "c36b1666cdb37b12b8214235e9112042bc230602bebd8387a5ee5cac60c90982",
+    "char_count": 218,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người lao động và người sử dụng lao động quy định tại các khoản 1, 2 và 3 Điều 2 của Bộ luật Lao động.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-07/article-2",
+      "doc-07/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "49b2c08e276189a9ca50"
+    ],
+    "source_spans": [
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 105
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-08/chapter-I/article-2/clause-1",
+    "label": "Clause",
+    "number": "1",
+    "document_id": "doc-08",
+    "source_file": "data/08_ND12-2022_Xu_phat_Lao_dong_BHXH.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 12/2022/NĐ-CP\nSố hiệu: 12/2022/NĐ-CP\nĐịa chỉ: Chương I: QUY ĐỊNH CHUNG > Điều 2: Đối tượng áp dụng > Khoản 1\nNội dung:\n1. Người sử dụng lao động, người lao động và các cá nhân, tổ chức khác có hành vi vi phạm hành chính trong lĩnh vực lao động, bảo hiểm xã hội, người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng được quy định tại Nghị định này.",
+    "embedding_text_hash": "cc2ecaec15fbccb4864c63756fc2fb904f386165d60c4ae0f7245f276cb53904",
+    "char_count": 376,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "1. Người sử dụng lao động, người lao động và các cá nhân, tổ chức khác có hành vi vi phạm hành chính trong lĩnh vực lao động, bảo hiểm xã hội, người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng được quy định tại Nghị định này.",
+    "context_text": "",
+    "path_node_ids": [
+      "doc-08/chapter-I",
+      "doc-08/chapter-I/article-2",
+      "doc-08/chapter-I/article-2/clause-1"
+    ],
+    "source_chunk_ids": [
+      "55a9ace26ed5deb89952"
+    ],
+    "source_spans": [
+      {
+        "block_number": 19,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 20,
+        "start": 0,
+        "end": 238
+      }
+    ],
+    "warnings": [
+      "clause_title_excludes_table_rows_if_not_present_in_title"
+    ]
+  },
+  {
+    "node_id": "doc-01/chapter-I/article-5/clause-1/point-e",
+    "label": "Point",
+    "number": "e",
+    "document_id": "doc-01",
+    "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Bộ luật Lao động 2019\nSố hiệu: 45/2019/QH14\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 5: Quyền và nghĩa vụ của người lao động > Khoản 1 > Điểm e\nPhần dẫn: 1. Người lao động có các quyền sau đây:\nNội dung:\ne) Đình công;",
+    "embedding_text_hash": "9afb7c17078cc960e50d9998ed8027e696db98567b95e90c8061facf6f096513",
+    "char_count": 232,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "e) Đình công;",
+    "context_text": "1. Người lao động có các quyền sau đây:",
+    "path_node_ids": [
+      "doc-01/chapter-I",
+      "doc-01/chapter-I/article-5",
+      "doc-01/chapter-I/article-5/clause-1",
+      "doc-01/chapter-I/article-5/clause-1/point-e"
+    ],
+    "source_chunk_ids": [
+      "d410d951ff12530667d8"
+    ],
+    "source_spans": [
+      {
+        "block_number": 35,
+        "start": 0,
+        "end": 44
+      },
+      {
+        "block_number": 36,
+        "start": 0,
+        "end": 39
+      },
+      {
+        "block_number": 42,
+        "start": 0,
+        "end": 13
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-06/chapter-VI/article-34/clause-1/point-b",
+    "label": "Point",
+    "number": "b",
+    "document_id": "doc-06",
+    "source_file": "data/06_ND158-2025_BHXH_bat_buoc.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 158/2025/NĐ-CP\nSố hiệu: 158/2025/NĐ-CP\nĐịa chỉ: Chương VI: QUY ĐỊNH CHUYỂN TIẾP > Điều 34: Tính thời gian công tác trước ngày 01 tháng 01 năm 1995 để hưởng bảo hiểm xã hội > Khoản 1 > Điểm b\nPhần dẫn: 1. Người lao động có thời gian làm việc trong khu vực nhà nước trước ngày 01 tháng 01 năm 1995 mà được tính là thời gian công tác liên tục, thời gian công tác thực tế nhưng chưa được giải quyết trợ cấp thôi việc hoặc trợ cấp một lần, bảo hiểm xã hội một lần thì thời gian đó được tính là thời gian đã đóng bảo hiểm xã hội, cụ thể như sau:\nNội dung:\nb) Người lao động có thời gian công tác gián đoạn hoặc đã nghỉ việc trước ngày 01 tháng 01 năm 1995 thì việc xác định thời gian công tác liên tục, thời gian công tác thực tế để tính hưởng bảo hiểm xã hội được thực hiện theo các văn bản quy định trước đây về tính thời gian công tác trước ngày 01 tháng 01 năm 1995 để hưởng bảo hiểm xã hội, trừ quy định tại Điều 3 của Nghị định số 66/CP ngày 30 tháng 9 năm 1993 của Chính phủ quy định tạm thời chế độ bảo hiểm xã hội đối với lực lượng vũ trang; Điều 3 của Nghị định số 43/CP ngày 22 tháng 6 năm 1993 của Chính phủ quy định tạm thời chế độ bảo hiểm xã hội; Điều 54 của Điều lệ bảo hiểm xã hội ban hành kèm theo Nghị định số 12/CP ngày 26 tháng 01 năm 1995 của Chính phủ; Điều 49 Điều lệ Bảo hiểm xã hội đối với sỹ quan, quân nhân chuyên nghiệp, hạ sỹ quan, binh sỹ Quân đội nhân dân và Công an nhân dân ban hành kèm theo Nghị định số 45/CP ngày 15 tháng 7 năm 1995 của Chính phủ; khoản4Điều 139 của Luật Bảo hiểm xã hội năm 2006; khoản 6 Điều 123 của Luật Bảo hiểm xã hội năm 2014; Điều 23 của Nghị định số 115/2015/NĐ-CP ngày 11 tháng 11 năm 2015 của Chính phủ quy định chi tiết một số điều của Luật Bảo hiểm xã hội về bảo hiểm xã hội bắt buộc; các khoản 7, 8 và 9 Điều 38 của Nghị định số 33/2023/NĐ-CP ngày 10 tháng 6 năm 2023 của Chính phủ quy định về cán bộ, công chức cấp xã và người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố; khoản 2 và khoản 3 Điều 16 của Nghị định số 92/2009/NĐ-CP ngày 22 tháng 10 năm 2009 của Chính phủ về chức danh, số lượng, một số chế độ, chính sách đối với cán bộ, công chức ở xã, phường, thị trấn và những người hoạt động không chuyên trách ở cấp xã; khoản 2 Điều 1 của Nghị định số 29/2013/NĐ-CP ngày 08 tháng 4 năm 2013 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 92/2009/NĐ-CP ngày 22 tháng 10 năm 2009 của Chính phủ về chức danh, số lượng, một số chế độ, chính sách đối với cán bộ, công chức xã, phường, thị trấn và những người hoạt động không chuyên trách ở cấp xã; khoản 8 Điều 2 của Nghị định số 34/2019/NĐ-CP ngày 24 tháng 4 năm 2019 về việc sửa đổi, bổ sung một số quy định về cán bộ, công chức cấp xã và người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố;",
+    "embedding_text_hash": "01bb8d1224746c28159180eb61ec35f5d0436726e2add78e54624e15e2256fae",
+    "char_count": 2761,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "b) Người lao động có thời gian công tác gián đoạn hoặc đã nghỉ việc trước ngày 01 tháng 01 năm 1995 thì việc xác định thời gian công tác liên tục, thời gian công tác thực tế để tính hưởng bảo hiểm xã hội được thực hiện theo các văn bản quy định trước đây về tính thời gian công tác trước ngày 01 tháng 01 năm 1995 để hưởng bảo hiểm xã hội, trừ quy định tại Điều 3 của Nghị định số 66/CP ngày 30 tháng 9 năm 1993 của Chính phủ quy định tạm thời chế độ bảo hiểm xã hội đối với lực lượng vũ trang; Điều 3 của Nghị định số 43/CP ngày 22 tháng 6 năm 1993 của Chính phủ quy định tạm thời chế độ bảo hiểm xã hội; Điều 54 của Điều lệ bảo hiểm xã hội ban hành kèm theo Nghị định số 12/CP ngày 26 tháng 01 năm 1995 của Chính phủ; Điều 49 Điều lệ Bảo hiểm xã hội đối với sỹ quan, quân nhân chuyên nghiệp, hạ sỹ quan, binh sỹ Quân đội nhân dân và Công an nhân dân ban hành kèm theo Nghị định số 45/CP ngày 15 tháng 7 năm 1995 của Chính phủ; khoản4Điều 139 của Luật Bảo hiểm xã hội năm 2006; khoản 6 Điều 123 của Luật Bảo hiểm xã hội năm 2014; Điều 23 của Nghị định số 115/2015/NĐ-CP ngày 11 tháng 11 năm 2015 của Chính phủ quy định chi tiết một số điều của Luật Bảo hiểm xã hội về bảo hiểm xã hội bắt buộc; các khoản 7, 8 và 9 Điều 38 của Nghị định số 33/2023/NĐ-CP ngày 10 tháng 6 năm 2023 của Chính phủ quy định về cán bộ, công chức cấp xã và người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố; khoản 2 và khoản 3 Điều 16 của Nghị định số 92/2009/NĐ-CP ngày 22 tháng 10 năm 2009 của Chính phủ về chức danh, số lượng, một số chế độ, chính sách đối với cán bộ, công chức ở xã, phường, thị trấn và những người hoạt động không chuyên trách ở cấp xã; khoản 2 Điều 1 của Nghị định số 29/2013/NĐ-CP ngày 08 tháng 4 năm 2013 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 92/2009/NĐ-CP ngày 22 tháng 10 năm 2009 của Chính phủ về chức danh, số lượng, một số chế độ, chính sách đối với cán bộ, công chức xã, phường, thị trấn và những người hoạt động không chuyên trách ở cấp xã; khoản 8 Điều 2 của Nghị định số 34/2019/NĐ-CP ngày 24 tháng 4 năm 2019 về việc sửa đổi, bổ sung một số quy định về cán bộ, công chức cấp xã và người hoạt động không chuyên trách ở cấp xã, ở thôn, tổ dân phố;",
+    "context_text": "1. Người lao động có thời gian làm việc trong khu vực nhà nước trước ngày 01 tháng 01 năm 1995 mà được tính là thời gian công tác liên tục, thời gian công tác thực tế nhưng chưa được giải quyết trợ cấp thôi việc hoặc trợ cấp một lần, bảo hiểm xã hội một lần thì thời gian đó được tính là thời gian đã đóng bảo hiểm xã hội, cụ thể như sau:",
+    "path_node_ids": [
+      "doc-06/chapter-VI",
+      "doc-06/chapter-VI/article-34",
+      "doc-06/chapter-VI/article-34/clause-1",
+      "doc-06/chapter-VI/article-34/clause-1/point-b"
+    ],
+    "source_chunk_ids": [
+      "7d95ddb6909f4fa33bbb"
+    ],
+    "source_spans": [
+      {
+        "block_number": 344,
+        "start": 0,
+        "end": 89
+      },
+      {
+        "block_number": 345,
+        "start": 0,
+        "end": 338
+      },
+      {
+        "block_number": 347,
+        "start": 0,
+        "end": 2192
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-01/chapter-I/article-5/clause-1/point-%C4%91",
+    "label": "Point",
+    "number": "đ",
+    "document_id": "doc-01",
+    "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Bộ luật Lao động 2019\nSố hiệu: 45/2019/QH14\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 5: Quyền và nghĩa vụ của người lao động > Khoản 1 > Điểm đ\nPhần dẫn: 1. Người lao động có các quyền sau đây:\nNội dung:\nđ) Đơn phương chấm dứt hợp đồng lao động;",
+    "embedding_text_hash": "58adf5a6cb9caf8f997af9e14b9df02ba9a70e83d528091bc25427c8ff9d78e3",
+    "char_count": 260,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "đ) Đơn phương chấm dứt hợp đồng lao động;",
+    "context_text": "1. Người lao động có các quyền sau đây:",
+    "path_node_ids": [
+      "doc-01/chapter-I",
+      "doc-01/chapter-I/article-5",
+      "doc-01/chapter-I/article-5/clause-1",
+      "doc-01/chapter-I/article-5/clause-1/point-%C4%91"
+    ],
+    "source_chunk_ids": [
+      "fc918f33fba4dddb928d"
+    ],
+    "source_spans": [
+      {
+        "block_number": 35,
+        "start": 0,
+        "end": 44
+      },
+      {
+        "block_number": 36,
+        "start": 0,
+        "end": 39
+      },
+      {
+        "block_number": 41,
+        "start": 0,
+        "end": 41
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-02/chapter-III/section-1/article-5/clause-7/point-%C4%91",
+    "label": "Point",
+    "number": "đ",
+    "document_id": "doc-02",
+    "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 145/2020/NĐ-CP\nSố hiệu: 145/2020/NĐ-CP\nĐịa chỉ: Chương III: HỢP ĐỒNG LAO ĐỘNG > Mục 1: NỘI DUNG HỢP ĐỒNG LAO ĐỘNG ĐỐI VỚI NGƯỜI LAO ĐỘNG ĐƯỢC THUÊ LÀM GIÁM ĐỐC TRONG DOANH NGHIỆP CÓ VỐN NHÀ NƯỚC > Điều 5: Nội dung hợp đồng lao động đối với người lao động được thuê làm giám đốc trong doanh nghiệp do Nhà nước nắm giữ 100% vốn điều lệ hoặc Nhà nước nắm giữ trên 50% vốn điều lệ hoặc tổng số cổ phần có quyền biểu quyết > Khoản 7 > Điểm đ\nPhần dẫn: Hợp đồng lao động đối với người lao động được thuê làm giám đốc trong doanh nghiệp do Nhà nước nắm giữ 100% vốn điều lệ hoặc Nhà nước nắm giữ trên 50% vốn điều lệ hoặc tổng số cổ phần có quyền biểu quyết tại khoản 4 Điều 21 của Bộ luật Lao động gồm những nội dung chủ yếu:\n7. Quyền và nghĩa vụ của người sử dụng lao động, bao gồm:\nNội dung:\nđ) Thực hiện nghĩa vụ đối với người lao động được thuê làm giám đốc về: trả lương, thưởng; đóng bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp; trang bị phương tiện làm việc, đi lại, ăn, ở; đào tạo, bồi dưỡng;",
+    "embedding_text_hash": "be11c9fb78d522a2e6e1d9fb8775ed5ce918c87163381d539f13e5b93c0bf9b2",
+    "char_count": 1022,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "đ) Thực hiện nghĩa vụ đối với người lao động được thuê làm giám đốc về: trả lương, thưởng; đóng bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp; trang bị phương tiện làm việc, đi lại, ăn, ở; đào tạo, bồi dưỡng;",
+    "context_text": "Hợp đồng lao động đối với người lao động được thuê làm giám đốc trong doanh nghiệp do Nhà nước nắm giữ 100% vốn điều lệ hoặc Nhà nước nắm giữ trên 50% vốn điều lệ hoặc tổng số cổ phần có quyền biểu quyết tại khoản 4 Điều 21 của Bộ luật Lao động gồm những nội dung chủ yếu:\n7. Quyền và nghĩa vụ của người sử dụng lao động, bao gồm:",
+    "path_node_ids": [
+      "doc-02/chapter-III",
+      "doc-02/chapter-III/section-1",
+      "doc-02/chapter-III/section-1/article-5",
+      "doc-02/chapter-III/section-1/article-5/clause-7",
+      "doc-02/chapter-III/section-1/article-5/clause-7/point-%C4%91"
+    ],
+    "source_chunk_ids": [
+      "96c0acde49753bdad089"
+    ],
+    "source_spans": [
+      {
+        "block_number": 47,
+        "start": 0,
+        "end": 220
+      },
+      {
+        "block_number": 48,
+        "start": 0,
+        "end": 272
+      },
+      {
+        "block_number": 55,
+        "start": 0,
+        "end": 57
+      },
+      {
+        "block_number": 60,
+        "start": 0,
+        "end": 215
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-03/chapter-II/article-3/clause-1/point-a",
+    "label": "Point",
+    "number": "a",
+    "document_id": "doc-03",
+    "source_file": "data/03_TT10-2020_Noi_dung_Hop_dong_Lao_dong.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Thông tư 10/2020/TT-BLĐTBXH\nSố hiệu: 10/2020/TT-BLĐTBXH\nĐịa chỉ: Chương II: NỘI DUNG CỦA HỢP ĐỒNG LAO ĐỘNG > Điều 3: Nội dung chủ yếu của hợp đồng lao động > Khoản 1 > Điểm a\nPhần dẫn: Nội dung chủ yếu phải có của hợp đồng lao động theo khoản 1 Điều 21 của Bộ luật Lao động được quy định như sau:\n1. Thông tin về tên, địa chỉ của người sử dụng lao động và họ tên, chức danh của người giao kết hợp đồng lao động bên phía người sử dụng lao động được quy định như sau:\nNội dung:\na) Tên của người sử dụng lao động: đối với doanh nghiệp, cơ quan, tổ chức, hợp tác xã, liên hiệp hợp tác xã thì lấy theo tên của doanh nghiệp, cơ quan, tổ chức, hợp tác xã, liên hiệp hợp tác xã ghi trong giấy chứng nhận đăng ký doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã hoặc giấy chứng nhận đăng ký đầu tư hoặc văn bản chấp thuận chủ trương đầu tư hoặc quyết định thành lập cơ quan, tổ chức; đối với tổ hợp tác thì lấy theo tên tổ hợp tác ghi trong hợp đồng hợp tác; đối với hộ gia đình, cá nhân thì lấy theo họ tên của người đại diện hộ gia đình, cá nhân ghi trong Căn cước công dân hoặc Chứng minh nhân dân hoặc hộ chiếu được cấp;",
+    "embedding_text_hash": "043514968d24287907e85bbec06aa80a40d4d87b1c32b3000b75858232a7ef0b",
+    "char_count": 1122,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "a) Tên của người sử dụng lao động: đối với doanh nghiệp, cơ quan, tổ chức, hợp tác xã, liên hiệp hợp tác xã thì lấy theo tên của doanh nghiệp, cơ quan, tổ chức, hợp tác xã, liên hiệp hợp tác xã ghi trong giấy chứng nhận đăng ký doanh nghiệp, hợp tác xã, liên hiệp hợp tác xã hoặc giấy chứng nhận đăng ký đầu tư hoặc văn bản chấp thuận chủ trương đầu tư hoặc quyết định thành lập cơ quan, tổ chức; đối với tổ hợp tác thì lấy theo tên tổ hợp tác ghi trong hợp đồng hợp tác; đối với hộ gia đình, cá nhân thì lấy theo họ tên của người đại diện hộ gia đình, cá nhân ghi trong Căn cước công dân hoặc Chứng minh nhân dân hoặc hộ chiếu được cấp;",
+    "context_text": "Nội dung chủ yếu phải có của hợp đồng lao động theo khoản 1 Điều 21 của Bộ luật Lao động được quy định như sau:\n1. Thông tin về tên, địa chỉ của người sử dụng lao động và họ tên, chức danh của người giao kết hợp đồng lao động bên phía người sử dụng lao động được quy định như sau:",
+    "path_node_ids": [
+      "doc-03/chapter-II",
+      "doc-03/chapter-II/article-3",
+      "doc-03/chapter-II/article-3/clause-1",
+      "doc-03/chapter-II/article-3/clause-1/point-a"
+    ],
+    "source_chunk_ids": [
+      "99073b2a8ad90f793192"
+    ],
+    "source_spans": [
+      {
+        "block_number": 20,
+        "start": 0,
+        "end": 46
+      },
+      {
+        "block_number": 21,
+        "start": 0,
+        "end": 111
+      },
+      {
+        "block_number": 22,
+        "start": 0,
+        "end": 168
+      },
+      {
+        "block_number": 23,
+        "start": 0,
+        "end": 637
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-04/article-2/clause-2/point-a",
+    "label": "Point",
+    "number": "a",
+    "document_id": "doc-04",
+    "source_file": "data/04_ND293-2025_Luong_toi_thieu_2026.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 293/2025/NĐ-CP\nSố hiệu: 293/2025/NĐ-CP\nĐịa chỉ: Điều 2: Đối tượng áp dụng > Khoản 2 > Điểm a\nPhần dẫn: 2. Người sử dụng lao động theo quy định của Bộ luật Lao động, bao gồm:\nNội dung:\na) Doanh nghiệp theo quy định của Luật Doanh nghiệp.",
+    "embedding_text_hash": "5384698cedcac35ed37388b59b8a54350ec0f8e5e5904158c693842d108e1572",
+    "char_count": 255,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "a) Doanh nghiệp theo quy định của Luật Doanh nghiệp.",
+    "context_text": "2. Người sử dụng lao động theo quy định của Bộ luật Lao động, bao gồm:",
+    "path_node_ids": [
+      "doc-04/article-2",
+      "doc-04/article-2/clause-2",
+      "doc-04/article-2/clause-2/point-a"
+    ],
+    "source_chunk_ids": [
+      "2d97a5f3f16687a8e742"
+    ],
+    "source_spans": [
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 13,
+        "start": 0,
+        "end": 70
+      },
+      {
+        "block_number": 14,
+        "start": 0,
+        "end": 52
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-05/chapter-I/article-2/clause-1/point-%C4%91",
+    "label": "Point",
+    "number": "đ",
+    "document_id": "doc-05",
+    "source_file": "data/05_Luat_BHXH_2024_41-2024-QH15.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Luật Bảo hiểm xã hội 2024\nSố hiệu: 41/2024/QH15\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 2: Đối tượng tham gia bảo hiểm xã hội bắt buộc và bảo hiểm xã hội tự nguyện > Khoản 1 > Điểm đ\nPhần dẫn: 1. Người lao động là công dân Việt Nam thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc bao gồm:\nNội dung:\nđ) Hạ sĩ quan, binh sĩ quân đội nhân dân; hạ sĩ quan, chiến sĩ nghĩa vụ công an nhân dân; học viên quân đội, công an, cơ yếu đang theo học được hưởng sinh hoạt phí;",
+    "embedding_text_hash": "a7669a82d83e315b41029aeaf1faa6350f82297590bc9714f5431962dc77211f",
+    "char_count": 481,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "đ) Hạ sĩ quan, binh sĩ quân đội nhân dân; hạ sĩ quan, chiến sĩ nghĩa vụ công an nhân dân; học viên quân đội, công an, cơ yếu đang theo học được hưởng sinh hoạt phí;",
+    "context_text": "1. Người lao động là công dân Việt Nam thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc bao gồm:",
+    "path_node_ids": [
+      "doc-05/chapter-I",
+      "doc-05/chapter-I/article-2",
+      "doc-05/chapter-I/article-2/clause-1",
+      "doc-05/chapter-I/article-2/clause-1/point-%C4%91"
+    ],
+    "source_chunk_ids": [
+      "ee707e01ef5fbb9512de"
+    ],
+    "source_spans": [
+      {
+        "block_number": 11,
+        "start": 0,
+        "end": 80
+      },
+      {
+        "block_number": 12,
+        "start": 0,
+        "end": 97
+      },
+      {
+        "block_number": 17,
+        "start": 0,
+        "end": 164
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-06/chapter-I/article-3/clause-2/point-a",
+    "label": "Point",
+    "number": "a",
+    "document_id": "doc-06",
+    "source_file": "data/06_ND158-2025_BHXH_bat_buoc.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 158/2025/NĐ-CP\nSố hiệu: 158/2025/NĐ-CP\nĐịa chỉ: Chương I: NHỮNG QUY ĐỊNH CHUNG > Điều 3: Đối tượng tham gia bảo hiểm xã hội bắt buộc > Khoản 2 > Điểm a\nPhần dẫn: 2. Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh quy định tại điểm m khoản 1 Điều 2 của Luật Bảo hiểm xã hội tham gia bảo hiểm xã hội bắt buộc bao gồm:\nNội dung:\na) Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh nộp thuế theo phương pháp kê khai;",
+    "embedding_text_hash": "ffe56bbb866f057be396de1db53d47a89b517caf8d83f2e2d27ed2f956270a67",
+    "char_count": 450,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "a) Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh nộp thuế theo phương pháp kê khai;",
+    "context_text": "2. Chủ hộ kinh doanh của hộ kinh doanh có đăng ký kinh doanh quy định tại điểm m khoản 1 Điều 2 của Luật Bảo hiểm xã hội tham gia bảo hiểm xã hội bắt buộc bao gồm:",
+    "path_node_ids": [
+      "doc-06/chapter-I",
+      "doc-06/chapter-I/article-3",
+      "doc-06/chapter-I/article-3/clause-2",
+      "doc-06/chapter-I/article-3/clause-2/point-a"
+    ],
+    "source_chunk_ids": [
+      "77e2b27d2a01ce0f0628"
+    ],
+    "source_spans": [
+      {
+        "block_number": 20,
+        "start": 0,
+        "end": 51
+      },
+      {
+        "block_number": 23,
+        "start": 0,
+        "end": 163
+      },
+      {
+        "block_number": 24,
+        "start": 0,
+        "end": 95
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-07/article-5/clause-1/point-a",
+    "label": "Point",
+    "number": "a",
+    "document_id": "doc-07",
+    "source_file": "data/07_ND135-2020_Tuoi_nghi_huu.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 135/2020/NĐ-CP\nSố hiệu: 135/2020/NĐ-CP\nĐịa chỉ: Điều 5: Nghỉ hưu ở tuổi thấp hơn tuổi nghỉ hưu trong điều kiện lao động bình thường > Khoản 1 > Điểm a\nPhần dẫn: Nghỉ hưu ở tuổi thấp hơn tuổi nghỉ hưu trong điều kiện lao động bình thường của người lao động theo khoản 3 Điều 169 của Bộ luật Lao động được quy định cụ thể như sau:\n1. Người lao động thuộc các trường hợp dưới đây có thể nghỉ hưu ở tuổi thấp hơn nhưng không quá 05 tuổi so với tuổi nghỉ hưu quy định tại Điều 4 của Nghị định này tại thời điểm nghỉ hưu, trừ trường hợp pháp luật có quy định khác:\nNội dung:\na) Người lao động có từ đủ 15 năm trở lên làm nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng nhọc, độc hại, nguy hiểm thuộc danh mục do Bộ Lao động - Thương binh và Xã hội ban hành.",
+    "embedding_text_hash": "0f96721dae7c458d210af36990f7c5f925b3793d823091e1c9e1a758b05f5959",
+    "char_count": 787,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "a) Người lao động có từ đủ 15 năm trở lên làm nghề, công việc nặng nhọc, độc hại, nguy hiểm hoặc đặc biệt nặng nhọc, độc hại, nguy hiểm thuộc danh mục do Bộ Lao động - Thương binh và Xã hội ban hành.",
+    "context_text": "Nghỉ hưu ở tuổi thấp hơn tuổi nghỉ hưu trong điều kiện lao động bình thường của người lao động theo khoản 3 Điều 169 của Bộ luật Lao động được quy định cụ thể như sau:\n1. Người lao động thuộc các trường hợp dưới đây có thể nghỉ hưu ở tuổi thấp hơn nhưng không quá 05 tuổi so với tuổi nghỉ hưu quy định tại Điều 4 của Nghị định này tại thời điểm nghỉ hưu, trừ trường hợp pháp luật có quy định khác:",
+    "path_node_ids": [
+      "doc-07/article-5",
+      "doc-07/article-5/clause-1",
+      "doc-07/article-5/clause-1/point-a"
+    ],
+    "source_chunk_ids": [
+      "6e4f3353ccc05ea639ea"
+    ],
+    "source_spans": [
+      {
+        "block_number": 43,
+        "start": 0,
+        "end": 83
+      },
+      {
+        "block_number": 44,
+        "start": 0,
+        "end": 167
+      },
+      {
+        "block_number": 45,
+        "start": 0,
+        "end": 229
+      },
+      {
+        "block_number": 46,
+        "start": 0,
+        "end": 199
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "node_id": "doc-08/chapter-I/article-3/clause-2/point-%C4%91",
+    "label": "Point",
+    "number": "đ",
+    "document_id": "doc-08",
+    "source_file": "data/08_ND12-2022_Xu_phat_Lao_dong_BHXH.docx",
+    "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+    "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+    "embedding_version": "node-text-v1",
+    "embedding_text": "Văn bản: Nghị định 12/2022/NĐ-CP\nSố hiệu: 12/2022/NĐ-CP\nĐịa chỉ: Chương I: QUY ĐỊNH CHUNG > Điều 3: Hình thức xử phạt > Khoản 2 > Điểm đ\nPhần dẫn: 2. Căn cứ tính chất, mức độ của hành vi vi phạm, tổ chức, cá nhân có hành vi vi phạm hành chính còn có thể bị áp dụng một hoặc nhiều hình thức xử phạt bổ sung sau đây:\nNội dung:\nđ) Đình chỉ hoạt động quan trắc môi trường lao động từ 03 tháng đến 06 tháng;",
+    "embedding_text_hash": "782052e36391bce6747d9f1c495cb42939375bc103320aad35f5775405da3a76",
+    "char_count": 402,
+    "needs_tokenizer_check": true,
+    "over_6000_chars": false,
+    "body_text": "đ) Đình chỉ hoạt động quan trắc môi trường lao động từ 03 tháng đến 06 tháng;",
+    "context_text": "2. Căn cứ tính chất, mức độ của hành vi vi phạm, tổ chức, cá nhân có hành vi vi phạm hành chính còn có thể bị áp dụng một hoặc nhiều hình thức xử phạt bổ sung sau đây:",
+    "path_node_ids": [
+      "doc-08/chapter-I",
+      "doc-08/chapter-I/article-3",
+      "doc-08/chapter-I/article-3/clause-2",
+      "doc-08/chapter-I/article-3/clause-2/point-%C4%91"
+    ],
+    "source_chunk_ids": [
+      "e7ef49ec275aa7a98b7e"
+    ],
+    "source_spans": [
+      {
+        "block_number": 23,
+        "start": 0,
+        "end": 25
+      },
+      {
+        "block_number": 25,
+        "start": 0,
+        "end": 167
+      },
+      {
+        "block_number": 30,
+        "start": 0,
+        "end": 77
+      }
+    ],
+    "warnings": []
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "document_id": "doc-01",
+    "blocks": 1364,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-02",
+    "blocks": 1737,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-03",
+    "blocks": 325,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-04",
+    "blocks": 175,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-05",
+    "blocks": 1182,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-06",
+    "blocks": 579,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-07",
+    "blocks": 361,
+    "matches_fresh_docx_extraction": true
+  },
+  {
+    "document_id": "doc-08",
+    "blocks": 1023,
+    "matches_fresh_docx_extraction": true
+  }
+]

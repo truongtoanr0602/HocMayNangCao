@@ -1,0 +1,962 @@
+[
+  {
+    "question_id": "q001",
+    "question": "Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24",
+        "score": 0.8605855703353882
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.860315203666687
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-36",
+        "score": 0.8589456677436829
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24/clause-4",
+        "score": 0.8586724996566772
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24/clause-4/point-b",
+        "score": 0.8569971323013306
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-4",
+        "score": 0.8560991287231445
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-1/article-5",
+        "score": 0.8560361862182617
+      },
+      {
+        "node_id": "doc-01/chapter-XVII/article-219",
+        "score": 0.8556253910064697
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.853583812713623
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-1",
+        "score": 0.852522611618042
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q002",
+    "question": "Công việc cần trình độ cao đẳng thì được thử việc tối đa bao lâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25",
+        "score": 0.9009577631950378
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-2",
+        "score": 0.9005869030952454
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-3",
+        "score": 0.8887499570846558
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-1",
+        "score": 0.8833518624305725
+      },
+      {
+        "node_id": "doc-01/chapter-XVII/article-219",
+        "score": 0.8788743019104004
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8783746957778931
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8758376836776733
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-2/article-8",
+        "score": 0.875272274017334
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114",
+        "score": 0.8743565082550049
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-4",
+        "score": 0.8737322688102722
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q006",
+    "question": "Làm thêm vào ngày nghỉ hằng tuần thì tiền lương ít nhất bằng bao nhiêu phần trăm?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55",
+        "score": 0.9115170240402222
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57",
+        "score": 0.9089368581771851
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.906273603439331
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1/point-b",
+        "score": 0.905652642250061
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98",
+        "score": 0.900081992149353
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-2",
+        "score": 0.8981961607933044
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.8959255218505859
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-3",
+        "score": 0.8952169418334961
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-b",
+        "score": 0.8947231769561768
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1",
+        "score": 0.892767071723938
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q008",
+    "question": "Làm ban đêm từ sáu giờ trở lên trong ngày thì được nghỉ giữa giờ tối thiểu bao lâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-1",
+        "score": 0.9120632410049438
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109/clause-1",
+        "score": 0.9098836779594421
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-1/article-106",
+        "score": 0.9058629274368286
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-64",
+        "score": 0.9049285650253296
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-2",
+        "score": 0.9027232527732849
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109",
+        "score": 0.8984422087669373
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-28",
+        "score": 0.8888566493988037
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-a",
+        "score": 0.8883346915245056
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57",
+        "score": 0.8872578144073486
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3",
+        "score": 0.8865220546722412
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q011",
+    "question": "Tôi tổ chức đám cưới thì được nghỉ hưởng lương mấy ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8878391981124878
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8870739936828613
+      },
+      {
+        "node_id": "doc-01/chapter-XVII/article-219",
+        "score": 0.8822128772735596
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-2",
+        "score": 0.8820176124572754
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.8813245296478271
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55",
+        "score": 0.880893886089325
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34",
+        "score": 0.8797293901443481
+      },
+      {
+        "node_id": "doc-05/chapter-I/article-2",
+        "score": 0.878212571144104
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141",
+        "score": 0.8767576813697815
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.8755642771720886
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q013",
+    "question": "Sổ quản lý lao động của doanh nghiệp có thể lập điện tử hay phải dùng giấy?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-2",
+        "score": 0.8901078701019287
+      },
+      {
+        "node_id": "doc-01/chapter-II/article-12/clause-1",
+        "score": 0.8886627554893494
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8844872713088989
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3",
+        "score": 0.8806788325309753
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-1/article-5",
+        "score": 0.8796771764755249
+      },
+      {
+        "node_id": "doc-08/chapter-IV/article-42/clause-1",
+        "score": 0.8737865686416626
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8689093589782715
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24",
+        "score": 0.8685101270675659
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-4",
+        "score": 0.8676983714103699
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-b",
+        "score": 0.8673784732818604
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q015",
+    "question": "Hợp đồng lao động cần ghi địa điểm thế nào nếu tôi thường xuyên làm ở nhiều nơi?",
+    "top_nodes": [
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.9070422649383545
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3",
+        "score": 0.9023773074150085
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3/point-b",
+        "score": 0.9019455909729004
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-b",
+        "score": 0.8903372287750244
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8892002701759338
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-1/article-5",
+        "score": 0.885506272315979
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1",
+        "score": 0.8840698599815369
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-1",
+        "score": 0.8822001218795776
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3/point-a",
+        "score": 0.881427526473999
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-a",
+        "score": 0.881150484085083
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q018",
+    "question": "Trả lương theo tuần thì quy đổi ra mức tháng để so với lương tối thiểu bằng cách nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-4/clause-3/point-a",
+        "score": 0.9203636050224304
+      },
+      {
+        "node_id": "doc-04/article-4",
+        "score": 0.9154934883117676
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-b",
+        "score": 0.9147912263870239
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3",
+        "score": 0.9137983322143555
+      },
+      {
+        "node_id": "doc-04/article-4/clause-1",
+        "score": 0.9021784067153931
+      },
+      {
+        "node_id": "doc-04/article-1",
+        "score": 0.8949606418609619
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54",
+        "score": 0.8895838260650635
+      },
+      {
+        "node_id": "doc-04/article-4/clause-2",
+        "score": 0.8889254331588745
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1/point-a",
+        "score": 0.8878209590911865
+      },
+      {
+        "node_id": "doc-04/article-3/clause-1",
+        "score": 0.8875314593315125
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q020",
+    "question": "Nam đang đóng BHXH bắt buộc có vợ sinh con phải phẫu thuật thì được nghỉ bao nhiêu ngày làm việc?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.9325579404830933
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.9320309162139893
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.9251207709312439
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.9240188598632812
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.9189732074737549
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.9110521674156189
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-3",
+        "score": 0.9045724272727966
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.903476357460022
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.902472734451294
+      },
+      {
+        "node_id": "doc-01/chapter-XVII/article-219",
+        "score": 0.9011175632476807
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q022",
+    "question": "Khi chưa bỏ lương cơ sở thì mức tham chiếu để tính BHXH bằng mức nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-2",
+        "score": 0.9259848594665527
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5",
+        "score": 0.9180313348770142
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141/clause-13",
+        "score": 0.9176692366600037
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-3",
+        "score": 0.9079716205596924
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141",
+        "score": 0.9057348966598511
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34",
+        "score": 0.9019356369972229
+      },
+      {
+        "node_id": "doc-05/chapter-I/article-2",
+        "score": 0.8991067409515381
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-32",
+        "score": 0.8989174962043762
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-41",
+        "score": 0.8937478065490723
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31",
+        "score": 0.8924461603164673
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q023",
+    "question": "Thời điểm bắt đầu hưởng chế độ hưu trí là ngày nào sau thời điểm nghỉ hưu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-07/article-3/clause-2",
+        "score": 0.9366241693496704
+      },
+      {
+        "node_id": "doc-07/article-3",
+        "score": 0.9264370203018188
+      },
+      {
+        "node_id": "doc-07/article-3/clause-1",
+        "score": 0.9162976145744324
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101",
+        "score": 0.9121129512786865
+      },
+      {
+        "node_id": "doc-07/article-3/clause-3",
+        "score": 0.9070742130279541
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-41",
+        "score": 0.9055131673812866
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-41/clause-4",
+        "score": 0.9023323059082031
+      },
+      {
+        "node_id": "doc-07/article-7/clause-1",
+        "score": 0.9006448984146118
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34",
+        "score": 0.8994913697242737
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-41/clause-3",
+        "score": 0.8988780975341797
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q026",
+    "question": "Điểm b khoản 1 Điều 112 Bộ luật Lao động 2019 quy định nghỉ Tết Âm lịch bao nhiêu ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112",
+        "score": 0.9289573431015015
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-b",
+        "score": 0.9227408766746521
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-3",
+        "score": 0.9217908978462219
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.9197776317596436
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-a",
+        "score": 0.9175961017608643
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-%C4%91",
+        "score": 0.9165616035461426
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-d",
+        "score": 0.9130876064300537
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-e",
+        "score": 0.9128208160400391
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-3",
+        "score": 0.9086428284645081
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-c",
+        "score": 0.9077272415161133
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q028",
+    "question": "Khoản 1 Điều 5 Nghị định 293/2025/NĐ-CP ghi ngày có hiệu lực là ngày nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-5/clause-1",
+        "score": 0.906466007232666
+      },
+      {
+        "node_id": "doc-04/article-5",
+        "score": 0.8933348655700684
+      },
+      {
+        "node_id": "doc-04/article-5/clause-3",
+        "score": 0.8890326023101807
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114",
+        "score": 0.8889889717102051
+      },
+      {
+        "node_id": "doc-04/article-5/clause-5",
+        "score": 0.8881616592407227
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-1",
+        "score": 0.8873541951179504
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-1/point-b",
+        "score": 0.8869980573654175
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34",
+        "score": 0.8869799375534058
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-2",
+        "score": 0.8836382627487183
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-1",
+        "score": 0.8834398984909058
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q029",
+    "question": "Điểm b khoản 1 Điều 52 Luật BHXH 2024 quy định số ngày nghỉ tối đa khi thai từ đủ 5 đến dưới 13 tuần như thế nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1",
+        "score": 0.9252124428749084
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-b",
+        "score": 0.9223877787590027
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-9",
+        "score": 0.9221032857894897
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-54/clause-3/point-a",
+        "score": 0.920264720916748
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-a",
+        "score": 0.9198039770126343
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-3",
+        "score": 0.9197268486022949
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-3",
+        "score": 0.9195113778114319
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-c",
+        "score": 0.9186803102493286
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-1",
+        "score": 0.918609619140625
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-2",
+        "score": 0.9185212254524231
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q031",
+    "question": "Nghỉ việc có phải hoàn trả chi phí đào tạo không? Cần xem trách nhiệm khi nghỉ trái luật và thỏa thuận đào tạo ở đâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-40/clause-3",
+        "score": 0.9053419232368469
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62",
+        "score": 0.8919003009796143
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-3",
+        "score": 0.89177405834198
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8906511068344116
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-2",
+        "score": 0.8899592161178589
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14",
+        "score": 0.8858791589736938
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8848834037780762
+      },
+      {
+        "node_id": "doc-08/chapter-IV/article-45",
+        "score": 0.8848776817321777
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-2/point-d",
+        "score": 0.884468674659729
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-40",
+        "score": 0.8828697204589844
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q034",
+    "question": "Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-10",
+        "score": 0.9005707502365112
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-12",
+        "score": 0.9001356959342957
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17",
+        "score": 0.8936234712600708
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-9",
+        "score": 0.8933349251747131
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-11",
+        "score": 0.8919466137886047
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.8918449282646179
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-28",
+        "score": 0.8914177417755127
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-19",
+        "score": 0.8912739753723145
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2",
+        "score": 0.8910605907440186
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-2",
+        "score": 0.890601634979248
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q035",
+    "question": "Nhà tuyển dụng bắt tôi đặt cọc tiền để bảo đảm thực hiện hợp đồng lao động có được không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8897179365158081
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-1",
+        "score": 0.8876587748527527
+      },
+      {
+        "node_id": "doc-08/chapter-III/article-41",
+        "score": 0.8876546621322632
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-12",
+        "score": 0.8874590396881104
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8867642879486084
+      },
+      {
+        "node_id": "doc-06/chapter-II/article-7",
+        "score": 0.8860061168670654
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-35",
+        "score": 0.8829901814460754
+      },
+      {
+        "node_id": "doc-08/chapter-IV/article-42",
+        "score": 0.8828009366989136
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-21",
+        "score": 0.8812713623046875
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-11",
+        "score": 0.8805199861526489
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q036",
+    "question": "Nam đang tham gia BHXH bắt buộc có vợ sinh đôi phải phẫu thuật thì được nghỉ bao nhiêu ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.926872968673706
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.9249801635742188
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.9188804030418396
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.9155563116073608
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.9122315645217896
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.9045901298522949
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.9023245573043823
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.8999881744384766
+      },
+      {
+        "node_id": "doc-01/chapter-XVII/article-219",
+        "score": 0.8967598676681519
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8957905769348145
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q037",
+    "question": "Công ty ABC chuyển lương tháng này vào tài khoản của tôi lúc mấy giờ?",
+    "top_nodes": [
+      {
+        "node_id": "doc-06/chapter-II/article-7",
+        "score": 0.8720167875289917
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8709154725074768
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-2/article-8/clause-4",
+        "score": 0.8695529699325562
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-2/article-8",
+        "score": 0.8686810731887817
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.8686205744743347
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34",
+        "score": 0.8676155209541321
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.8642017841339111
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-1",
+        "score": 0.8636771440505981
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1/point-a",
+        "score": 0.8628072738647461
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141",
+        "score": 0.8623219728469849
+      }
+    ],
+    "answerable_gold": false,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q039",
+    "question": "Viết giúp tôi thuật toán sắp xếp nhanh bằng Python.",
+    "top_nodes": [
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.833488941192627
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4",
+        "score": 0.8322550654411316
+      },
+      {
+        "node_id": "doc-02/chapter-IX/section-2/article-80",
+        "score": 0.8283597230911255
+      },
+      {
+        "node_id": "doc-05/chapter-II/section-2/article-18",
+        "score": 0.8273853063583374
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89",
+        "score": 0.8260471224784851
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24",
+        "score": 0.8232808113098145
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-38",
+        "score": 0.8220902681350708
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-28",
+        "score": 0.8219857811927795
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-27",
+        "score": 0.8207979202270508
+      },
+      {
+        "node_id": "doc-03/chapter-III/article-6",
+        "score": 0.820674479007721
+      }
+    ],
+    "answerable_gold": false,
+    "abstention_decision": null
+  }
+]

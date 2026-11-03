@@ -17,3 +17,7 @@ env/
 ~$*
 .DS_Store
 Thumbs.db
+
+# Rebuildable local embedding arrays and checkpoints.
+output/kg/embedding_benchmark/**/*.npy
+output/kg/embedding_benchmark/**/*.npz

@@ -1,0 +1,27 @@
+{
+  "total": 40,
+  "by_split": {
+    "dev": 20,
+    "test": 20
+  },
+  "by_type": {
+    "natural": 26,
+    "direct": 6,
+    "multi": 4,
+    "unanswerable": 4
+  },
+  "documents_with_evidence": [
+    "doc-01",
+    "doc-02",
+    "doc-03",
+    "doc-04",
+    "doc-05",
+    "doc-06",
+    "doc-07",
+    "doc-08"
+  ],
+  "article_family_split_overlap": 0,
+  "all_evidence_quotes_checked": true,
+  "requires_human_review": true,
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1"
+}
