@@ -1,0 +1,227 @@
+{
+  "processing_version": "4.0.0",
+  "generated_at": "2026-10-21T02:03:01.600607+00:00",
+  "max_chars": 6000,
+  "documents": [
+    {
+      "document_id": "doc-01",
+      "source_file": "data/01_Bo_luat_Lao_dong_2019_45-2019-QH14.docx",
+      "block_count": 1364,
+      "paragraph_count": 1363,
+      "table_row_count": 1,
+      "raw_char_count": 187977,
+      "clean_char_count": 187977,
+      "removed_block_count": 0,
+      "article_count": 220,
+      "appendix_count": 0,
+      "table_count": 1,
+      "source_content_preserved": true,
+      "chunk_count": 906,
+      "chunk_chars": {
+        "min": 25,
+        "median": 252.0,
+        "max": 1740
+      },
+      "split_reasons": {
+        "none": 906
+      },
+      "warnings": [
+        "Rejected Article-like reference at block 1317: “Điều 54. Điều kiện hưởng lương hưu",
+        "Rejected Article-like reference at block 1330: “Điều 55. Điều kiện hưởng lương hưu khi suy giảm khả năng la",
+        "Rejected Article-like reference at block 1344: “Điều 32. Những tranh chấp về lao động và tranh chấp liên qu"
+      ]
+    },
+    {
+      "document_id": "doc-02",
+      "source_file": "data/02_ND145-2020_Huong_dan_BLLD.docx",
+      "block_count": 1737,
+      "paragraph_count": 1546,
+      "table_row_count": 191,
+      "raw_char_count": 233519,
+      "clean_char_count": 232868,
+      "removed_block_count": 0,
+      "article_count": 115,
+      "appendix_count": 6,
+      "table_count": 43,
+      "source_content_preserved": true,
+      "chunk_count": 775,
+      "chunk_chars": {
+        "min": 13,
+        "median": 309,
+        "max": 4872
+      },
+      "split_reasons": {
+        "none": 773,
+        "max_size_sentence": 2
+      },
+      "warnings": [
+        "OCR chapter label normalized at block 1026: Chương XI -> Chương XII"
+      ]
+    },
+    {
+      "document_id": "doc-03",
+      "source_file": "data/03_TT10-2020_Noi_dung_Hop_dong_Lao_dong.docx",
+      "block_count": 325,
+      "paragraph_count": 323,
+      "table_row_count": 2,
+      "raw_char_count": 33021,
+      "clean_char_count": 33020,
+      "removed_block_count": 0,
+      "article_count": 12,
+      "appendix_count": 1,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 82,
+      "chunk_chars": {
+        "min": 96,
+        "median": 368.5,
+        "max": 5989
+      },
+      "split_reasons": {
+        "none": 79,
+        "max_size_sentence": 3
+      },
+      "warnings": []
+    },
+    {
+      "document_id": "doc-04",
+      "source_file": "data/04_ND293-2025_Luong_toi_thieu_2026.docx",
+      "block_count": 175,
+      "paragraph_count": 168,
+      "table_row_count": 7,
+      "raw_char_count": 29176,
+      "clean_char_count": 29160,
+      "removed_block_count": 0,
+      "article_count": 5,
+      "appendix_count": 1,
+      "table_count": 3,
+      "source_content_preserved": true,
+      "chunk_count": 29,
+      "chunk_chars": {
+        "min": 108,
+        "median": 313,
+        "max": 5839
+      },
+      "split_reasons": {
+        "none": 25,
+        "max_size_sentence": 4
+      },
+      "warnings": []
+    },
+    {
+      "document_id": "doc-05",
+      "source_file": "data/05_Luat_BHXH_2024_41-2024-QH15.docx",
+      "block_count": 1182,
+      "paragraph_count": 1179,
+      "table_row_count": 3,
+      "raw_char_count": 181989,
+      "clean_char_count": 181919,
+      "removed_block_count": 0,
+      "article_count": 141,
+      "appendix_count": 0,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 818,
+      "chunk_chars": {
+        "min": 25,
+        "median": 298.0,
+        "max": 1162
+      },
+      "split_reasons": {
+        "none": 818
+      },
+      "warnings": []
+    },
+    {
+      "document_id": "doc-06",
+      "source_file": "data/06_ND158-2025_BHXH_bat_buoc.docx",
+      "block_count": 579,
+      "paragraph_count": 564,
+      "table_row_count": 15,
+      "raw_char_count": 115031,
+      "clean_char_count": 115036,
+      "removed_block_count": 0,
+      "article_count": 45,
+      "appendix_count": 2,
+      "table_count": 10,
+      "source_content_preserved": true,
+      "chunk_count": 284,
+      "chunk_chars": {
+        "min": 9,
+        "median": 501.5,
+        "max": 2621
+      },
+      "split_reasons": {
+        "none": 284
+      },
+      "warnings": [
+        "Rejected Article-like reference at block 459: “Điều 39. Chi tổ chức và hoạt động bảo hiểm tai nạn lao động"
+      ]
+    },
+    {
+      "document_id": "doc-07",
+      "source_file": "data/07_ND135-2020_Tuoi_nghi_huu.docx",
+      "block_count": 361,
+      "paragraph_count": 93,
+      "table_row_count": 268,
+      "raw_char_count": 23154,
+      "clean_char_count": 22288,
+      "removed_block_count": 0,
+      "article_count": 9,
+      "appendix_count": 3,
+      "table_count": 6,
+      "source_content_preserved": true,
+      "chunk_count": 36,
+      "chunk_chars": {
+        "min": 90,
+        "median": 361.0,
+        "max": 5276
+      },
+      "split_reasons": {
+        "none": 36
+      },
+      "warnings": []
+    },
+    {
+      "document_id": "doc-08",
+      "source_file": "data/08_ND12-2022_Xu_phat_Lao_dong_BHXH.docx",
+      "block_count": 1023,
+      "paragraph_count": 1021,
+      "table_row_count": 2,
+      "raw_char_count": 177624,
+      "clean_char_count": 177624,
+      "removed_block_count": 0,
+      "article_count": 64,
+      "appendix_count": 0,
+      "table_count": 2,
+      "source_content_preserved": true,
+      "chunk_count": 759,
+      "chunk_chars": {
+        "min": 97,
+        "median": 374,
+        "max": 1830
+      },
+      "split_reasons": {
+        "none": 759
+      },
+      "warnings": []
+    }
+  ],
+  "global": {
+    "document_count": 8,
+    "chunk_count": 3689,
+    "checks": {
+      "expected_document_count": true,
+      "unique_chunk_ids": true,
+      "nonempty_text": true,
+      "optional_files_excluded": true,
+      "docx_sources": true,
+      "within_max_chars": true,
+      "valid_structure_paths": true,
+      "valid_source_spans": true,
+      "valid_paragraph_ranges": true,
+      "source_content_preserved": true
+    },
+    "status": "passed"
+  }
+}

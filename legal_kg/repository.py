@@ -4,6 +4,7 @@ from collections import defaultdict
 from dataclasses import asdict, dataclass
 
 from .models import GraphPayload
+from .titles import normalize_title
 
 
 class LoadError(RuntimeError):
@@ -36,6 +37,10 @@ def load_graph(graph: GraphPayload, driver, *, database: str = "neo4j", batch_si
                     "FOR (n:KGNode) REQUIRE (n.snapshot_id, n.id) IS UNIQUE").consume()
         session.run("CREATE CONSTRAINT kg_snapshot_identity IF NOT EXISTS "
                     "FOR (s:KGSnapshot) REQUIRE s.id IS UNIQUE").consume()
+        for name, field in (("kg_query_title", "query_title_key"), ("kg_original_title", "title_key"),
+                            ("kg_document_number", "document_number")):
+            session.run(f"CREATE INDEX {name} IF NOT EXISTS FOR (n:LegalDocument) "
+                        f"ON (n.snapshot_id, n.{field})").consume()
         return session.execute_write(_write_graph, graph, batch_size)
 
 
@@ -75,7 +80,7 @@ def _write_graph(tx, graph: GraphPayload, batch_size: int) -> LoadReport:
                     "UNWIND $edges AS row "
                     "MATCH (a:KGNode {snapshot_id: $snapshot_id, id: row.source}) "
                     "MATCH (b:KGNode {snapshot_id: $snapshot_id, id: row.target}) "
-                    f"MERGE (a)-[r:{edge_type}]->(b) RETURN count(r) AS written",
+                    f"MERGE (a)-[r:{edge_type}]->(b) SET r += row.properties RETURN count(r) AS written",
                     edges=batch, snapshot_id=graph.source_hash, edge_type=edge_type,
                 ).single()
                 if record is None or record["written"] != len(batch):
@@ -93,7 +98,7 @@ def _write_graph(tx, graph: GraphPayload, batch_size: int) -> LoadReport:
 
 
 def fetch_context(driver, snapshot_id: str, chunk_id: str, *, database: str = "neo4j") -> dict:
-    """Return ancestry and sibling chunks only from an explicitly selected ready snapshot."""
+    """Return ancestry, siblings and evidenced relations from one ready snapshot."""
     query = """
     MATCH (s:KGSnapshot {id: $snapshot_id, state: 'ready'})
     MATCH path=(d:LegalDocument)-[:CONTAINS*0..8]->(parent:KGNode)-[:HAS_CHUNK]->(c:Chunk)
@@ -110,5 +115,45 @@ def fetch_context(driver, snapshot_id: str, chunk_id: str, *, database: str = "n
             record = tx.run(query, snapshot_id=snapshot_id, chunk_id=chunk_id).single()
             if record is None:
                 raise ValueError(f"Chunk not found in ready snapshot: {chunk_id}")
-            return dict(record)
+            result = dict(record)
+            path_ids = [n["id"] for n in result["path"]]
+            records = tx.run("""
+                MATCH (n:KGNode {snapshot_id: $snapshot_id})-[r:REFERS_TO|GUIDES|DETAILS]-
+                      (other:KGNode {snapshot_id: $snapshot_id})
+                WHERE n.id IN $node_ids
+                RETURN DISTINCT startNode(r).id AS source, endNode(r).id AS target,
+                       type(r) AS type, properties(r) AS properties,
+                       other{.*, labels: labels(other)} AS related
+                """, snapshot_id=snapshot_id, node_ids=path_ids)
+            relations, related = {}, {}
+            for item in records:
+                key = (item["source"], item["target"], item["type"])
+                relations[key] = {k: item[k] for k in ("source", "target", "type", "properties")}
+                if item["related"]["id"] not in path_ids:
+                    related[item["related"]["id"]] = item["related"]
+            result["relations"] = [relations[k] for k in sorted(relations)]
+            result["related_nodes"] = [related[k] for k in sorted(related)]
+            return result
         return session.execute_read(read)
+
+
+def fetch_by_title(driver, snapshot_id: str, title: str, *, database: str = "neo4j") -> list[dict]:
+    """Use exact composite indexes for aliases and original titles in one snapshot."""
+    query = """
+    MATCH (:KGSnapshot {id: $snapshot_id, state: 'ready'})
+    MATCH (d:LegalDocument {snapshot_id: $snapshot_id, query_title_key: $key})
+    RETURN d{.*} AS document
+    UNION
+    MATCH (:KGSnapshot {id: $snapshot_id, state: 'ready'})
+    MATCH (d:LegalDocument {snapshot_id: $snapshot_id, title_key: $key})
+    RETURN d{.*} AS document
+    UNION
+    MATCH (:KGSnapshot {id: $snapshot_id, state: 'ready'})
+    MATCH (d:LegalDocument {snapshot_id: $snapshot_id, document_number: $number})
+    RETURN d{.*} AS document
+    """
+    with driver.session(database=database) as session:
+        return session.execute_read(lambda tx: sorted(
+            [dict(record["document"]) for record in tx.run(query, snapshot_id=snapshot_id,
+                                                          key=normalize_title(title), number=title.strip().upper())],
+            key=lambda item: item["id"]))

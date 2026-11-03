@@ -11,6 +11,7 @@ class DocumentSpec:
     document_number: str
     document_type: str
     source_file: str
+    short_title: str | None = None
 
 
 @dataclass(frozen=True)
@@ -106,6 +107,7 @@ class Chunk:
     table_id: str | None = None
     table_headers: tuple[tuple[str, ...], ...] = ()
     table_rows: tuple[dict, ...] = ()
+    short_title: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         value = asdict(self)

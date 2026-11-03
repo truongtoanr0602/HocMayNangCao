@@ -6,7 +6,7 @@ from statistics import median
 
 def _valid_path(row: dict) -> bool:
     path = row.get("structure_path")
-    levels = ("part", "chapter", "section", "article", "appendix", "table")
+    levels = ("part", "chapter", "section", "article", "clause", "point", "appendix", "table")
     if not isinstance(path, list):
         return False
     previous = -1

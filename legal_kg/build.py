@@ -1,13 +1,18 @@
+
+
+
+
+
 from __future__ import annotations
 
 import json
 from urllib.parse import quote
 
-from .models import Edge, GraphPayload, Node, fingerprint
+from .models import Edge, GraphPayload, Node, SCHEMA_VERSION, STRUCTURAL_EDGES, fingerprint
 
 
 LEVELS = {"part": "Part", "chapter": "Chapter", "section": "Section", "article": "Article",
-          "appendix": "Appendix", "table": "Table"}
+          "clause": "Clause", "point": "Point", "appendix": "Appendix", "table": "Table"}
 LEGACY_WARNING = (
     "Legacy metadata: structure_path is absent. Appendix/table boundaries and clause/point parentage "
     "are not verified; the graph reflects existing metadata, including possible attachment to the last Article."
@@ -54,13 +59,14 @@ def _path(row: dict) -> list[dict]:
 
 
 def build_graph(rows: list[dict]) -> GraphPayload:
-    """Build from metadata only. Input order does not change IDs or hashes."""
+    """Build structure, then resolve evidenced references across the full corpus."""
     if not isinstance(rows, list) or not rows or not all(isinstance(r, dict) for r in rows):
         raise ValueError("Expected a nonempty list of chunk objects")
     nodes: dict[str, Node] = {}
     edges: set[tuple[str, str, str]] = set()
     chunks = set()
     warnings = set()
+    chunk_parents = {}
 
     def add(node: Node) -> None:
         existing = nodes.get(node.id)
@@ -91,6 +97,8 @@ def build_graph(rows: list[dict]) -> GraphPayload:
         doc_properties = {key: _text(row.get(key), key) for key in
                           ("title", "document_number", "document_type", "source_file")}
         doc_properties["document_id"] = document_id
+        from .titles import title_properties
+        doc_properties.update(title_properties(row))
         add(Node(document_id, "LegalDocument", doc_properties))
         parent = document_id
         for ref in path:
@@ -103,6 +111,7 @@ def build_graph(rows: list[dict]) -> GraphPayload:
         props = {"text": text, "document_id": document_id, "source_file": doc_properties["source_file"],
                  "chunk_type": kind, "paragraph_start": start, "paragraph_end": end,
                  "metadata_mode": "explicit_path" if "structure_path" in row else "legacy"}
+        props.update({"title": doc_properties["title"], **title_properties(row)})
         for key in ("chunk_index", "article_chunk_index", "page_start", "page_end"):
             item = row.get(key)
             if item is not None and (type(item) is not int or item < 1):
@@ -124,10 +133,17 @@ def build_graph(rows: list[dict]) -> GraphPayload:
                 props[f"{field}_json"] = json.dumps(row[field], ensure_ascii=False, sort_keys=True)
         add(Node(chunk_id, "Chunk", props))
         edges.add((parent, chunk_id, "HAS_CHUNK"))
+        chunk_parents[chunk_id] = parent
+    from .references import REFERENCE_RULES_VERSION, resolve_references
+    relations, reference_warnings = resolve_references(rows, nodes, chunk_parents, edges)
+    warnings.update(reference_warnings)
     graph = GraphPayload(
-        source_hash=fingerprint(sorted(rows, key=lambda r: r["chunk_id"])),
+        source_hash=fingerprint({"schema_version": SCHEMA_VERSION,
+                                 "reference_rules_version": REFERENCE_RULES_VERSION,
+                                 "rows": sorted(rows, key=lambda r: r["chunk_id"])}),
         nodes=tuple(sorted(nodes.values(), key=lambda n: n.id)),
-        edges=tuple(Edge(*e) for e in sorted(edges)), warnings=tuple(sorted(warnings)),
+        edges=tuple(sorted([Edge(*e) for e in edges] + relations, key=lambda e: (e.source, e.target, e.type))),
+        warnings=tuple(sorted(warnings)),
     )
     graph.validate()
     return graph
@@ -138,7 +154,7 @@ def inspect_chunk(graph: GraphPayload, chunk_id: str) -> dict:
     nodes = {n.id: n for n in graph.nodes}
     if chunk_id not in nodes or nodes[chunk_id].label != "Chunk":
         raise ValueError(f"Chunk not found: {chunk_id}")
-    parents = {e.target: e.source for e in graph.edges}
+    parents = {e.target: e.source for e in graph.edges if e.type in STRUCTURAL_EDGES}
     path = []
     current = parents[chunk_id]
     while True:
@@ -151,6 +167,12 @@ def inspect_chunk(graph: GraphPayload, chunk_id: str) -> dict:
         n.properties.get("article_chunk_index") or n.properties.get("chunk_index") or 0, n.id,
     ))
     encode = lambda n: {"id": n.id, "label": n.label, "properties": n.properties}
+    from dataclasses import asdict
+    path_ids = {n.id for n in path}
+    relations = [e for e in graph.edges if e.type not in STRUCTURAL_EDGES
+                 and (e.source in path_ids or e.target in path_ids)]
+    related_ids = {endpoint for e in relations for endpoint in (e.source, e.target)} - path_ids
     return {"source_hash": graph.source_hash, "warnings": list(graph.warnings),
             "chunk": encode(nodes[chunk_id]), "path": [encode(n) for n in reversed(path)],
-            "siblings": [encode(n) for n in siblings]}
+            "siblings": [encode(n) for n in siblings], "relations": [asdict(e) for e in relations],
+            "related_nodes": [encode(nodes[n]) for n in sorted(related_ids)]}

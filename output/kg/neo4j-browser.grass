@@ -1,0 +1,59 @@
+node {
+  color: #94A3B8;
+  caption: "{id}";
+}
+
+node.LegalDocument {
+  color: #14B8A6;
+  caption: "{title}";
+}
+
+node.Part {
+  color: #64748B;
+  caption: "Phần {number}";
+}
+
+node.Chapter {
+  color: #8B5CF6;
+  caption: "Chương {number}";
+}
+
+node.Section {
+  color: #A78BFA;
+  caption: "Mục {number}";
+}
+
+node.Article {
+  color: #F59E0B;
+  caption: "Điều {number}";
+}
+
+node.Clause {
+  color: #38BDF8;
+  caption: "Khoản {number}";
+}
+
+node.Point {
+  color: #A3E635;
+  caption: "Điểm {number}";
+}
+
+node.Appendix {
+  color: #F472B6;
+  caption: "Phụ lục {number}";
+}
+
+node.Table {
+  color: #FB7185;
+  caption: "Bảng {number}";
+}
+
+node.Chunk {
+  color: #CBD5E1;
+  caption: "Chunk {chunk_index}";
+}
+
+node.KGNode {
+  color: #94A3B8;
+  caption: "{id}";
+}

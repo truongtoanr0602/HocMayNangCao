@@ -134,7 +134,7 @@ def test_real_corpus_preserves_every_chunk_with_explicit_paths():
     assert {n.id for n in chunks} == {r["chunk_id"] for r in rows}
     assert sum(n.properties["chunk_type"] == "clause_group" for n in chunks) == sum(r["chunk_type"] == "clause_group" for r in rows)
     assert len([e for e in graph.edges if e.type == "HAS_CHUNK"]) == len(rows)
-    assert not graph.warnings
+    assert all(w.startswith("Unresolved reference") for w in graph.warnings)
     assert all(n.properties["metadata_mode"] == "explicit_path" for n in chunks)
 
 

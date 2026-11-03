@@ -11,10 +11,10 @@ def article(*texts):
     return LegalUnit("article", lines, 1, 1, article=StructureRef("1", "Phạm vi"), clause_ids=("1", "2"))
 
 
-def test_short_article_stays_whole():
+def test_short_article_with_one_clause_emits_a_clause():
     chunks = chunk_units(SPEC, [article("Điều 1. Phạm vi", "1. Nội dung")], max_chars=6000)
     assert len(chunks) == 1
-    assert chunks[0].chunk_type == "article"
+    assert chunks[0].chunk_type == "clause"
     assert chunks[0].split_reason is None
 
 
@@ -24,7 +24,7 @@ def test_long_article_splits_at_clause_and_keeps_article_metadata():
     assert len(chunks) == 2
     assert {chunk.article.number for chunk in chunks} == {"1"}
     assert [chunk.article_chunk_index for chunk in chunks] == [1, 2]
-    assert all(chunk.split_reason == "max_size_clause" for chunk in chunks)
+    assert all(chunk.split_reason is None and chunk.chunk_type == "clause" for chunk in chunks)
     assert chunk_units(SPEC, [unit], max_chars=110)[0].chunk_id == chunks[0].chunk_id
 
 

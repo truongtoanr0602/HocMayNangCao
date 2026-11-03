@@ -1,6 +1,6 @@
 {
-  "processing_version": "3.0.0",
-  "generated_at": "2026-10-12T16:11:26.691980+00:00",
+  "processing_version": "4.0.0",
+  "generated_at": "2026-10-28T02:37:34.276884+00:00",
   "max_chars": 6000,
   "documents": [
     {
@@ -16,15 +16,14 @@
       "appendix_count": 0,
       "table_count": 1,
       "source_content_preserved": true,
-      "chunk_count": 233,
+      "chunk_count": 906,
       "chunk_chars": {
         "min": 25,
-        "median": 667,
-        "max": 4880
+        "median": 252.0,
+        "max": 1740
       },
       "split_reasons": {
-        "none": 231,
-        "max_size_clause": 2
+        "none": 906
       },
       "warnings": [
         "Rejected Article-like reference at block 1317: “Điều 54. Điều kiện hưởng lương hưu",
@@ -45,15 +44,14 @@
       "appendix_count": 6,
       "table_count": 43,
       "source_content_preserved": true,
-      "chunk_count": 221,
+      "chunk_count": 775,
       "chunk_chars": {
         "min": 13,
-        "median": 703,
-        "max": 5856
+        "median": 309,
+        "max": 4872
       },
       "split_reasons": {
-        "none": 215,
-        "max_size_clause": 4,
+        "none": 773,
         "max_size_sentence": 2
       },
       "warnings": [
@@ -73,15 +71,14 @@
       "appendix_count": 1,
       "table_count": 2,
       "source_content_preserved": true,
-      "chunk_count": 19,
+      "chunk_count": 82,
       "chunk_chars": {
-        "min": 194,
-        "median": 936,
+        "min": 96,
+        "median": 368.5,
         "max": 5989
       },
       "split_reasons": {
-        "none": 14,
-        "max_size_clause": 2,
+        "none": 79,
         "max_size_sentence": 3
       },
       "warnings": []
@@ -99,14 +96,14 @@
       "appendix_count": 1,
       "table_count": 3,
       "source_content_preserved": true,
-      "chunk_count": 14,
+      "chunk_count": 29,
       "chunk_chars": {
-        "min": 163,
-        "median": 968.5,
+        "min": 108,
+        "median": 313,
         "max": 5839
       },
       "split_reasons": {
-        "none": 10,
+        "none": 25,
         "max_size_sentence": 4
       },
       "warnings": []
@@ -124,15 +121,14 @@
       "appendix_count": 0,
       "table_count": 2,
       "source_content_preserved": true,
-      "chunk_count": 150,
+      "chunk_count": 818,
       "chunk_chars": {
         "min": 25,
-        "median": 960.5,
-        "max": 5618
+        "median": 298.0,
+        "max": 1162
       },
       "split_reasons": {
-        "none": 148,
-        "max_size_clause": 2
+        "none": 818
       },
       "warnings": []
     },
@@ -149,15 +145,14 @@
       "appendix_count": 2,
       "table_count": 10,
       "source_content_preserved": true,
-      "chunk_count": 71,
+      "chunk_count": 284,
       "chunk_chars": {
         "min": 9,
-        "median": 1105,
-        "max": 5958
+        "median": 501.5,
+        "max": 2621
       },
       "split_reasons": {
-        "none": 67,
-        "max_size_clause": 4
+        "none": 284
       },
       "warnings": [
         "Rejected Article-like reference at block 459: “Điều 39. Chi tổ chức và hoạt động bảo hiểm tai nạn lao động"
@@ -176,14 +171,14 @@
       "appendix_count": 3,
       "table_count": 6,
       "source_content_preserved": true,
-      "chunk_count": 21,
+      "chunk_count": 36,
       "chunk_chars": {
-        "min": 106,
-        "median": 635,
+        "min": 90,
+        "median": 361.0,
         "max": 5276
       },
       "split_reasons": {
-        "none": 21
+        "none": 36
       },
       "warnings": []
     },
@@ -200,22 +195,21 @@
       "appendix_count": 0,
       "table_count": 2,
       "source_content_preserved": true,
-      "chunk_count": 74,
+      "chunk_count": 759,
       "chunk_chars": {
-        "min": 159,
-        "median": 2016.0,
-        "max": 5895
+        "min": 97,
+        "median": 374,
+        "max": 1830
       },
       "split_reasons": {
-        "none": 62,
-        "max_size_clause": 12
+        "none": 759
       },
       "warnings": []
     }
   ],
   "global": {
     "document_count": 8,
-    "chunk_count": 803,
+    "chunk_count": 3689,
     "checks": {
       "expected_document_count": true,
       "unique_chunk_ids": true,

@@ -1,19 +1,22 @@
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from hashlib import sha256
 import json
 
 
-LABELS = {"LegalDocument", "Part", "Chapter", "Section", "Article", "Appendix", "Table", "Chunk"}
-EDGE_TYPES = {"CONTAINS", "HAS_CHUNK"}
-SCHEMA_VERSION = "structural-kg-v1"
+LABELS = {"LegalDocument", "Part", "Chapter", "Section", "Article", "Clause", "Point", "Appendix", "Table", "Chunk"}
+STRUCTURAL_EDGES = {"CONTAINS", "HAS_CHUNK"}
+SEMANTIC_EDGES = {"REFERS_TO", "GUIDES", "DETAILS"}
+EDGE_TYPES = STRUCTURAL_EDGES | SEMANTIC_EDGES
+SCHEMA_VERSION = "legal-kg-v2"
 CHILD_LABELS = {
-    "LegalDocument": LABELS - {"LegalDocument", "Chunk"},
+    "LegalDocument": LABELS - {"LegalDocument", "Chunk", "Clause", "Point"},
     "Part": {"Chapter", "Section", "Article", "Table"},
     "Chapter": {"Section", "Article", "Table"},
     "Section": {"Article", "Table"},
-    "Article": {"Table"}, "Appendix": {"Table"}, "Table": set(),
+    "Article": {"Clause", "Point", "Table"}, "Clause": {"Point", "Table"}, "Point": {"Table"},
+    "Appendix": {"Table"}, "Table": set(),
 }
 
 
@@ -63,6 +66,7 @@ class Edge:
     source: str
     target: str
     type: str
+    properties: dict = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -78,7 +82,12 @@ class GraphPayload:
         return fingerprint(self._body())
 
     def _body(self) -> dict:
-        return asdict(self)
+        body = asdict(self)
+        # Preserve old artifact hashes when reading structural-only snapshots.
+        if self.schema_version == "structural-kg-v1":
+            for edge in body["edges"]:
+                edge.pop("properties")
+        return body
 
     def to_dict(self) -> dict:
         return json.loads(json.dumps({**self._body(), "graph_hash": self.graph_hash}, ensure_ascii=False))
@@ -100,7 +109,7 @@ class GraphPayload:
             raise ValueError("Invalid graph payload") from exc
 
     def validate(self) -> None:
-        if self.schema_version != SCHEMA_VERSION:
+        if self.schema_version not in {SCHEMA_VERSION, "structural-kg-v1"}:
             raise ValueError("Unsupported graph schema version")
         if not isinstance(self.source_hash, str) or len(self.source_hash) != 64 or any(
             c not in "0123456789abcdef" for c in self.source_hash
@@ -132,6 +141,31 @@ class GraphPayload:
                 raise ValueError("Duplicate edge, missing endpoint or invalid relationship type")
             seen_edges.add(key)
             source, target = nodes[edge.source], nodes[edge.target]
+            if not isinstance(edge.properties, dict):
+                raise ValueError("Edge properties must be an object")
+            if edge.type in SEMANTIC_EDGES:
+                if self.schema_version == "structural-kg-v1":
+                    raise ValueError("Semantic relationships require legal-kg-v2")
+                allowed = {"LegalDocument", "Article", "Clause", "Point"}
+                if source.label not in allowed or target.label not in allowed or source.id == target.id:
+                    raise ValueError("Invalid semantic relationship endpoints")
+                if set(edge.properties) != {"evidence_json"}:
+                    raise ValueError("Semantic relationships require evidence_json")
+                try:
+                    evidence = json.loads(edge.properties["evidence_json"])
+                except (TypeError, ValueError) as exc:
+                    raise ValueError("Invalid relationship evidence") from exc
+                if not isinstance(evidence, list) or not evidence:
+                    raise ValueError("Missing relationship evidence")
+                for item in evidence:
+                    chunk = nodes.get(item.get("chunk_id")) if isinstance(item, dict) else None
+                    if (chunk is None or chunk.label != "Chunk" or not isinstance(item.get("quote"), str)
+                            or not item["quote"].strip() or item["quote"] not in chunk.properties["text"]
+                            or item.get("method") not in {"rule", "explicit"}):
+                        raise ValueError("Relationship evidence does not match source chunk")
+                continue
+            if edge.properties:
+                raise ValueError("Unexpected structural relationship properties")
             if source.label == "Chunk" or target.label == "LegalDocument":
                 raise ValueError("Invalid structure relationship")
             if (edge.type == "HAS_CHUNK") != (target.label == "Chunk"):

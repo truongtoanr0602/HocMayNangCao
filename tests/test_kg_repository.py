@@ -23,6 +23,7 @@ class Driver:
     def __init__(self, fail_edges=False):
         self.nodes = {}
         self.edges = set()
+        self.edge_properties = {}
         self.snapshots = {}
         self.fail_edges = fail_edges
 
@@ -41,13 +42,14 @@ class Session:
         pass
 
     def run(self, query, **params):
-        assert query.startswith("CREATE CONSTRAINT")
+        assert query.startswith(("CREATE CONSTRAINT", "CREATE INDEX"))
         return Result()
 
     def execute_write(self, callback, *args):
         staged = copy.deepcopy(self.driver)
         value = callback(Transaction(staged), *args)
         self.driver.nodes, self.driver.edges, self.driver.snapshots = staged.nodes, staged.edges, staged.snapshots
+        self.driver.edge_properties = staged.edge_properties
         return value
 
 
@@ -74,6 +76,8 @@ class Transaction:
                 assert (snapshot, e["source"]) in self.driver.nodes
                 assert (snapshot, e["target"]) in self.driver.nodes
                 self.driver.edges.add((snapshot, e["source"], e["target"], params["edge_type"]))
+                if "SET r += row.properties" in query:
+                    self.driver.edge_properties[(snapshot, e["source"], e["target"], params["edge_type"])] = e["properties"]
             return Result([{"written": len(params["edges"])}])
         else:
             raise AssertionError(query)
@@ -132,3 +136,16 @@ def test_same_snapshot_cannot_be_overwritten_with_different_graph():
 def test_invalid_batch_size_is_rejected():
     with pytest.raises(ValueError, match="batch_size"):
         load_graph(build_graph([row(structure_path=[])]), Driver(), batch_size=0)
+
+
+def test_loading_relations_preserves_evidence_and_is_idempotent():
+    from test_kg_relations import graph_for
+    graph, _ = graph_for("Quy định chi tiết Điều 1 của Luật mẫu 2026.")
+    driver = Driver()
+    load_graph(graph, driver)
+    load_graph(graph, driver)
+    assert len(driver.edges) == len(graph.edges)
+    for edge in graph.edges:
+        if edge.type == "DETAILS":
+            key = (graph.source_hash, edge.source, edge.target, edge.type)
+            assert driver.edge_properties[key] == edge.properties

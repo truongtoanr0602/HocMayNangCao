@@ -91,13 +91,89 @@ def _path(unit: LegalUnit) -> tuple[StructurePathEntry, ...]:
                  ("part", "chapter", "section", "article") if (ref := getattr(unit, kind)))
 
 
+def _leaf_units(unit: LegalUnit) -> list[LegalUnit]:
+    """Partition each article branch; introductory text travels with its children.
+
+    A size limit is applied only AFTER this semantic partition. Every fragment of
+    an oversized leaf retains the same structural address and source offsets.
+    """
+    if unit.unit_type != "article":
+        return [unit]
+    introduction: list[SourceLine] = []
+    branches: list[tuple[str | None, list[SourceLine]]] = []
+    clause = None
+    for line in unit.lines:
+        match = _CLAUSE.match(line.text)
+        number = match.group(1) if match else line.clause_id
+        if number is not None and (number != clause or match):
+            clause = number
+            branches.append((clause, []))
+        if branches:
+            branches[-1][1].append(line)
+        else:
+            introduction.append(line)
+    if not branches:
+        branches = [(None, introduction)]
+        introduction = []
+    leaves = []
+    for clause, lines in branches:
+        prefix = list(introduction)
+        points: list[tuple[str, list[SourceLine]]] = []
+        point = None
+        for line in lines:
+            match = _POINT.match(line.text)
+            number = match.group(1).lower() if match else line.point_id
+            if number is not None and (number != point or match):
+                point = number
+                points.append((point, []))
+            if points:
+                points[-1][1].append(line)
+            else:
+                prefix.append(line)
+        path = _path(unit)
+        if clause:
+            path += (StructurePathEntry("clause", clause, "\n".join(line.text for line in lines)),)
+        if points:
+            for point, body in points:
+                leaves.append(replace(unit, unit_type="point", lines=tuple(prefix + body),
+                                      clause_ids=(clause,) if clause else (), point_ids=(point,),
+                                      structure_path=path + (StructurePathEntry(
+                                          "point", point, "\n".join(line.text for line in body)),)))
+        else:
+            leaves.append(replace(unit, unit_type="clause" if clause else "article", lines=tuple(prefix),
+                                  clause_ids=(clause,) if clause else (), point_ids=(), structure_path=path))
+    return leaves
+
+
 def chunk_units(spec: DocumentSpec, units: list[LegalUnit] | tuple[LegalUnit, ...], max_chars: int = 6000) -> list[Chunk]:
     if type(max_chars) is not int or max_chars < 1:
         raise ValueError("max_chars must be a positive integer")
     chunks: list[Chunk] = []
     article_indexes: dict[str, int] = defaultdict(int)
     path_indexes: dict[str, int] = defaultdict(int)
-    for unit in units:
+    leaves = []
+    titles: dict[tuple, list[str]] = defaultdict(list)
+    for original in units:
+        branches = _leaf_units(original)
+        seen = set()
+        for leaf in branches:
+            path = _path(leaf)
+            for index, entry in enumerate(path):
+                if entry.type not in {"clause", "point"}:
+                    continue
+                key = tuple((p.type, p.number) for p in path[:index + 1])
+                if key not in seen:
+                    titles[key].append(entry.title)
+                    seen.add(key)
+        leaves.extend(branches)
+    # A table can interrupt an article unit. Reunite titles across its segments
+    # before splitting chunks so all occurrences of a structural node agree.
+    for unit in leaves:
+        path = _path(unit)
+        unit = replace(unit, structure_path=tuple(
+            replace(entry, title="\n".join(titles[tuple((p.type, p.number) for p in path[:index + 1])]))
+            if entry.type in {"clause", "point"} else entry
+            for index, entry in enumerate(path)))
         if not unit.lines:
             continue
         groups, split_reason = _groups(unit, max_chars)
@@ -111,6 +187,8 @@ def chunk_units(spec: DocumentSpec, units: list[LegalUnit] | tuple[LegalUnit, ..
                             if (match := _CLAUSE.match(line.text)) or line.clause_id)) if unit.article else ()
             points = tuple(dict.fromkeys(line.point_id or match.group(1).lower() for line in lines
                            if (match := _POINT.match(line.text)) or line.point_id)) if unit.article else ()
+            if unit.unit_type in {"clause", "point"}:
+                clauses, points = unit.clause_ids, unit.point_ids
             if unit.article:
                 article_indexes[unit.article.number] += 1
                 article_index = article_indexes[unit.article.number]
@@ -120,7 +198,7 @@ def chunk_units(spec: DocumentSpec, units: list[LegalUnit] | tuple[LegalUnit, ..
             identity = unit.article.number if unit.unit_type == "article" and unit.article else path_key
             identity_index = article_index if unit.unit_type == "article" and unit.article else path_indexes[path_key]
             digest = sha256(f"{spec.document_id}|{identity}|{identity_index}|{text}".encode("utf-8")).hexdigest()[:20]
-            chunk_type = "clause_group" if unit.unit_type == "article" and len(groups) > 1 else unit.unit_type
+            chunk_type = unit.unit_type
             spans = []
             offset = 0
             for line in lines:
@@ -136,5 +214,6 @@ def chunk_units(spec: DocumentSpec, units: list[LegalUnit] | tuple[LegalUnit, ..
                 len(chunks) + 1, article_index, text, len(text), ceil(len(text) / 3),
                 split_reason, __version__, structure_path, tuple(spans), unit.table_id, unit.table_headers,
                 tuple(row for row in unit.table_rows if row["block_number"] in source_blocks),
+                short_title=spec.short_title.strip() or None if spec.short_title is not None else None,
             ))
     return chunks

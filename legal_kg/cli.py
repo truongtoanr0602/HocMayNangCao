@@ -10,7 +10,8 @@ import tempfile
 
 from .build import build_graph, inspect_chunk
 from .models import GraphPayload
-from .repository import LoadError, fetch_context, load_graph
+from .repository import LoadError, fetch_by_title, fetch_context, load_graph
+from .titles import TitleIndex
 
 
 def _write_atomic(path: Path, value: dict) -> None:
@@ -63,6 +64,9 @@ def main(argv: list[str] | None = None) -> int:
     inspect = commands.add_parser("inspect", help="Inspect ancestry and sibling chunks offline")
     inspect.add_argument("--input", type=Path, default=Path("output/kg/structural_graph.json"))
     inspect.add_argument("--chunk-id", required=True)
+    search = commands.add_parser("search", help="Look up original title, short title or document number offline")
+    search.add_argument("--input", type=Path, default=Path("output/kg/structural_graph.json"))
+    search.add_argument("--title", required=True)
     load = commands.add_parser("load", help="Load one graph snapshot atomically into Neo4j")
     load.add_argument("--input", type=Path, default=Path("output/kg/structural_graph.json"))
     load.add_argument("--batch-size", type=int, default=500)
@@ -70,7 +74,10 @@ def main(argv: list[str] | None = None) -> int:
     lookup = commands.add_parser("lookup", help="Fetch context from a ready Neo4j snapshot")
     lookup.add_argument("--snapshot", required=True)
     lookup.add_argument("--chunk-id", required=True)
-    for command in (load, lookup):
+    search_db = commands.add_parser("search-db", help="Use Neo4j title indexes in a ready snapshot")
+    search_db.add_argument("--snapshot", required=True)
+    search_db.add_argument("--title", required=True)
+    for command in (load, lookup, search_db):
         command.add_argument("--uri", default=os.environ.get("NEO4J_URI", "bolt://localhost:7687"))
         command.add_argument("--user", default=os.environ.get("NEO4J_USER", "neo4j"))
         command.add_argument("--database", default=os.environ.get("NEO4J_DATABASE", "neo4j"))
@@ -95,6 +102,11 @@ def main(argv: list[str] | None = None) -> int:
                       "chunk_count": sum(n.label == "Chunk" for n in graph.nodes), "warnings": list(graph.warnings)}
         elif args.command == "inspect":
             result = inspect_chunk(_read_graph(args.input), args.chunk_id)
+        elif args.command == "search":
+            result = TitleIndex(_read_graph(args.input)).lookup(args.title)
+        elif args.command == "search-db":
+            with _connect(args) as driver:
+                result = fetch_by_title(driver, args.snapshot, args.title, database=args.database)
         elif args.command == "load":
             graph = _read_graph(args.input)
             # Fail before connecting if input has not been reviewed.
