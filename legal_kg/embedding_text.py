@@ -10,6 +10,9 @@ from urllib.parse import quote
 from .models import GraphPayload, fingerprint
 
 VERSION = "node-text-v1"
+# v1: an Article embeds its full text, including every Clause/Point.
+# v2: an Article that has Clauses embeds only its heading and lead-in; content lives in the children.
+VERSIONS = {"v1": "node-text-v1", "v2": "node-text-v2"}
 TYPES = {"Article", "Clause", "Point"}
 
 
@@ -31,7 +34,10 @@ def reconstruct(blocks, spans):
     return "\n".join(blocks[b][s:e] for b, s, e in merged_spans(spans))
 
 
-def prepare_records(graph, rows, blocks):
+def prepare_records(graph, rows, blocks, article_mode="v1"):
+    if article_mode not in VERSIONS:
+        raise ValueError(f"Unknown article mode: {article_mode}")
+    version = VERSIONS[article_mode]
     graph_hash = graph.graph_hash
     nodes = {n.id: n for n in graph.nodes}
     mapped = defaultdict(list)
@@ -118,6 +124,12 @@ def prepare_records(graph, rows, blocks):
             address.append(text)
         context_text = "\n".join(context).strip()
         body = bodies[nid]
+        if (article_mode == "v2" and node.label == "Article"
+                and any(nodes[c].label == "Clause" for c in direct_children[nid])):
+            lead = introduction(nid, "Clause")
+            if not lead or lead not in body:
+                raise ValueError(f"Article lead-in not found for v2 text: {nid}")
+            body = lead
         text = (f"Văn bản: {nodes[doc].properties['title']}\n"
                 f"Số hiệu: {nodes[doc].properties['document_number']}\n"
                 f"Địa chỉ: {' > '.join(address)}\n")
@@ -128,7 +140,7 @@ def prepare_records(graph, rows, blocks):
             "node_id": nid, "label": node.label, "number": node.properties["number"],
             "document_id": doc, "source_file": nodes[doc].properties["source_file"],
             "snapshot_id": graph.source_hash, "graph_hash": graph_hash,
-            "embedding_version": VERSION, "embedding_text": text,
+            "embedding_version": version, "embedding_text": text,
             "embedding_text_hash": fingerprint(text), "char_count": len(text),
             "needs_tokenizer_check": True, "over_6000_chars": len(text) > 6000,
             "body_text": body, "context_text": context_text, "path_node_ids": path,
@@ -147,8 +159,12 @@ def main():
     parser.add_argument("--graph", type=Path, default=Path("output/kg/structural_graph.json"))
     parser.add_argument("--chunks", type=Path, default=Path("output/preprocessed/legal_chunks.jsonl"))
     parser.add_argument("--blocks", type=Path, default=Path("output/preprocessed/intermediate"))
-    parser.add_argument("--output", type=Path, default=Path("output/kg/embedding_text"))
+    parser.add_argument("--output", type=Path, default=None,
+                        help="Default: output/kg/embedding_text (v1) or output/kg/embedding_text_v2 (v2)")
+    parser.add_argument("--article-mode", choices=sorted(VERSIONS), default="v1")
     args = parser.parse_args()
+    if args.output is None:
+        args.output = Path("output/kg/embedding_text" + ("" if args.article_mode == "v1" else "_v2"))
     if args.output.resolve() in {args.graph.resolve(), args.chunks.resolve(), args.blocks.resolve()}:
         raise ValueError("Output must be separate from inputs")
     graph = GraphPayload.from_dict(json.loads(args.graph.read_text(encoding="utf-8")))
@@ -156,7 +172,7 @@ def main():
     blocks = {p.name.split('.')[0]: {b['block_number']: b['text'] for b in
               json.loads(p.read_text(encoding="utf-8"))['clean_blocks']}
               for p in args.blocks.glob("*.blocks.json")}
-    records = prepare_records(graph, rows, blocks)
+    records = prepare_records(graph, rows, blocks, args.article_mode)
     args.output.mkdir(parents=True, exist_ok=True)
     payload = "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records)
     destination = args.output / "node_texts.jsonl"
@@ -173,7 +189,7 @@ def main():
             if r['node_id'] not in {x['node_id'] for x in samples}:
                 samples.append(r)
     (args.output / "samples.json").write_text(json.dumps(samples, ensure_ascii=False, indent=2), encoding="utf-8")
-    report = {"snapshot_id": graph.source_hash, "version": VERSION,
+    report = {"snapshot_id": graph.source_hash, "version": VERSIONS[args.article_mode],
               "counts": dict(Counter(r['label'] for r in records)),
               "total": len(records), "empty_texts": sum(not r['embedding_text'].strip() for r in records),
               "over_6000_chars": sum(r['over_6000_chars'] for r in records),
