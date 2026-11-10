@@ -1,0 +1,922 @@
+[
+  {
+    "question_id": "q001",
+    "top_nodes": [
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-3/point-d",
+        "score": 0.5793407559394836
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17/clause-1",
+        "score": 0.5703514218330383
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-5/article-165/clause-3",
+        "score": 0.5418233871459961
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-14/clause-1",
+        "score": 0.5414227843284607
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-4",
+        "score": 0.5400187969207764
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9",
+        "score": 0.5214066803455353
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2/point-a",
+        "score": 0.5214066803455353
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17",
+        "score": 0.5133162796497345
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-5/article-165",
+        "score": 0.4876410484313965
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-14",
+        "score": 0.4872805058956146
+      }
+    ],
+    "context_chars": 5408
+  },
+  {
+    "question_id": "q002",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-2",
+        "score": 0.7370355129241943
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25",
+        "score": 0.6993688344955444
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-3",
+        "score": 0.6858925223350525
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-1",
+        "score": 0.6519423723220825
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-4",
+        "score": 0.644101619720459
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-1/point-a",
+        "score": 0.6168414354324341
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-1",
+        "score": 0.6121240854263306
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-1/article-92/clause-2",
+        "score": 0.6085304021835327
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-24/clause-3",
+        "score": 0.6018404960632324
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-61/clause-2",
+        "score": 0.5988445281982422
+      }
+    ],
+    "context_chars": 2052
+  },
+  {
+    "question_id": "q006",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.7011007070541382
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-b",
+        "score": 0.6727624535560608
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-c",
+        "score": 0.672704815864563
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98",
+        "score": 0.6632000803947449
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-3",
+        "score": 0.65217125415802
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.6309906363487244
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-4",
+        "score": 0.5968800723552704
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-2",
+        "score": 0.5869541287422181
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-a",
+        "score": 0.5869541287422181
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-b",
+        "score": 0.5869541287422181
+      }
+    ],
+    "context_chars": 5271
+  },
+  {
+    "question_id": "q008",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-1",
+        "score": 0.7216793298721313
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-64",
+        "score": 0.6865600347518921
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109/clause-1",
+        "score": 0.6851323843002319
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-2",
+        "score": 0.6800764799118042
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-1/article-106",
+        "score": 0.6583381295204163
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109",
+        "score": 0.6166191458702087
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-1/article-105",
+        "score": 0.6166191458702087
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109/clause-2",
+        "score": 0.6166191458702087
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-a",
+        "score": 0.6166191458702087
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-b",
+        "score": 0.6166191458702087
+      }
+    ],
+    "context_chars": 3379
+  },
+  {
+    "question_id": "q011",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1",
+        "score": 0.6797568202018738
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115",
+        "score": 0.6728748083114624
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1/point-a",
+        "score": 0.6658695936203003
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.6570690870285034
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-e",
+        "score": 0.6540908813476562
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-65/clause-3",
+        "score": 0.6117811381816864
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-67/clause-2",
+        "score": 0.6117811381816864
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-66/clause-2",
+        "score": 0.6055873274803162
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112",
+        "score": 0.5913621783256531
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-3",
+        "score": 0.5913621783256531
+      }
+    ],
+    "context_chars": 3427
+  },
+  {
+    "question_id": "q013",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-2",
+        "score": 0.6956496238708496
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3",
+        "score": 0.6799219846725464
+      },
+      {
+        "node_id": "doc-01/chapter-II/article-12/clause-1",
+        "score": 0.6680521965026855
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-1",
+        "score": 0.6443235874176025
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-3",
+        "score": 0.6110349297523499
+      },
+      {
+        "node_id": "doc-01/chapter-II/article-12",
+        "score": 0.601246976852417
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-14/clause-1",
+        "score": 0.5872899889945984
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-119/clause-1",
+        "score": 0.5835269689559937
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-119/clause-4",
+        "score": 0.5779925584793091
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-1/article-144/clause-3",
+        "score": 0.5762668251991272
+      }
+    ],
+    "context_chars": 4206
+  },
+  {
+    "question_id": "q015",
+    "top_nodes": [
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3/point-b",
+        "score": 0.655207633972168
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3",
+        "score": 0.6534910798072815
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-b",
+        "score": 0.6494002938270569
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1",
+        "score": 0.6402672529220581
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-a",
+        "score": 0.63190758228302
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3",
+        "score": 0.5896868705749512
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-21/clause-1",
+        "score": 0.5896868705749512
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-c",
+        "score": 0.6241974234580994
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-2",
+        "score": 0.6177349090576172
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-16/clause-2",
+        "score": 0.6150006055831909
+      }
+    ],
+    "context_chars": 11960
+  },
+  {
+    "question_id": "q018",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-4/clause-3/point-a",
+        "score": 0.7450307607650757
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3",
+        "score": 0.7417050004005432
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-b",
+        "score": 0.7299763560295105
+      },
+      {
+        "node_id": "doc-04/article-4",
+        "score": 0.7187765836715698
+      },
+      {
+        "node_id": "doc-04/article-4/clause-1",
+        "score": 0.6725488901138306
+      },
+      {
+        "node_id": "doc-04/article-1",
+        "score": 0.6382412910461426
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-91/clause-2",
+        "score": 0.6379479169845581
+      },
+      {
+        "node_id": "doc-04/article-3",
+        "score": 0.6284409761428833
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-91",
+        "score": 0.6220662593841553
+      },
+      {
+        "node_id": "doc-04/article-3/clause-1",
+        "score": 0.6206708550453186
+      }
+    ],
+    "context_chars": 6492
+  },
+  {
+    "question_id": "q020",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.7532116770744324
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.7462724447250366
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.7210050821304321
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.6986388564109802
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.6909852027893066
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.6778905093669891
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-3",
+        "score": 0.6716452002525329
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-59/clause-1",
+        "score": 0.6716452002525329
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-59/clause-2",
+        "score": 0.6716452002525329
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6526893377304077
+      }
+    ],
+    "context_chars": 5974
+  },
+  {
+    "question_id": "q022",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-XI/article-141/clause-13",
+        "score": 0.7751715183258057
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-2",
+        "score": 0.768923282623291
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5",
+        "score": 0.7490715980529785
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-3",
+        "score": 0.698944091796875
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31/clause-1",
+        "score": 0.6472128629684448
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141",
+        "score": 0.6976543664932251
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-43/clause-2/point-b",
+        "score": 0.6741644382476807
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31",
+        "score": 0.5824915766716003
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-39/clause-1/point-c",
+        "score": 0.5824915766716003
+      },
+      {
+        "node_id": "doc-06/chapter-II/article-7/clause-1/point-a",
+        "score": 0.5824915766716003
+      }
+    ],
+    "context_chars": 10061
+  },
+  {
+    "question_id": "q023",
+    "top_nodes": [
+      {
+        "node_id": "doc-07/article-3/clause-2",
+        "score": 0.7588396072387695
+      },
+      {
+        "node_id": "doc-07/article-3",
+        "score": 0.7303241491317749
+      },
+      {
+        "node_id": "doc-07/article-3/clause-1",
+        "score": 0.6887631416320801
+      },
+      {
+        "node_id": "doc-07/article-3/clause-3",
+        "score": 0.6883282661437988
+      },
+      {
+        "node_id": "doc-07/article-7",
+        "score": 0.6863058805465698
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101",
+        "score": 0.6822256445884705
+      },
+      {
+        "node_id": "doc-07/article-7/clause-2",
+        "score": 0.6791185140609741
+      },
+      {
+        "node_id": "doc-07/article-7/clause-1",
+        "score": 0.6767290234565735
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101/clause-1",
+        "score": 0.6709902882575989
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101/clause-2",
+        "score": 0.6696775555610657
+      }
+    ],
+    "context_chars": 5776
+  },
+  {
+    "question_id": "q026",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112",
+        "score": 0.6980268955230713
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-b",
+        "score": 0.6874855756759644
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.6788477301597595
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-a",
+        "score": 0.6614673733711243
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-3",
+        "score": 0.6583142876625061
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-66/clause-2",
+        "score": 0.6282242059707642
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-67/clause-2",
+        "score": 0.6282242059707642
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-3",
+        "score": 0.6109629571437836
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-2",
+        "score": 0.6109629571437836
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-4/article-109/clause-3/point-a",
+        "score": 0.6109629571437836
+      }
+    ],
+    "context_chars": 2784
+  },
+  {
+    "question_id": "q028",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-5/clause-1",
+        "score": 0.7765271067619324
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-1",
+        "score": 0.7199835181236267
+      },
+      {
+        "node_id": "doc-04/article-5",
+        "score": 0.686035692691803
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44",
+        "score": 0.6761482954025269
+      },
+      {
+        "node_id": "doc-07/article-8/clause-1",
+        "score": 0.6756654977798462
+      },
+      {
+        "node_id": "doc-07/article-8",
+        "score": 0.6080989480018616
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-a",
+        "score": 0.6754534840583801
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-1",
+        "score": 0.661929726600647
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-c",
+        "score": 0.6577636003494263
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-b",
+        "score": 0.6522505879402161
+      }
+    ],
+    "context_chars": 6067
+  },
+  {
+    "question_id": "q029",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-a",
+        "score": 0.6693122386932373
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-c",
+        "score": 0.6634178757667542
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.6606389284133911
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6593930125236511
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-9",
+        "score": 0.6548659801483154
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60",
+        "score": 0.6023810148239136
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-1",
+        "score": 0.6023810148239136
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-4",
+        "score": 0.594575035572052
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.589379382133484
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-1",
+        "score": 0.589379382133484
+      }
+    ],
+    "context_chars": 7656
+  },
+  {
+    "question_id": "q031",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-40/clause-3",
+        "score": 0.7491762638092041
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-2",
+        "score": 0.669553279876709
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62",
+        "score": 0.6664958000183105
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-3",
+        "score": 0.6639541387557983
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-40",
+        "score": 0.6632652282714844
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-%C4%91",
+        "score": 0.6025979518890381
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-a",
+        "score": 0.6025979518890381
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-b",
+        "score": 0.6025979518890381
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-c",
+        "score": 0.6025979518890381
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-d",
+        "score": 0.6025979518890381
+      }
+    ],
+    "context_chars": 2982
+  },
+  {
+    "question_id": "q034",
+    "top_nodes": [
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-2",
+        "score": 0.7154236435890198
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-b",
+        "score": 0.7021429538726807
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-1/point-b",
+        "score": 0.700741708278656
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-d",
+        "score": 0.7006683349609375
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-c",
+        "score": 0.6997509002685547
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18",
+        "score": 0.6438812792301178
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17",
+        "score": 0.6319286584854126
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-1",
+        "score": 0.6983574032783508
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-a",
+        "score": 0.6970018148422241
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2",
+        "score": 0.6968438625335693
+      }
+    ],
+    "context_chars": 9608
+  },
+  {
+    "question_id": "q035",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17/clause-2",
+        "score": 0.5888935923576355
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1",
+        "score": 0.5794538855552673
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-8/clause-3",
+        "score": 0.5787402987480164
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-a",
+        "score": 0.578148365020752
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-%C4%91",
+        "score": 0.5779999494552612
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17",
+        "score": 0.530004233121872
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9",
+        "score": 0.5215084969997407
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-3/point-a",
+        "score": 0.5215084969997407
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-3/point-b",
+        "score": 0.5215084969997407
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-3/point-c",
+        "score": 0.5215084969997407
+      }
+    ],
+    "context_chars": 6266
+  },
+  {
+    "question_id": "q036",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.7479881048202515
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.7262102365493774
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.6889094710350037
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.6690229773521423
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.6442975401878357
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53",
+        "score": 0.6731892943382264
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-3",
+        "score": 0.6535892128944397
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-59/clause-1",
+        "score": 0.6535892128944397
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-59/clause-2",
+        "score": 0.6535892128944397
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6348792910575867
+      }
+    ],
+    "context_chars": 5974
+  },
+  {
+    "question_id": "q037",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.5706349015235901
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-b",
+        "score": 0.566005289554596
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-2",
+        "score": 0.5658627152442932
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-c",
+        "score": 0.565728485584259
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-96/clause-2",
+        "score": 0.5629292726516724
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98",
+        "score": 0.5135714113712311
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.5135714113712311
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54",
+        "score": 0.5092764437198639
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-96",
+        "score": 0.5092764437198639
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1",
+        "score": 0.5092764437198639
+      }
+    ],
+    "context_chars": 8673
+  },
+  {
+    "question_id": "q039",
+    "top_nodes": [
+      {
+        "node_id": "doc-06/chapter-VII/article-45",
+        "score": 0.43895047903060913
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-45/clause-2/point-a",
+        "score": 0.4202699661254883
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-2",
+        "score": 0.4193127453327179
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-1/article-97/clause-4/point-b",
+        "score": 0.4105667769908905
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-16/clause-2",
+        "score": 0.37824296951293945
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63",
+        "score": 0.3773814707994461
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-a",
+        "score": 0.3773814707994461
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-b",
+        "score": 0.3773814707994461
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-1/article-97",
+        "score": 0.36951009929180145
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-5/point-b",
+        "score": 0.4080736041069031
+      }
+    ],
+    "context_chars": 7173
+  }
+]

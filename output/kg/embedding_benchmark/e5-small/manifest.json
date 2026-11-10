@@ -1,14 +1,17 @@
 {
-  "cache_key": "69ed22c5b47892f1b01b6deebbe4a923b86f54e719ae10199e7d403d2c361572",
+  "cache_key": "844312f13d4919229b5794372332ff17e4f89edd39cc03d3de95d61433ed2102",
   "config": {
     "model_id": "intfloat/multilingual-e5-small",
     "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "weights_format": "safetensors",
     "max_seq_length": 512,
-    "payload_budget": 507,
+    "payload_budget": 508,
     "overlap": 24,
     "doc_prefix": "passage: ",
     "query_prefix": "query: ",
     "policy": "full-text-token-windows-weighted-normalized-mean-v1",
+    "batching": "length-sorted-token-budget-v1",
+    "embedding_version": "node-text-v1",
     "candidate_ids": [
       "doc-01/chapter-I/article-1",
       "doc-01/chapter-I/article-2",
@@ -9083,13 +9086,15 @@
     ],
     "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
     "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
-    "threads": 4,
-    "batch_size": 4,
+    "device": "cuda",
+    "gpu": "Tesla T4",
+    "threads": 2,
+    "batch_size": 16,
     "versions": {
-      "torch": "2.5.1+cu121",
-      "transformers": "5.3.0",
-      "sentence-transformers": "5.3.0",
-      "numpy": "2.4.3"
+      "torch": "2.14.1+cu130",
+      "transformers": "5.22.1",
+      "sentence-transformers": "5.7.0",
+      "numpy": "2.4.6"
     }
   },
   "dimension": 384,
@@ -13632,6 +13637,8 @@
     1,
     1
   ],
-  "encode_seconds_this_session": 610.7265198999958,
-  "resumed_window_index": 0
+  "encode_seconds_this_session": 19.09739986999989,
+  "resumed_from_batch": 0,
+  "batch_count": 302,
+  "max_batch_tokens": 8192
 }

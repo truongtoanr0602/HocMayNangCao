@@ -23,5 +23,12 @@
   "article_family_split_overlap": 0,
   "all_evidence_quotes_checked": true,
   "requires_human_review": true,
-  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1"
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "table_or_appendix_questions": 2,
+  "label_version": "v1",
+  "pooling_rows": 0,
+  "pooling_pending": 0,
+  "label_hash": "ff662a8446d93bf26684af96b820064950b7dfcc20f4faf34100d0ec0fb7f067",
+  "dev_question_hash": "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a",
+  "test_question_hash": "a651ac0b8572171d311f3854141e689fbaa66c35550ef4eff505013862ad8d1b"
 }

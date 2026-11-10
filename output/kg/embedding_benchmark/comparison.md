@@ -1,57 +1,91 @@
-# So sánh embedding node trên development
+# So sánh 4 model embedding node trên development (nhãn v1, tạm thời)
 
-Đây là thử nghiệm trên bộ nhãn nháp, chưa đánh giá tập test hoặc Neo4j ANN.
+Bộ câu hỏi: 20 câu, split dev, hash `6f737bb26c61`. Sinh tự động bởi `python -m legal_kg.retrieval_eval`.
 
-| Model | Node | Token/window | Số window | Recall nhóm @1 | @3 | @5 | @10 | Node chính @5 | MRR@10 (1 nhóm) |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| e5-small | 4534 | 512 | 4829 | 0.583 | 0.750 | 0.806 | 0.806 | 0.694 | 0.700 |
-| minilm | 4534 | 128 | 11167 | 0.389 | 0.611 | 0.694 | 0.694 | 0.389 | 0.565 |
+| Cấu hình | Recall nhóm @1 | @3 | @5 | @10 | Node chính @5 | Đủ mọi nhóm @5 | MRR@10 (1 nhóm) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| e5-small | 0.583 | 0.750 | 0.750 | 0.806 | 0.694 | 0.722 | 0.698 |
+| e5-base | 0.583 | 0.833 | 0.833 | 0.917 | 0.750 | 0.833 | 0.738 |
+| vn-embedding | 0.833 | 0.972 | 1.000 | 1.000 | 0.917 | 1.000 | 0.938 |
+| bge-m3 | 0.639 | 0.889 | 0.889 | 0.972 | 0.861 | 0.889 | 0.812 |
+
+## So sánh cặp: group_recall@5, paired bootstrap CI 95%
+
+| A | B | A − B | CI thấp | CI cao | Khác biệt có ý nghĩa |
+|---|---|---:|---:|---:|---|
+| e5-small | e5-base | -0.083 | -0.250 | +0.056 | không |
+| e5-small | vn-embedding | -0.250 | -0.444 | -0.056 | có |
+| e5-small | bge-m3 | -0.139 | -0.389 | +0.083 | không |
+| e5-base | vn-embedding | -0.167 | -0.333 | +0.000 | không |
+| e5-base | bge-m3 | -0.056 | -0.222 | +0.111 | không |
+| vn-embedding | bge-m3 | +0.111 | +0.000 | +0.278 | không |
 
 ## Theo loại câu hỏi
 
-| Model | Loại | Số câu có đáp án | Recall nhóm @5 | Đủ mọi nhóm @5 |
-|---|---|---:|---:|---:|
-| e5-small | direct | 3 | 1.000 | 1.000 |
-| e5-small | multi | 2 | 0.750 | 0.500 |
-| e5-small | natural | 13 | 0.769 | 0.769 |
-| minilm | direct | 3 | 1.000 | 1.000 |
-| minilm | multi | 2 | 0.250 | 0.000 |
-| minilm | natural | 13 | 0.692 | 0.692 |
+| Cấu hình | Loại | Số câu | Recall nhóm @5 | Node chính @5 | Đủ mọi nhóm @5 |
+|---|---|---:|---:|---:|---:|
+| e5-small | direct | 3 | 1.000 | 1.000 | 1.000 |
+| e5-small | multi | 2 | 0.750 | 0.250 | 0.500 |
+| e5-small | natural | 13 | 0.692 | 0.692 | 0.692 |
+| e5-base | direct | 3 | 1.000 | 0.667 | 1.000 |
+| e5-base | multi | 2 | 0.500 | 0.250 | 0.500 |
+| e5-base | natural | 13 | 0.846 | 0.846 | 0.846 |
+| vn-embedding | direct | 3 | 1.000 | 1.000 | 1.000 |
+| vn-embedding | multi | 2 | 1.000 | 0.250 | 1.000 |
+| vn-embedding | natural | 13 | 1.000 | 1.000 | 1.000 |
+| bge-m3 | direct | 3 | 0.667 | 0.667 | 0.667 |
+| bge-m3 | multi | 2 | 0.500 | 0.250 | 0.500 |
+| bge-m3 | natural | 13 | 1.000 | 1.000 | 1.000 |
+
+## Từ chối trả lời theo điểm top-1
+
+Từ chối khi cosine top-1 < ngưỡng. Ngưỡng chọn trên dev: tối đa hóa từ chối đúng với ràng buộc từ chối nhầm câu có đáp án ≤ giới hạn; `—` nghĩa là không từ chối.
+
+| Cấu hình | Ngưỡng | Từ chối đúng | Từ chối nhầm | Câu có đáp án | Câu không trả lời được |
+|---|---:|---:|---:|---:|---:|
+| e5-small | 0.888 | 1.000 | 0.056 | 18 | 2 |
+| e5-base | 0.838 | 1.000 | 0.000 | 18 | 2 |
+| vn-embedding | 0.470 | 1.000 | 0.056 | 18 | 2 |
+| bge-m3 | 0.579 | 1.000 | 0.000 | 18 | 2 |
+
+## Encode
+
+| Model | Thiết bị | Số window | Node nhiều cửa sổ | Token nội dung lớn nhất | RAM đỉnh (MB) | GPU đỉnh (MB) | Giây encode (session) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| e5-small | Tesla T4 | 4829 | 219 | 4123 | 1930 | 729 | 19 |
+| e5-base | Tesla T4 | 4829 | 219 | 4123 | 2539 | 1605 | 62 |
+| vn-embedding | Tesla T4 | 4534 | 0 | 4123 | 3690 | 2902 | 215 |
+| bge-m3 | Tesla T4 | 4534 | 0 | 4123 | 3709 | 2902 | 206 |
 
 ## Câu chưa lấy đủ bằng chứng ở top 5
 
 ### e5-small
 
-- q001: Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không? — thiếu nhóm doc-01/chapter-III/section-1/article-17/clause-1
-- q011: Tôi tổ chức đám cưới thì được nghỉ hưởng lương mấy ngày? — thiếu nhóm doc-01/chapter-VII/section-2/article-115/clause-1/point-a
-- q034: Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không? — thiếu nhóm doc-01/chapter-VI/article-98/clause-1/point-b
-- q035: Nhà tuyển dụng bắt tôi đặt cọc tiền để bảo đảm thực hiện hợp đồng lao động có được không? — thiếu nhóm doc-01/chapter-III/section-1/article-17/clause-2
+- q001: Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không?
+- q006: Làm thêm vào ngày nghỉ hằng tuần thì tiền lương ít nhất bằng bao nhiêu phần trăm?
+- q011: Tôi tổ chức đám cưới thì được nghỉ hưởng lương mấy ngày?
+- q034: Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không?
+- q035: Nhà tuyển dụng bắt tôi đặt cọc tiền để bảo đảm thực hiện hợp đồng lao động có được không?
 
-### minilm
+### e5-base
 
-- q001: Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không? — thiếu nhóm doc-01/chapter-III/section-1/article-17/clause-1
-- q011: Tôi tổ chức đám cưới thì được nghỉ hưởng lương mấy ngày? — thiếu nhóm doc-01/chapter-VII/section-2/article-115/clause-1/point-a
-- q022: Khi chưa bỏ lương cơ sở thì mức tham chiếu để tính BHXH bằng mức nào? — thiếu nhóm doc-06/chapter-I/article-5/clause-2
-- q031: Nghỉ việc có phải hoàn trả chi phí đào tạo không? Cần xem trách nhiệm khi nghỉ trái luật và thỏa thuận đào tạo ở đâu? — thiếu nhóm doc-01/chapter-III/section-3/article-40/clause-3
-- q034: Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không? — thiếu nhóm doc-01/chapter-VI/article-98/clause-1/point-b, doc-08/chapter-II/article-17/clause-2
-- q035: Nhà tuyển dụng bắt tôi đặt cọc tiền để bảo đảm thực hiện hợp đồng lao động có được không? — thiếu nhóm doc-01/chapter-III/section-1/article-17/clause-2
+- q001: Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không?
+- q006: Làm thêm vào ngày nghỉ hằng tuần thì tiền lương ít nhất bằng bao nhiêu phần trăm?
+- q034: Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không?
 
+### vn-embedding
 
-## Giao thức và giới hạn
+- (không có)
 
-- Tìm trên toàn bộ node Điều/Khoản/Điểm bằng cosine chính xác, không hạn chế ứng viên theo nhãn đáp án.
-- Cả hai dùng cửa sổ token chồng lấn, chuẩn hóa vector cửa sổ, lấy trung bình có trọng số token mới rồi chuẩn hóa vector node.
-- Đây là so sánh model cùng cấu hình độ dài gốc của từng model, không phải thí nghiệm chỉ thay trọng số model.
-- Xem batch_size trong manifest: E5 giảm batch để phù hợp RAM. Không dùng thời gian encode hai lượt khác batch để kết luận tốc độ model trong điều kiện kiểm soát.
-- E5 dùng passage: cho node và query: cho câu hỏi. MiniLM không dùng hai tiền tố này.
-- Recall nhóm cho phép node tổ tiên nếu chứa nguyên văn bằng chứng; xem thêm node chính để tránh kết quả quá lạc quan.
-- Câu multi cần xem all_groups_hit_rate, không chỉ có một đáp án đúng.
-- Câu không trả lời được chỉ xuất chẩn đoán top-k; chưa chọn ngưỡng từ chối trên bộ quá nhỏ.
-- Thời gian encode trong manifest là thời gian phần chạy của session; nếu resume không phải tổng thời gian từ đầu. Thời gian tải model được ghi riêng.
-- Chưa kiểm tra sử dụng RAM đỉnh; chưa có reranker, graph traversal, sinh câu trả lời hoặc ghi Neo4j.
-- Các file predictions.json chứa thứ hạng theo từng câu để phân tích lỗi; manifest.json lưu commit model và hash nội dung.
+### bge-m3
 
-## Nguồn cấu hình model
+- q029: Điểm b khoản 1 Điều 52 Luật BHXH 2024 quy định số ngày nghỉ tối đa khi thai từ đủ 5 đến dưới 13 tuần như thế nào?
+- q034: Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không?
 
-- https://huggingface.co/intfloat/multilingual-e5-small
-- https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+## Giao thức
+
+- Tìm trên toàn bộ node Điều/Khoản/Điểm; chỉ dùng KG và embedding node, không BM25, không embed chunk.
+- Recall nhóm cho phép node tổ tiên nếu chứa nguyên văn bằng chứng; node chính là chỉ số khắt khe hơn.
+- Câu không trả lời được không tính vào Recall/MRR; chỉ dùng cho ngưỡng từ chối.
+- CI 95% là paired bootstrap trên cùng câu hỏi, 10.000 mẫu, seed cố định.
+- Nhãn do nhóm biên soạn và duyệt, chưa phải thẩm định của chuyên gia pháp lý.
