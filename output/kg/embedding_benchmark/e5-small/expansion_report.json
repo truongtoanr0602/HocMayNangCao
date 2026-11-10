@@ -1,0 +1,45 @@
+{
+  "router": {
+    "direct_questions": 3,
+    "exact_primary_routes": 3,
+    "routed_non_direct": 0,
+    "routes": {
+      "q001": [],
+      "q002": [],
+      "q006": [],
+      "q008": [],
+      "q011": [],
+      "q013": [],
+      "q015": [],
+      "q018": [],
+      "q020": [],
+      "q022": [],
+      "q023": [],
+      "q026": [
+        "doc-01/chapter-VII/section-2/article-112/clause-1/point-b"
+      ],
+      "q028": [
+        "doc-04/article-5/clause-1"
+      ],
+      "q029": [
+        "doc-05/chapter-V/section-2/article-52/clause-1/point-b"
+      ],
+      "q031": [],
+      "q034": [],
+      "q035": [],
+      "q036": [],
+      "q037": [],
+      "q039": []
+    }
+  },
+  "question_set_hash": "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a",
+  "dense_run": "e5-small",
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+  "parameters": {
+    "seeds": 5,
+    "decay": 0.9,
+    "max_nodes": 10,
+    "max_chars": 12000
+  }
+}

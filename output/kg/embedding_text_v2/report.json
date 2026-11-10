@@ -1,0 +1,16 @@
+{
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "version": "node-text-v2",
+  "counts": {
+    "Article": 611,
+    "Clause": 2095,
+    "Point": 1828
+  },
+  "total": 4534,
+  "empty_texts": 0,
+  "over_6000_chars": 0,
+  "max_chars": 4224,
+  "sample_count": 30,
+  "vectors_generated": false,
+  "neo4j_modified": false
+}
