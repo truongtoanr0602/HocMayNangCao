@@ -23,5 +23,20 @@
   "article_family_split_overlap": 0,
   "all_evidence_quotes_checked": true,
   "requires_human_review": true,
-  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1"
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "table_or_appendix_questions": 2,
+  "label_version": "v2",
+  "pooling_rows": 801,
+  "pooling_pending": 0,
+  "pooling_label_sources": {
+    "human": 53,
+    "draft_confirmed": 748
+  },
+  "pooling_draft_agreement": {
+    "compared": 762,
+    "differs": 1
+  },
+  "label_hash": "531276dc87c3790bf0160e54867cc157b4b52d157a4585abc650504a78d7f68a",
+  "dev_question_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
+  "test_question_hash": "d0815078c2749af432a696c297198b20013657f0a8fb155a981b1814f5e0c642"
 }

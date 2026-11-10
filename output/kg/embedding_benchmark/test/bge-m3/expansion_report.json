@@ -1,0 +1,45 @@
+{
+  "router": {
+    "direct_questions": 3,
+    "exact_primary_routes": 3,
+    "routed_non_direct": 0,
+    "routes": {
+      "q003": [],
+      "q004": [],
+      "q005": [],
+      "q007": [],
+      "q009": [],
+      "q010": [],
+      "q012": [],
+      "q014": [],
+      "q016": [],
+      "q017": [],
+      "q019": [],
+      "q021": [],
+      "q024": [],
+      "q025": [
+        "doc-01/chapter-VI/article-97/clause-4"
+      ],
+      "q027": [
+        "doc-02/chapter-VII/article-58/clause-6"
+      ],
+      "q030": [
+        "doc-07/article-5/clause-1/point-c"
+      ],
+      "q032": [],
+      "q033": [],
+      "q038": [],
+      "q040": []
+    }
+  },
+  "question_set_hash": "d0815078c2749af432a696c297198b20013657f0a8fb155a981b1814f5e0c642",
+  "dense_run": "bge-m3",
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+  "parameters": {
+    "seeds": 5,
+    "decay": 0.9,
+    "max_nodes": 10,
+    "max_chars": 12000
+  }
+}

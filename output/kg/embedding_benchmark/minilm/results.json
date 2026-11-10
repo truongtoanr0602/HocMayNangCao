@@ -1,9 +1,13 @@
 {
+  "name": "minilm",
   "model": "minilm",
   "cache_hit": false,
-  "cache_key": "a2f41b4eef7aa59534f99e266d399adef7dc8d5f65288a8c109491a5e552602d",
-  "question_set_hash": "e50642b2ce1ac726f0d587505d8a6a590457192ef3c22df4f4deb8c67ed16ca5",
+  "cache_key": "5ec03dbaac5370f4d5320d46e9592c78703daeb6cb45e731b39a48d452e1fffe",
+  "question_set_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
   "candidate_count": 4534,
+  "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
+  "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
+  "embedding_version": "node-text-v1",
   "split": "dev",
   "question_count": 20,
   "metrics": {
@@ -11,27 +15,27 @@
     "unanswerable_questions": 2,
     "by_k": {
       "1": {
-        "group_recall_macro": 0.3888888888888889,
+        "group_recall_macro": 0.4444444444444444,
         "primary_group_recall_macro": 0.16666666666666666,
-        "all_groups_hit_rate": 0.3888888888888889
+        "all_groups_hit_rate": 0.4444444444444444
       },
       "3": {
-        "group_recall_macro": 0.6111111111111112,
+        "group_recall_macro": 0.6388888888888888,
         "primary_group_recall_macro": 0.2777777777777778,
         "all_groups_hit_rate": 0.6111111111111112
       },
       "5": {
-        "group_recall_macro": 0.6944444444444444,
+        "group_recall_macro": 0.7222222222222222,
         "primary_group_recall_macro": 0.3888888888888889,
         "all_groups_hit_rate": 0.6666666666666666
       },
       "10": {
-        "group_recall_macro": 0.6944444444444444,
+        "group_recall_macro": 0.7222222222222222,
         "primary_group_recall_macro": 0.3888888888888889,
         "all_groups_hit_rate": 0.6666666666666666
       }
     },
-    "single_group_mrr_at_max_k": 0.5645833333333333,
+    "single_group_mrr_at_max_k": 0.60625,
     "by_type": {
       "direct": {
         "answerable_questions": 3,
@@ -70,17 +74,17 @@
             "all_groups_hit_rate": 0.0
           },
           "3": {
-            "group_recall_macro": 0.0,
+            "group_recall_macro": 0.25,
             "primary_group_recall_macro": 0.0,
             "all_groups_hit_rate": 0.0
           },
           "5": {
-            "group_recall_macro": 0.25,
+            "group_recall_macro": 0.5,
             "primary_group_recall_macro": 0.0,
             "all_groups_hit_rate": 0.0
           },
           "10": {
-            "group_recall_macro": 0.25,
+            "group_recall_macro": 0.5,
             "primary_group_recall_macro": 0.0,
             "all_groups_hit_rate": 0.0
           }
@@ -92,9 +96,9 @@
         "unanswerable_questions": 0,
         "by_k": {
           "1": {
-            "group_recall_macro": 0.46153846153846156,
+            "group_recall_macro": 0.5384615384615384,
             "primary_group_recall_macro": 0.15384615384615385,
-            "all_groups_hit_rate": 0.46153846153846156
+            "all_groups_hit_rate": 0.5384615384615384
           },
           "3": {
             "group_recall_macro": 0.6923076923076923,
@@ -112,24 +116,48 @@
             "all_groups_hit_rate": 0.6923076923076923
           }
         },
-        "single_group_mrr_at_max_k": 0.5641025641025641
+        "single_group_mrr_at_max_k": 0.6153846153846154
       }
     }
   },
-  "load_seconds": 3.943226599978516,
-  "query_encode_seconds": 0.4133231000159867,
-  "search_seconds": 0.05915040001855232,
+  "per_question_group_recall_at_5": {
+    "q001": 0.0,
+    "q002": 1.0,
+    "q006": 1.0,
+    "q008": 1.0,
+    "q011": 0.0,
+    "q013": 1.0,
+    "q015": 1.0,
+    "q018": 1.0,
+    "q020": 1.0,
+    "q022": 0.0,
+    "q023": 1.0,
+    "q026": 1.0,
+    "q028": 1.0,
+    "q029": 1.0,
+    "q031": 0.5,
+    "q034": 0.5,
+    "q035": 0.0,
+    "q036": 1.0
+  },
+  "ranking_depth": 20,
+  "load_seconds": 24.438120100006927,
+  "query_encode_seconds": 0.2506821000133641,
+  "search_seconds": 0.01561770000262186,
   "manifest": {
-    "cache_key": "a2f41b4eef7aa59534f99e266d399adef7dc8d5f65288a8c109491a5e552602d",
+    "cache_key": "5ec03dbaac5370f4d5320d46e9592c78703daeb6cb45e731b39a48d452e1fffe",
     "config": {
       "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
       "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "weights_format": "safetensors",
       "max_seq_length": 128,
       "payload_budget": 126,
       "overlap": 24,
       "doc_prefix": "",
       "query_prefix": "",
       "policy": "full-text-token-windows-weighted-normalized-mean-v1",
+      "batching": "length-sorted-token-budget-v1",
+      "embedding_version": "node-text-v1",
       "candidate_ids": [
         "doc-01/chapter-I/article-1",
         "doc-01/chapter-I/article-2",
@@ -9204,13 +9232,15 @@
       ],
       "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
       "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
-      "threads": 4,
-      "batch_size": 16,
+      "device": "cpu",
+      "gpu": null,
+      "threads": 8,
+      "batch_size": 32,
       "versions": {
-        "torch": "2.5.1+cu121",
-        "transformers": "5.3.0",
-        "sentence-transformers": "5.3.0",
-        "numpy": "2.4.3"
+        "torch": "2.15.0+cpu",
+        "transformers": "5.22.2",
+        "sentence-transformers": "5.7.0",
+        "numpy": "2.5.4"
       }
     },
     "dimension": 384,
@@ -13753,14 +13783,19 @@
       1,
       1
     ],
-    "encode_seconds_this_session": 489.94893070001854,
-    "resumed_window_index": 0
+    "encode_seconds_this_session": 340.599540300027,
+    "resumed_from_batch": 0,
+    "batch_count": 349,
+    "max_batch_tokens": 8192,
+    "peak_rss_mb": 1359.99609375
   },
-  "unanswerable_policy": "diagnostics_only_no_threshold_claim",
+  "unanswerable_policy": "threshold chosen on dev by legal_kg.retrieval_eval",
   "notes": [
-    "Draft labels require human review.",
+    "Labels are reviewed by the project team, not legal experts.",
     "Exact cosine offline, not Neo4j ANN.",
-    "Native window limits differ; compare complete configurations.",
-    "No graph expansion, reranking, fine-tuning or test-set evaluation."
+    "Native window limits differ; compare complete configurations."
+  ],
+  "relabelled_from": [
+    "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a"
   ]
 }

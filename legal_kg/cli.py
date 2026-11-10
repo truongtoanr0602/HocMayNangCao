@@ -10,7 +10,7 @@ import tempfile
 
 from .build import build_graph, inspect_chunk
 from .models import GraphPayload
-from .repository import LoadError, fetch_by_title, fetch_context, load_graph
+from .repository import LoadError, fetch_by_title, fetch_context, load_embeddings, load_graph, vector_search
 from .titles import TitleIndex
 
 
@@ -51,6 +51,42 @@ def _connect(args):
     return driver
 
 
+def _run_vectors(run: Path) -> dict:
+    """Read a benchmark run's node vectors and provenance (numpy is needed only here)."""
+    try:
+        import numpy as np
+    except ImportError as exc:
+        raise ValueError("Install numpy: python -m pip install -r requirements-embedding.txt") from exc
+    manifest = json.loads((run / "manifest.json").read_text(encoding="utf-8"))
+    results = json.loads((run / "results.json").read_text(encoding="utf-8"))
+    config = manifest["config"]
+    vectors = np.load(run / "node_vectors.npy", allow_pickle=False)
+    if vectors.shape != (len(config["candidate_ids"]), manifest["dimension"]):
+        raise ValueError("node_vectors.npy does not match the run manifest")
+    return {"np": np, "model_key": results["model"], "model_id": config["model_id"],
+            "revision": config["revision"], "snapshot_id": config["snapshot_id"],
+            "text_version": results.get("embedding_version") or "node-text-v1",
+            "ids": config["candidate_ids"], "vectors": vectors}
+
+
+def check_ann(driver, run: Path, *, database: str, k: int = 10, overfetch: int = 10) -> dict:
+    """Overlap@k between Neo4j ANN and the run's exact offline cosine ranking, per question."""
+    info = _run_vectors(run)
+    query_ids = json.loads((run / "query_ids.json").read_text(encoding="utf-8"))
+    queries = info["np"].load(run / "query_vectors.npy", allow_pickle=False)
+    offline = {p["question_id"]: [n["node_id"] for n in p["top_nodes"][:k]]
+               for p in json.loads((run / "predictions.json").read_text(encoding="utf-8"))}
+    overlaps = {}
+    for question_id, vector in zip(query_ids, queries):
+        ann = [hit["id"] for hit in vector_search(driver, info["snapshot_id"], info["model_key"], vector, k,
+                                                  database=database, overfetch=overfetch)]
+        overlaps[question_id] = len(set(ann) & set(offline[question_id])) / k
+    mean = sum(overlaps.values()) / len(overlaps)
+    return {"model_key": info["model_key"], "snapshot_id": info["snapshot_id"], "k": k, "overfetch": overfetch,
+            "mean_overlap": mean, "exact_match_questions": sum(v == 1 for v in overlaps.values()),
+            "questions": len(overlaps), "per_question": overlaps}
+
+
 def main(argv: list[str] | None = None) -> int:
     # Windows redirected streams can default to cp1252, which cannot encode legal Vietnamese.
     for stream in (sys.stdout, sys.stderr):
@@ -77,7 +113,16 @@ def main(argv: list[str] | None = None) -> int:
     search_db = commands.add_parser("search-db", help="Use Neo4j title indexes in a ready snapshot")
     search_db.add_argument("--snapshot", required=True)
     search_db.add_argument("--title", required=True)
-    for command in (load, lookup, search_db):
+    load_embeddings_cmd = commands.add_parser("load-embeddings",
+                                              help="Write a benchmark run's node vectors and a vector index to Neo4j")
+    load_embeddings_cmd.add_argument("--run", type=Path, required=True)
+    load_embeddings_cmd.add_argument("--batch-size", type=int, default=500)
+    ann = commands.add_parser("check-ann", help="Compare Neo4j vector-index top-k with the offline ranking")
+    ann.add_argument("--run", type=Path, required=True)
+    ann.add_argument("--k", type=int, default=10)
+    ann.add_argument("--overfetch", type=int, default=10)
+    ann.add_argument("--output", type=Path, help="Optional JSON report path")
+    for command in (load, lookup, search_db, load_embeddings_cmd, ann):
         command.add_argument("--uri", default=os.environ.get("NEO4J_URI", "bolt://localhost:7687"))
         command.add_argument("--user", default=os.environ.get("NEO4J_USER", "neo4j"))
         command.add_argument("--database", default=os.environ.get("NEO4J_DATABASE", "neo4j"))
@@ -115,6 +160,19 @@ def main(argv: list[str] | None = None) -> int:
             with _connect(args) as driver:
                 result = asdict(load_graph(graph, driver, database=args.database, batch_size=args.batch_size,
                                            allow_legacy_metadata=args.allow_legacy_metadata))
+        elif args.command == "load-embeddings":
+            info = _run_vectors(args.run)
+            with _connect(args) as driver:
+                result = load_embeddings(driver, info["snapshot_id"], info["ids"], info["vectors"].tolist(),
+                                         model_key=info["model_key"], model_id=info["model_id"],
+                                         revision=info["revision"], text_version=info["text_version"],
+                                         database=args.database, batch_size=args.batch_size)
+        elif args.command == "check-ann":
+            with _connect(args) as driver:
+                result = check_ann(driver, args.run, database=args.database, k=args.k, overfetch=args.overfetch)
+            if args.output:
+                _write_atomic(args.output, result)
+            result = {k: v for k, v in result.items() if k != "per_question"}
         else:
             with _connect(args) as driver:
                 result = fetch_context(driver, args.snapshot, args.chunk_id, database=args.database)

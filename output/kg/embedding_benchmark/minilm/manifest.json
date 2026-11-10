@@ -1,14 +1,17 @@
 {
-  "cache_key": "a2f41b4eef7aa59534f99e266d399adef7dc8d5f65288a8c109491a5e552602d",
+  "cache_key": "9b15aa3edadee0ed00ce703f6ac85fc36edfc371bbf18abc2b0643adc59b5b08",
   "config": {
     "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_format": "safetensors",
     "max_seq_length": 128,
     "payload_budget": 126,
     "overlap": 24,
     "doc_prefix": "",
     "query_prefix": "",
     "policy": "full-text-token-windows-weighted-normalized-mean-v1",
+    "batching": "length-sorted-token-budget-v1",
+    "embedding_version": "node-text-v1",
     "candidate_ids": [
       "doc-01/chapter-I/article-1",
       "doc-01/chapter-I/article-2",
@@ -9083,13 +9086,15 @@
     ],
     "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
     "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
-    "threads": 4,
+    "device": "cpu",
+    "gpu": null,
+    "threads": 8,
     "batch_size": 16,
     "versions": {
-      "torch": "2.5.1+cu121",
-      "transformers": "5.3.0",
-      "sentence-transformers": "5.3.0",
-      "numpy": "2.4.3"
+      "torch": "2.15.0+cpu",
+      "transformers": "5.22.2",
+      "sentence-transformers": "5.7.0",
+      "numpy": "2.5.4"
     }
   },
   "dimension": 384,
@@ -13632,6 +13637,8 @@
     1,
     1
   ],
-  "encode_seconds_this_session": 489.94893070001854,
-  "resumed_window_index": 0
+  "encode_seconds_this_session": 387.75197909999406,
+  "resumed_from_batch": 0,
+  "batch_count": 698,
+  "max_batch_tokens": 8192
 }

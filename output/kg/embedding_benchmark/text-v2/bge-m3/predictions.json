@@ -1,0 +1,1762 @@
+[
+  {
+    "question_id": "q001",
+    "question": "Công ty yêu cầu giữ bản gốc bằng đại học khi nhận việc có được không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-3/point-d",
+        "score": 0.5793407559394836
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17/clause-1",
+        "score": 0.5703514218330383
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-5/article-165/clause-3",
+        "score": 0.5418233871459961
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-14/clause-1",
+        "score": 0.5414227843284607
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-4",
+        "score": 0.5400187969207764
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24/clause-4",
+        "score": 0.5295222997665405
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-12/clause-4/point-b",
+        "score": 0.5285861492156982
+      },
+      {
+        "node_id": "doc-05/chapter-I/article-3/clause-12",
+        "score": 0.5272408127784729
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-61/clause-5",
+        "score": 0.5264420509338379
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2/point-a",
+        "score": 0.52614426612854
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-1",
+        "score": 0.5244446396827698
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2",
+        "score": 0.5239704251289368
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-4/point-b",
+        "score": 0.5219725370407104
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-4",
+        "score": 0.521071195602417
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-24/clause-4/point-b",
+        "score": 0.5203710794448853
+      },
+      {
+        "node_id": "doc-02/chapter-IV/section-3/article-27/clause-2/point-b",
+        "score": 0.5198493003845215
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-36/clause-3/point-b",
+        "score": 0.5184643268585205
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-34/clause-4/point-a",
+        "score": 0.5182634592056274
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-77/clause-2/point-b",
+        "score": 0.5177580714225769
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-61/clause-1/point-b",
+        "score": 0.5169903635978699
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q002",
+    "question": "Công việc cần trình độ cao đẳng thì được thử việc tối đa bao lâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-2",
+        "score": 0.7370355129241943
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-3",
+        "score": 0.6858925223350525
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-1",
+        "score": 0.6519423723220825
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25/clause-4",
+        "score": 0.644101619720459
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-25",
+        "score": 0.6307539939880371
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-1/point-a",
+        "score": 0.6168414354324341
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-1",
+        "score": 0.6121240854263306
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-1/article-92/clause-2",
+        "score": 0.6085304021835327
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-24/clause-3",
+        "score": 0.6018404960632324
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-61/clause-2",
+        "score": 0.5988445281982422
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-2",
+        "score": 0.589740514755249
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-2/point-b",
+        "score": 0.5863451957702637
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-2/point-a",
+        "score": 0.5782802104949951
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-2/article-98/clause-2",
+        "score": 0.5782001614570618
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-26",
+        "score": 0.5746542811393738
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-2/point-c",
+        "score": 0.5713688731193542
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-2/point-c",
+        "score": 0.5710889101028442
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-35/clause-2/point-c",
+        "score": 0.5696820020675659
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-35/clause-2/point-a",
+        "score": 0.5619321465492249
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-2/point-d",
+        "score": 0.5575703382492065
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q006",
+    "question": "Làm thêm vào ngày nghỉ hằng tuần thì tiền lương ít nhất bằng bao nhiêu phần trăm?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.7011007070541382
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-b",
+        "score": 0.6727624535560608
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-c",
+        "score": 0.672704815864563
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-3",
+        "score": 0.65217125415802
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-3",
+        "score": 0.6502761244773865
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2",
+        "score": 0.6412863731384277
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-a",
+        "score": 0.6400861740112305
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3",
+        "score": 0.6357064247131348
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-2",
+        "score": 0.6333587169647217
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-a",
+        "score": 0.6320334672927856
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.6313261985778809
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-b",
+        "score": 0.631206750869751
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1",
+        "score": 0.6297243237495422
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-101/clause-3",
+        "score": 0.6285005211830139
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1/point-b",
+        "score": 0.6283851861953735
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-2",
+        "score": 0.6268832087516785
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-c",
+        "score": 0.6257520914077759
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-b",
+        "score": 0.6256366968154907
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-a",
+        "score": 0.6250524520874023
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-b",
+        "score": 0.6231399178504944
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q008",
+    "question": "Làm ban đêm từ sáu giờ trở lên trong ngày thì được nghỉ giữa giờ tối thiểu bao lâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-1",
+        "score": 0.7216793298721313
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-109/clause-1",
+        "score": 0.6851323843002319
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-64/clause-2",
+        "score": 0.6800764799118042
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-1/article-106",
+        "score": 0.6583381295204163
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-2",
+        "score": 0.6569774746894836
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.6390357613563538
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-3",
+        "score": 0.6374167203903198
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2",
+        "score": 0.6373686194419861
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1",
+        "score": 0.6347942352294922
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3",
+        "score": 0.634598433971405
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-b",
+        "score": 0.6327453851699829
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-a",
+        "score": 0.6321818828582764
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-a",
+        "score": 0.6314327120780945
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-b",
+        "score": 0.6302599310874939
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-b",
+        "score": 0.6292495727539062
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2/point-c",
+        "score": 0.628158688545227
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-60/clause-4",
+        "score": 0.6273635625839233
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-1",
+        "score": 0.623133659362793
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-3/point-b",
+        "score": 0.6212375164031982
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-c",
+        "score": 0.6205730438232422
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q011",
+    "question": "Tôi tổ chức đám cưới thì được nghỉ hưởng lương mấy ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1",
+        "score": 0.6797568202018738
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1/point-a",
+        "score": 0.6658695936203003
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.6570690870285034
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-e",
+        "score": 0.6540908813476562
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-2",
+        "score": 0.6520209312438965
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-b",
+        "score": 0.6414283514022827
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1/point-b",
+        "score": 0.640826940536499
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-%C4%91",
+        "score": 0.6397930383682251
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.6320710182189941
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-115/clause-1/point-c",
+        "score": 0.631629228591919
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-c",
+        "score": 0.6265278458595276
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-d",
+        "score": 0.6245286464691162
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-a",
+        "score": 0.6242426037788391
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.6232253909111023
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.6226556897163391
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1",
+        "score": 0.6132639646530151
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-3/point-b",
+        "score": 0.6106069087982178
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-65/clause-4",
+        "score": 0.6102107763290405
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1/point-c",
+        "score": 0.6100034713745117
+      },
+      {
+        "node_id": "doc-02/chapter-X/article-89/clause-3",
+        "score": 0.608807384967804
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q013",
+    "question": "Sổ quản lý lao động của doanh nghiệp có thể lập điện tử hay phải dùng giấy?",
+    "top_nodes": [
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-2",
+        "score": 0.6956496238708496
+      },
+      {
+        "node_id": "doc-01/chapter-II/article-12/clause-1",
+        "score": 0.6680521965026855
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-1",
+        "score": 0.6443235874176025
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3",
+        "score": 0.6179936528205872
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-3/clause-3",
+        "score": 0.6110349297523499
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-14/clause-1",
+        "score": 0.5872899889945984
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-119/clause-1",
+        "score": 0.5835269689559937
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-119/clause-4",
+        "score": 0.5779925584793091
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-1/article-144/clause-3",
+        "score": 0.5762668251991272
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-4/clause-1",
+        "score": 0.5721977949142456
+      },
+      {
+        "node_id": "doc-01/chapter-XIII/article-172/clause-4",
+        "score": 0.5689149498939514
+      },
+      {
+        "node_id": "doc-02/chapter-II/article-4/clause-2",
+        "score": 0.5640092492103577
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-118/clause-1",
+        "score": 0.5606544017791748
+      },
+      {
+        "node_id": "doc-02/chapter-III/section-1/article-5/clause-1",
+        "score": 0.5569027066230774
+      },
+      {
+        "node_id": "doc-01/chapter-XV/article-212/clause-2",
+        "score": 0.5532428622245789
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-8/clause-2/point-d",
+        "score": 0.5495904684066772
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-8/clause-1/point-d",
+        "score": 0.5494617223739624
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-1/article-25/clause-2",
+        "score": 0.5486125946044922
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-3/article-154/clause-2",
+        "score": 0.5482898950576782
+      },
+      {
+        "node_id": "doc-01/chapter-XI/section-5/article-165/clause-3",
+        "score": 0.5478838086128235
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q015",
+    "question": "Hợp đồng lao động cần ghi địa điểm thế nào nếu tôi thường xuyên làm ở nhiều nơi?",
+    "top_nodes": [
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3/point-b",
+        "score": 0.655207633972168
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3",
+        "score": 0.6534910798072815
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-b",
+        "score": 0.6494002938270569
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1",
+        "score": 0.6402671337127686
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-a",
+        "score": 0.63190758228302
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-1/point-c",
+        "score": 0.6241974234580994
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-21/clause-1",
+        "score": 0.6235062479972839
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-2",
+        "score": 0.6177349090576172
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-16/clause-2",
+        "score": 0.6150006055831909
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-2/point-a",
+        "score": 0.613244354724884
+      },
+      {
+        "node_id": "doc-01/chapter-VIII/section-1/article-119/clause-4",
+        "score": 0.6105854511260986
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-21/clause-1/point-b",
+        "score": 0.6105303764343262
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-21/clause-1/point-a",
+        "score": 0.6094172596931458
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-2/point-c",
+        "score": 0.6082608699798584
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-2/point-b",
+        "score": 0.605090856552124
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-21/clause-1/point-c",
+        "score": 0.6044838428497314
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-2/article-28",
+        "score": 0.6026020646095276
+      },
+      {
+        "node_id": "doc-03/chapter-II/article-3/clause-3/point-a",
+        "score": 0.6016952991485596
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-19/clause-1",
+        "score": 0.5997421145439148
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-16/clause-1",
+        "score": 0.5977951884269714
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q018",
+    "question": "Trả lương theo tuần thì quy đổi ra mức tháng để so với lương tối thiểu bằng cách nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-4/clause-3/point-a",
+        "score": 0.7450307607650757
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3",
+        "score": 0.7417050004005432
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-b",
+        "score": 0.7299763560295105
+      },
+      {
+        "node_id": "doc-04/article-4/clause-1",
+        "score": 0.6725488901138306
+      },
+      {
+        "node_id": "doc-04/article-1",
+        "score": 0.6382412314414978
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-91/clause-2",
+        "score": 0.6379479169845581
+      },
+      {
+        "node_id": "doc-04/article-3/clause-1",
+        "score": 0.6206708550453186
+      },
+      {
+        "node_id": "doc-04/article-3/clause-3/point-d",
+        "score": 0.6168563961982727
+      },
+      {
+        "node_id": "doc-04/article-5/clause-5",
+        "score": 0.6110168695449829
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-91/clause-3",
+        "score": 0.6103570461273193
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1/point-a",
+        "score": 0.609965443611145
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1",
+        "score": 0.6020746827125549
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-1/article-50/clause-4",
+        "score": 0.6018074750900269
+      },
+      {
+        "node_id": "doc-04/article-3/clause-3",
+        "score": 0.6012482643127441
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-97/clause-2",
+        "score": 0.60033118724823
+      },
+      {
+        "node_id": "doc-04/article-3/clause-3/point-%C4%91",
+        "score": 0.59982830286026
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-2/article-29/clause-3",
+        "score": 0.5969368815422058
+      },
+      {
+        "node_id": "doc-06/chapter-IV/article-23/clause-1",
+        "score": 0.5951377749443054
+      },
+      {
+        "node_id": "doc-04/article-3/clause-3/point-b",
+        "score": 0.5938059091567993
+      },
+      {
+        "node_id": "doc-06/chapter-IV/article-23/clause-1/point-b",
+        "score": 0.5884053707122803
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q020",
+    "question": "Nam đang đóng BHXH bắt buộc có vợ sinh con phải phẫu thuật thì được nghỉ bao nhiêu ngày làm việc?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.7532116770744324
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.7462724447250366
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.7210050821304321
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.6986388564109802
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.6909852027893066
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6526893377304077
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.6326888203620911
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-7",
+        "score": 0.6264826059341431
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-57/clause-1",
+        "score": 0.6263452768325806
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-8",
+        "score": 0.6250399351119995
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2/point-b",
+        "score": 0.6159961223602295
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-50/clause-3",
+        "score": 0.6157393455505371
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-50/clause-5",
+        "score": 0.6157313585281372
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-a",
+        "score": 0.6153576374053955
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-c",
+        "score": 0.6128455400466919
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-b",
+        "score": 0.607278048992157
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2",
+        "score": 0.6069256663322449
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1",
+        "score": 0.6058459281921387
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-a",
+        "score": 0.6054210662841797
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-5",
+        "score": 0.6052331924438477
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q022",
+    "question": "Khi chưa bỏ lương cơ sở thì mức tham chiếu để tính BHXH bằng mức nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-XI/article-141/clause-13",
+        "score": 0.7751715183258057
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-2",
+        "score": 0.768923282623291
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-5/clause-3",
+        "score": 0.698944091796875
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31/clause-1",
+        "score": 0.6472128629684448
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31/clause-2",
+        "score": 0.6457037329673767
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31/clause-1/point-%C4%91",
+        "score": 0.6441954374313354
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-17/clause-5",
+        "score": 0.6441730856895447
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-15/clause-3/point-a",
+        "score": 0.6425674557685852
+      },
+      {
+        "node_id": "doc-07/article-7/clause-3",
+        "score": 0.6407516598701477
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-16/clause-1/point-a",
+        "score": 0.6376315355300903
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-15/clause-3/point-c",
+        "score": 0.6373036503791809
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-73/clause-1",
+        "score": 0.6371302008628845
+      },
+      {
+        "node_id": "doc-05/chapter-IV/section-2/article-31/clause-1/point-d",
+        "score": 0.6366561055183411
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-99/clause-1",
+        "score": 0.6362648010253906
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-16/clause-1",
+        "score": 0.6353187561035156
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-72/clause-1",
+        "score": 0.6348989009857178
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-15/clause-3",
+        "score": 0.6345130801200867
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-72/clause-1/point-c",
+        "score": 0.6334991455078125
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-15/clause-2/point-b",
+        "score": 0.63320392370224
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-72/clause-1/point-b",
+        "score": 0.6323369741439819
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q023",
+    "question": "Thời điểm bắt đầu hưởng chế độ hưu trí là ngày nào sau thời điểm nghỉ hưu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-07/article-3/clause-2",
+        "score": 0.7588396072387695
+      },
+      {
+        "node_id": "doc-07/article-3/clause-1",
+        "score": 0.6887631416320801
+      },
+      {
+        "node_id": "doc-07/article-3/clause-3",
+        "score": 0.6883282661437988
+      },
+      {
+        "node_id": "doc-07/article-7/clause-2",
+        "score": 0.6791185140609741
+      },
+      {
+        "node_id": "doc-07/article-7/clause-1",
+        "score": 0.6767290234565735
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101/clause-1",
+        "score": 0.6709902882575989
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101/clause-2",
+        "score": 0.6696775555610657
+      },
+      {
+        "node_id": "doc-05/chapter-VI/section-2/article-101/clause-3",
+        "score": 0.664455771446228
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-41/clause-1",
+        "score": 0.6544474959373474
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-12/clause-3",
+        "score": 0.6369748115539551
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-12/clause-2",
+        "score": 0.636951208114624
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-64/clause-2",
+        "score": 0.6268410682678223
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-69/clause-1",
+        "score": 0.6256306767463684
+      },
+      {
+        "node_id": "doc-07/article-3",
+        "score": 0.6245452165603638
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-64/clause-1",
+        "score": 0.6243936419487
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-64/clause-2/point-a",
+        "score": 0.6216491460800171
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-64/clause-1/point-b",
+        "score": 0.6212158799171448
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-3/article-64/clause-2/point-b",
+        "score": 0.6201592683792114
+      },
+      {
+        "node_id": "doc-01/chapter-XII/article-169/clause-1",
+        "score": 0.6159029603004456
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-1/article-13/clause-2",
+        "score": 0.6154931783676147
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q026",
+    "question": "Điểm b khoản 1 Điều 112 Bộ luật Lao động 2019 quy định nghỉ Tết Âm lịch bao nhiêu ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-b",
+        "score": 0.6874855756759644
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1",
+        "score": 0.6788477301597595
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-a",
+        "score": 0.6614673733711243
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112",
+        "score": 0.6585803627967834
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-3",
+        "score": 0.6583142876625061
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-2",
+        "score": 0.6540217399597168
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-%C4%91",
+        "score": 0.6341893672943115
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-e",
+        "score": 0.6278076171875
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-c",
+        "score": 0.6231440305709839
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-112/clause-1/point-d",
+        "score": 0.6225100159645081
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1",
+        "score": 0.6218615770339966
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-3",
+        "score": 0.6146870851516724
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-2",
+        "score": 0.6128054261207581
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1/point-b",
+        "score": 0.61250901222229
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1/point-a",
+        "score": 0.6112033128738403
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-6",
+        "score": 0.6107310652732849
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-111/clause-1",
+        "score": 0.6083036065101624
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-1/point-c",
+        "score": 0.6051299571990967
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113",
+        "score": 0.6033474206924438
+      },
+      {
+        "node_id": "doc-01/chapter-VII/section-2/article-113/clause-7",
+        "score": 0.6026483178138733
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q028",
+    "question": "Khoản 1 Điều 5 Nghị định 293/2025/NĐ-CP ghi ngày có hiệu lực là ngày nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-04/article-5/clause-1",
+        "score": 0.7765272259712219
+      },
+      {
+        "node_id": "doc-04/article-5",
+        "score": 0.7211247682571411
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-1",
+        "score": 0.7199835777282715
+      },
+      {
+        "node_id": "doc-07/article-8/clause-1",
+        "score": 0.6756654381752014
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-a",
+        "score": 0.6754534840583801
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-1",
+        "score": 0.6619296669960022
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-c",
+        "score": 0.6577637791633606
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-b",
+        "score": 0.6522505879402161
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44",
+        "score": 0.6477758288383484
+      },
+      {
+        "node_id": "doc-08/chapter-VI/article-62/clause-1",
+        "score": 0.6473222374916077
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2",
+        "score": 0.6467114090919495
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-44/clause-2/point-d",
+        "score": 0.6442164182662964
+      },
+      {
+        "node_id": "doc-04/article-2",
+        "score": 0.6426125168800354
+      },
+      {
+        "node_id": "doc-07/article-8/clause-2/point-a",
+        "score": 0.6380892992019653
+      },
+      {
+        "node_id": "doc-07/article-8/clause-2/point-b",
+        "score": 0.6379256248474121
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-2/point-b",
+        "score": 0.6359376907348633
+      },
+      {
+        "node_id": "doc-02/chapter-XII/article-114/clause-2/point-g",
+        "score": 0.6279482841491699
+      },
+      {
+        "node_id": "doc-06/chapter-I/article-2",
+        "score": 0.6221643686294556
+      },
+      {
+        "node_id": "doc-03/chapter-V/article-12/clause-1",
+        "score": 0.6210812330245972
+      },
+      {
+        "node_id": "doc-07/article-8/clause-2",
+        "score": 0.6208681464195251
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q029",
+    "question": "Điểm b khoản 1 Điều 52 Luật BHXH 2024 quy định số ngày nghỉ tối đa khi thai từ đủ 5 đến dưới 13 tuần như thế nào?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-a",
+        "score": 0.6693122386932373
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-c",
+        "score": 0.6634178757667542
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.6606389284133911
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6593930125236511
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-9",
+        "score": 0.6548659801483154
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1",
+        "score": 0.6544603705406189
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-b",
+        "score": 0.6519930362701416
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-57/clause-2",
+        "score": 0.6495363116264343
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-d",
+        "score": 0.6481999158859253
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-2",
+        "score": 0.6480311155319214
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-c",
+        "score": 0.646825909614563
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-3",
+        "score": 0.6461864709854126
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-54/clause-3",
+        "score": 0.6438427567481995
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-52/clause-1/point-a",
+        "score": 0.6422927975654602
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-5",
+        "score": 0.6410092711448669
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-51/clause-1",
+        "score": 0.6409249901771545
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-54/clause-3/point-b",
+        "score": 0.6402994990348816
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-55/clause-1",
+        "score": 0.6385113000869751
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-54/clause-3/point-a",
+        "score": 0.6379480361938477
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-3",
+        "score": 0.6361894607543945
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q031",
+    "question": "Nghỉ việc có phải hoàn trả chi phí đào tạo không? Cần xem trách nhiệm khi nghỉ trái luật và thỏa thuận đào tạo ở đâu?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-40/clause-3",
+        "score": 0.7491762638092041
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-2",
+        "score": 0.669553279876709
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-3",
+        "score": 0.6639541387557983
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-3",
+        "score": 0.6607320308685303
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-3/point-b",
+        "score": 0.6582780480384827
+      },
+      {
+        "node_id": "doc-08/chapter-III/article-41/clause-7/point-e",
+        "score": 0.6502364277839661
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-3/point-a",
+        "score": 0.6481801867485046
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-2/point-d",
+        "score": 0.6472271084785461
+      },
+      {
+        "node_id": "doc-08/chapter-III/article-41/clause-7/point-%C4%91",
+        "score": 0.6408694386482239
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-%C4%91",
+        "score": 0.6384999752044678
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-a",
+        "score": 0.6377386450767517
+      },
+      {
+        "node_id": "doc-01/chapter-III/section-3/article-41/clause-1",
+        "score": 0.6377272009849548
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-b",
+        "score": 0.6372078657150269
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-d",
+        "score": 0.6368533372879028
+      },
+      {
+        "node_id": "doc-08/chapter-III/article-41/clause-6",
+        "score": 0.6362285017967224
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1/point-c",
+        "score": 0.6357952356338501
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-48",
+        "score": 0.6337512135505676
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-14/clause-1",
+        "score": 0.6334952712059021
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-50",
+        "score": 0.6284525394439697
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-3",
+        "score": 0.6281560659408569
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q034",
+    "question": "Quy định trả lương làm thêm ngày nghỉ hằng tuần nằm ở đâu và Nghị định 12 có quy định xử phạt việc trả thiếu lương làm thêm không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-2",
+        "score": 0.7154236435890198
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-b",
+        "score": 0.7021429538726807
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-1/point-b",
+        "score": 0.700741708278656
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-d",
+        "score": 0.7006680965423584
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-c",
+        "score": 0.6997508406639099
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-1",
+        "score": 0.6983574032783508
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-a",
+        "score": 0.6970018744468689
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2",
+        "score": 0.6968438625335693
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-2/point-%C4%91",
+        "score": 0.6940551996231079
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4/point-%C4%91",
+        "score": 0.6904326677322388
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4/point-d",
+        "score": 0.6895188093185425
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4/point-b",
+        "score": 0.6892999410629272
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4/point-c",
+        "score": 0.6891773343086243
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4/point-a",
+        "score": 0.6888778805732727
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-4/point-c",
+        "score": 0.6886252164840698
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-28/clause-3/point-a",
+        "score": 0.6880602836608887
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-3/point-b",
+        "score": 0.6874673366546631
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-4/point-d",
+        "score": 0.6870981454849243
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-18/clause-4",
+        "score": 0.6858550310134888
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-3",
+        "score": 0.6835546493530273
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q035",
+    "question": "Nhà tuyển dụng bắt tôi đặt cọc tiền để bảo đảm thực hiện hợp đồng lao động có được không?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-III/section-1/article-17/clause-2",
+        "score": 0.5888935923576355
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1",
+        "score": 0.5794538855552673
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-8/clause-3",
+        "score": 0.5787402987480164
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-a",
+        "score": 0.578148365020752
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-%C4%91",
+        "score": 0.5779999494552612
+      },
+      {
+        "node_id": "doc-04/article-5/clause-4",
+        "score": 0.5776491761207581
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2",
+        "score": 0.5752478837966919
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-100/clause-2",
+        "score": 0.5746864080429077
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-c",
+        "score": 0.5742210149765015
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-d",
+        "score": 0.5740378499031067
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2/point-b",
+        "score": 0.5730434656143188
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-1/point-b",
+        "score": 0.5728875398635864
+      },
+      {
+        "node_id": "doc-01/chapter-IV/article-62/clause-1",
+        "score": 0.5688040256500244
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2/point-a",
+        "score": 0.5675395727157593
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-11/clause-4/point-b",
+        "score": 0.5672156810760498
+      },
+      {
+        "node_id": "doc-01/chapter-I/article-8/clause-6",
+        "score": 0.5658077597618103
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-100/clause-1",
+        "score": 0.5654923319816589
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-9/clause-2/point-c",
+        "score": 0.5652884244918823
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-10/clause-1",
+        "score": 0.562156617641449
+      },
+      {
+        "node_id": "doc-06/chapter-II/article-7/clause-2",
+        "score": 0.5594914555549622
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q036",
+    "question": "Nam đang tham gia BHXH bắt buộc có vợ sinh đôi phải phẫu thuật thì được nghỉ bao nhiêu ngày?",
+    "top_nodes": [
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-d",
+        "score": 0.7479881048202515
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2",
+        "score": 0.7262102365493774
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-c",
+        "score": 0.6889094710350037
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-b",
+        "score": 0.6690229773521423
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-2/point-a",
+        "score": 0.6442975401878357
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-b",
+        "score": 0.6348792910575867
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2",
+        "score": 0.6321167349815369
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-a",
+        "score": 0.6148251295089722
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2/point-b",
+        "score": 0.6108379364013672
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-60/clause-2/point-c",
+        "score": 0.6040107011795044
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2",
+        "score": 0.6030566692352295
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2/point-a",
+        "score": 0.596275806427002
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-2/point-c",
+        "score": 0.5920911431312561
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-53/clause-7",
+        "score": 0.5892531871795654
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-65/clause-6",
+        "score": 0.5815463662147522
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-57/clause-1",
+        "score": 0.5811817646026611
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-50/clause-5",
+        "score": 0.5800161361694336
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-46/clause-1",
+        "score": 0.5798458456993103
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-2/article-50/clause-3",
+        "score": 0.5785556435585022
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-1/article-43/clause-1/point-b",
+        "score": 0.5771684646606445
+      }
+    ],
+    "answerable_gold": true,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q037",
+    "question": "Công ty ABC chuyển lương tháng này vào tài khoản của tôi lúc mấy giờ?",
+    "top_nodes": [
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1",
+        "score": 0.5706349015235901
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-b",
+        "score": 0.566005289554596
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-2",
+        "score": 0.5658627152442932
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-c",
+        "score": 0.565728485584259
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-96/clause-2",
+        "score": 0.5629292726516724
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-97/clause-2",
+        "score": 0.5626748204231262
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-1/point-a",
+        "score": 0.5589383840560913
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1/point-a",
+        "score": 0.5584688186645508
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-54/clause-1",
+        "score": 0.5581772923469543
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-97/clause-1",
+        "score": 0.5571306347846985
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-95/clause-3",
+        "score": 0.5560494661331177
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-2",
+        "score": 0.5533679723739624
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3",
+        "score": 0.5532433390617371
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-b",
+        "score": 0.5501090884208679
+      },
+      {
+        "node_id": "doc-04/article-4/clause-3/point-a",
+        "score": 0.5496202707290649
+      },
+      {
+        "node_id": "doc-01/chapter-VI/article-98/clause-3",
+        "score": 0.5474296808242798
+      },
+      {
+        "node_id": "doc-05/chapter-XI/article-141/clause-8",
+        "score": 0.5431410670280457
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-1/point-b",
+        "score": 0.5388748645782471
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-55/clause-1",
+        "score": 0.5367277264595032
+      },
+      {
+        "node_id": "doc-02/chapter-VI/section-2/article-57/clause-2",
+        "score": 0.5365829467773438
+      }
+    ],
+    "answerable_gold": false,
+    "abstention_decision": null
+  },
+  {
+    "question_id": "q039",
+    "question": "Viết giúp tôi thuật toán sắp xếp nhanh bằng Python.",
+    "top_nodes": [
+      {
+        "node_id": "doc-06/chapter-VII/article-45/clause-2/point-a",
+        "score": 0.42027029395103455
+      },
+      {
+        "node_id": "doc-02/chapter-VII/article-63/clause-2",
+        "score": 0.4193127453327179
+      },
+      {
+        "node_id": "doc-02/chapter-XI/section-1/article-97/clause-4/point-b",
+        "score": 0.4105667769908905
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-5/point-b",
+        "score": 0.4080736041069031
+      },
+      {
+        "node_id": "doc-06/chapter-VII/article-45/clause-2",
+        "score": 0.4074302911758423
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-5/point-a",
+        "score": 0.4060559868812561
+      },
+      {
+        "node_id": "doc-05/chapter-V/section-4/article-85/clause-2",
+        "score": 0.4053686261177063
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-2/point-c",
+        "score": 0.4051864743232727
+      },
+      {
+        "node_id": "doc-06/chapter-II/article-10/clause-4/point-a",
+        "score": 0.4046606123447418
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-2/point-b",
+        "score": 0.404238224029541
+      },
+      {
+        "node_id": "doc-08/chapter-III/article-39/clause-10/point-b",
+        "score": 0.4042132794857025
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-2/point-a",
+        "score": 0.4034888446331024
+      },
+      {
+        "node_id": "doc-01/chapter-XIV/section-5/article-200",
+        "score": 0.4026915729045868
+      },
+      {
+        "node_id": "doc-01/chapter-XIV/section-5/article-200/clause-3",
+        "score": 0.40229666233062744
+      },
+      {
+        "node_id": "doc-06/chapter-IV/article-25/clause-4/point-b",
+        "score": 0.4015917181968689
+      },
+      {
+        "node_id": "doc-06/chapter-VI/article-32/clause-3",
+        "score": 0.4015556871891022
+      },
+      {
+        "node_id": "doc-08/chapter-II/article-17/clause-5",
+        "score": 0.4010244607925415
+      },
+      {
+        "node_id": "doc-01/chapter-XIV/section-1/article-180/clause-3",
+        "score": 0.4009186625480652
+      },
+      {
+        "node_id": "doc-06/chapter-III/section-2/article-21/clause-2",
+        "score": 0.40050867199897766
+      },
+      {
+        "node_id": "doc-08/chapter-I/article-4/clause-43",
+        "score": 0.3998250365257263
+      }
+    ],
+    "answerable_gold": false,
+    "abstention_decision": null
+  }
+]

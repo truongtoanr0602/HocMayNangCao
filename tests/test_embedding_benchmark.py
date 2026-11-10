@@ -52,3 +52,28 @@ def test_metrics_distinguish_primary_and_all_required_groups():
     assert result['by_k']['1']['primary_group_recall_macro'] == .25
     assert result['by_k']['2']['all_groups_hit_rate'] == 1
     assert result['single_group_mrr_at_max_k'] == 1
+
+
+def test_model_registry_uses_each_model_card_prefix_convention():
+    from legal_kg.embedding_benchmark import MODELS
+    assert {'e5-small', 'e5-base', 'bge-m3', 'vn-embedding'} <= set(MODELS)
+    for key in ('e5-small', 'e5-base'):
+        assert MODELS[key][1:] == ('passage: ', 'query: ')
+    for key in ('bge-m3', 'vn-embedding', 'minilm'):
+        assert MODELS[key][1:] == ('', '')
+
+
+def test_batches_are_length_sorted_bounded_and_cover_every_window_once():
+    from legal_kg.embedding_benchmark import plan_batches
+    lengths = [500, 10, 20, 9000, 30, 400, 15]
+    batches = plan_batches(lengths, batch_size=3, max_batch_tokens=1000)
+    assert sorted(i for b in batches for i in b) == list(range(len(lengths)))
+    flat = [lengths[i] for b in batches for i in b]
+    assert flat == sorted(flat)
+    for batch in batches:
+        assert len(batch) <= 3
+        assert len(batch) == 1 or max(lengths[i] for i in batch) * len(batch) <= 1000
+    assert [3] in batches  # an over-budget window still runs alone
+    assert plan_batches(lengths, 3, 1000) == batches
+    with pytest.raises(ValueError):
+        plan_batches(lengths, 0, 1000)

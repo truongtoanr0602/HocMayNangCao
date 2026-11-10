@@ -1,9 +1,19 @@
 """Build a corpus-grounded, reviewable retrieval benchmark. No model calls."""
+import argparse
 import json
 from collections import Counter
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from legal_kg.models import fingerprint  # noqa: E402
+
+# Target composition of the expanded benchmark (ticket #3); enforced with --enforce-composition.
+COMPOSITION_TARGET = {'natural': 70, 'direct': 15, 'multi': 20, 'unanswerable': 15}
+TABLE_OR_APPENDIX_TARGET = 10
+POOLING_REVIEW = ROOT / 'evaluation' / 'pooling_review.jsonl'
 
 # Each reference is (document, article, optional clause, optional point, evidence substring).
 # Splits are assigned by provision family, not by paraphrase.
@@ -131,9 +141,46 @@ SEEDS = [
 ]
 
 
-def build():
-    records = [json.loads(x) for x in (ROOT / 'output/kg/embedding_text/node_texts.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+def apply_pooling(questions, nodes, rows):
+    """Add reviewer-approved pooled nodes as acceptable evidence; returns (label_version, pending)."""
+    by_id = {q['question_id']: q for q in questions}
+    pending = 0
+    for row in rows:
+        decision = row.get('decision')
+        if decision is None:
+            pending += 1
+            continue
+        if decision not in {'relevant', 'not_relevant'}:
+            raise ValueError(f"Unknown pooling decision {decision!r} for {row['question_id']}")
+        if decision == 'not_relevant':
+            continue
+        q = by_id[row['question_id']]
+        if not q['answerable']:
+            raise ValueError(f"{q['question_id']} is unanswerable but a pooled node was judged relevant; "
+                             'fix its SEED instead')
+        index = row.get('group_index')
+        if type(index) is not int or not 0 <= index < len(q['evidence_groups']):
+            raise ValueError(f"Invalid group_index for {row['question_id']} / {row['node_id']}")
+        quote_text = row.get('evidence_quote') or ''
+        if not quote_text.strip() or quote_text not in nodes[row['node_id']]['body_text']:
+            raise ValueError(f"Evidence quote is not verbatim in {row['node_id']} ({row['question_id']})")
+        group = q['evidence_groups'][index]
+        if row['node_id'] not in group['acceptable_node_ids']:
+            group['acceptable_node_ids'].append(row['node_id'])
+            group.setdefault('pooled_additions', []).append(
+                {'node_id': row['node_id'], 'evidence_quote': quote_text,
+                 'label_source': row.get('label_source') or 'human'})
+    return ('v2' if rows and not pending else 'v1'), pending
+
+
+def read_lines(path):
+    return [json.loads(x) for x in path.read_text(encoding='utf-8').splitlines() if x.strip()]
+
+
+def build(enforce_composition=False):
+    records = read_lines(ROOT / 'output/kg/embedding_text/node_texts.jsonl')
     nodes = {r['node_id']: r for r in records}
+    chunks = {c['chunk_id']: c for c in read_lines(ROOT / 'output/preprocessed/legal_chunks.jsonl')}
     questions = []
     for index, (split, kind, question, refs, rubric) in enumerate(SEEDS, 1):
         groups = []
@@ -163,7 +210,11 @@ def build():
             # Ancestors are alternatives only if their body contains the evidence.
             # Descendants are not assumed relevant merely by sharing an article.
             acceptable = [p for p in node['path_node_ids'] if p in nodes and quote_text in nodes[p]['body_text']]
+            # Flag evidence that sits in a table or appendix chunk (reported as its own slice).
+            in_table = any(chunks[c]['chunk_type'] in {'table', 'appendix'} and quote_text in chunks[c]['text']
+                           for c in node['source_chunk_ids'])
             groups.append({'primary_node_id': node['node_id'], 'acceptable_node_ids': acceptable,
+                           'evidence_in_table_or_appendix': in_table,
                            'evidence_quote': quote_text, 'body_start': start, 'body_end': end,
                            'source_chunk_ids': node['source_chunk_ids'],
                            'note': 'Chunk IDs are node provenance candidates, not exact-span relevance judgments.'})
@@ -171,6 +222,7 @@ def build():
                           'question': question, 'answerable': bool(refs),
                           'snapshot_id': records[0]['snapshot_id'], 'graph_hash': records[0]['graph_hash'],
                           'evidence_groups': groups, 'article_family_ids': sorted(articles),
+                          'evidence_in_table_or_appendix': any(g['evidence_in_table_or_appendix'] for g in groups),
                           'answer_rubric': rubric, 'review_status': 'draft_corpus_checked',
                           'requires_human_review': True,
                           'scope': 'fixed_corpus_not_current_legal_advice'})
@@ -180,6 +232,21 @@ def build():
             if article in families and families[article] != q['split']:
                 raise ValueError(f'Article-family split leakage: {article}')
             families[article] = q['split']
+    rows = read_lines(POOLING_REVIEW) if POOLING_REVIEW.exists() else []
+    label_version, pending = apply_pooling(questions, nodes, rows)
+    for q in questions:
+        q['label_version'] = label_version
+    composition = dict(Counter(q['type'] for q in questions))
+    table_count = sum(q['evidence_in_table_or_appendix'] for q in questions)
+    if enforce_composition:
+        if composition != COMPOSITION_TARGET:
+            raise ValueError(f'Composition {composition} differs from target {COMPOSITION_TARGET}')
+        if table_count < TABLE_OR_APPENDIX_TARGET:
+            raise ValueError(f'Only {table_count} questions have table/appendix evidence; '
+                             f'need {TABLE_OR_APPENDIX_TARGET}')
+        splits = Counter(q['split'] for q in questions)
+        if abs(splits['dev'] - splits['test']) > 1:
+            raise ValueError(f'Dev and test must split the questions evenly: {dict(splits)}')
     output = ROOT / 'evaluation'
     for name, subset in [('questions', questions), ('dev', [q for q in questions if q['split']=='dev']),
                          ('test', [q for q in questions if q['split']=='test'])]:
@@ -188,7 +255,18 @@ def build():
                'by_type': dict(Counter(q['type'] for q in questions)),
                'documents_with_evidence': sorted({g['primary_node_id'].split('/')[0] for q in questions for g in q['evidence_groups']}),
                'article_family_split_overlap': 0, 'all_evidence_quotes_checked': True,
-               'requires_human_review': True, 'snapshot_id': records[0]['snapshot_id']}
+               'requires_human_review': True, 'snapshot_id': records[0]['snapshot_id'],
+               'table_or_appendix_questions': table_count, 'label_version': label_version,
+               'pooling_rows': len(rows), 'pooling_pending': pending,
+               'pooling_label_sources': dict(Counter(r.get('label_source') or 'human' for r in rows
+                                                     if r.get('decision'))),
+               'pooling_draft_agreement': {
+                   'compared': sum(1 for r in rows if r.get('decision') and r.get('draft_suggestion')),
+                   'differs': sum(1 for r in rows if r.get('decision') and r.get('draft_suggestion')
+                                  and r['draft_suggestion'] != r['decision'])},
+               'label_hash': fingerprint(questions),
+               'dev_question_hash': fingerprint([q for q in questions if q['split'] == 'dev']),
+               'test_question_hash': fingerprint([q for q in questions if q['split'] == 'test'])}
     (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
     review = ['# Bộ câu hỏi đánh giá truy xuất node', '',
               'Bản nháp kiểm tra theo corpus cố định; cần duyệt nội dung và độ đủ của bằng chứng.', '']
@@ -205,4 +283,7 @@ def build():
 
 
 if __name__ == '__main__':
-    build()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--enforce-composition', action='store_true',
+                        help=f'Require the target composition {COMPOSITION_TARGET} and an even dev/test split')
+    build(parser.parse_args().enforce_composition)
