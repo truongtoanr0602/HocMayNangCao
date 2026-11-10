@@ -21,3 +21,7 @@ Thumbs.db
 # Rebuildable local embedding arrays and checkpoints.
 output/kg/embedding_benchmark/**/*.npy
 output/kg/embedding_benchmark/**/*.npz
+
+# Colab hand-off archives (rebuildable)
+/colab_bundle.zip
+/colab_results.zip
