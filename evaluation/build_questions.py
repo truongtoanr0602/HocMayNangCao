@@ -168,7 +168,8 @@ def apply_pooling(questions, nodes, rows):
         if row['node_id'] not in group['acceptable_node_ids']:
             group['acceptable_node_ids'].append(row['node_id'])
             group.setdefault('pooled_additions', []).append(
-                {'node_id': row['node_id'], 'evidence_quote': quote_text})
+                {'node_id': row['node_id'], 'evidence_quote': quote_text,
+                 'label_source': row.get('label_source') or 'human'})
     return ('v2' if rows and not pending else 'v1'), pending
 
 
@@ -257,6 +258,12 @@ def build(enforce_composition=False):
                'requires_human_review': True, 'snapshot_id': records[0]['snapshot_id'],
                'table_or_appendix_questions': table_count, 'label_version': label_version,
                'pooling_rows': len(rows), 'pooling_pending': pending,
+               'pooling_label_sources': dict(Counter(r.get('label_source') or 'human' for r in rows
+                                                     if r.get('decision'))),
+               'pooling_draft_agreement': {
+                   'compared': sum(1 for r in rows if r.get('decision') and r.get('draft_suggestion')),
+                   'differs': sum(1 for r in rows if r.get('decision') and r.get('draft_suggestion')
+                                  and r['draft_suggestion'] != r['decision'])},
                'label_hash': fingerprint(questions),
                'dev_question_hash': fingerprint([q for q in questions if q['split'] == 'dev']),
                'test_question_hash': fingerprint([q for q in questions if q['split'] == 'test'])}

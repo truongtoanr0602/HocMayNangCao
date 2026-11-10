@@ -84,7 +84,10 @@ def test_compare_reports_runs_pairs_and_markdown(tmp_path):
     assert report["runs"]["good"]["per_question"] == {"one": 1.0, "two": 1.0}
     assert report["pairwise"][0]["mean_difference"] == .75
     text = render_markdown(report, QUESTIONS, "Thử")
-    assert "| good |" in text and "paired bootstrap" in text
+    assert "| good |" in text and "paired bootstrap" in text and "pooling" not in text
+    pooled = [dict(q, evidence_groups=[dict(g, pooled_additions=[{"node_id": "x", "label_source": "draft_confirmed"}])
+                                       for g in q["evidence_groups"]]) for q in QUESTIONS]
+    assert "0 do người duyệt tự quyết, 3 do người xác nhận nháp Claude" in render_markdown(report, pooled, "Thử")
 
 
 def test_check_run_rejects_other_question_sets(tmp_path):

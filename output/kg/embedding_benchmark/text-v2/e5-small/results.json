@@ -3,7 +3,7 @@
   "model": "e5-small",
   "cache_hit": true,
   "cache_key": "e33272aec070fbc7a3c945cc364dbfa59876160dcad84dfbfbb0a82f088be71e",
-  "question_set_hash": "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a",
+  "question_set_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
   "candidate_count": 4534,
   "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
   "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
@@ -15,27 +15,27 @@
     "unanswerable_questions": 2,
     "by_k": {
       "1": {
-        "group_recall_macro": 0.5833333333333334,
+        "group_recall_macro": 0.6944444444444444,
         "primary_group_recall_macro": 0.5277777777777778,
-        "all_groups_hit_rate": 0.5555555555555556
+        "all_groups_hit_rate": 0.6666666666666666
       },
       "3": {
-        "group_recall_macro": 0.7777777777777778,
+        "group_recall_macro": 0.8333333333333334,
         "primary_group_recall_macro": 0.6944444444444444,
-        "all_groups_hit_rate": 0.7777777777777778
+        "all_groups_hit_rate": 0.8333333333333334
       },
       "5": {
-        "group_recall_macro": 0.8333333333333334,
+        "group_recall_macro": 0.8611111111111112,
         "primary_group_recall_macro": 0.7777777777777778,
         "all_groups_hit_rate": 0.8333333333333334
       },
       "10": {
-        "group_recall_macro": 0.9166666666666666,
+        "group_recall_macro": 0.9444444444444444,
         "primary_group_recall_macro": 0.9166666666666666,
-        "all_groups_hit_rate": 0.8888888888888888
+        "all_groups_hit_rate": 0.9444444444444444
       }
     },
-    "single_group_mrr_at_max_k": 0.7328869047619048,
+    "single_group_mrr_at_max_k": 0.8110119047619048,
     "by_type": {
       "direct": {
         "answerable_questions": 3,
@@ -79,14 +79,14 @@
             "all_groups_hit_rate": 0.5
           },
           "5": {
-            "group_recall_macro": 0.5,
+            "group_recall_macro": 0.75,
             "primary_group_recall_macro": 0.5,
             "all_groups_hit_rate": 0.5
           },
           "10": {
-            "group_recall_macro": 0.75,
+            "group_recall_macro": 1.0,
             "primary_group_recall_macro": 0.75,
-            "all_groups_hit_rate": 0.5
+            "all_groups_hit_rate": 1.0
           }
         },
         "single_group_mrr_at_max_k": null
@@ -96,14 +96,14 @@
         "unanswerable_questions": 0,
         "by_k": {
           "1": {
-            "group_recall_macro": 0.5384615384615384,
+            "group_recall_macro": 0.6923076923076923,
             "primary_group_recall_macro": 0.5384615384615384,
-            "all_groups_hit_rate": 0.5384615384615384
+            "all_groups_hit_rate": 0.6923076923076923
           },
           "3": {
-            "group_recall_macro": 0.7692307692307693,
+            "group_recall_macro": 0.8461538461538461,
             "primary_group_recall_macro": 0.7692307692307693,
-            "all_groups_hit_rate": 0.7692307692307693
+            "all_groups_hit_rate": 0.8461538461538461
           },
           "5": {
             "group_recall_macro": 0.8461538461538461,
@@ -116,7 +116,7 @@
             "all_groups_hit_rate": 0.9230769230769231
           }
         },
-        "single_group_mrr_at_max_k": 0.6712454212454213
+        "single_group_mrr_at_max_k": 0.7673992673992674
       }
     }
   },
@@ -136,7 +136,7 @@
     "q028": 1.0,
     "q029": 1.0,
     "q031": 1.0,
-    "q034": 0.0,
+    "q034": 0.5,
     "q035": 1.0,
     "q036": 1.0
   },
@@ -13795,5 +13795,8 @@
     "Labels are reviewed by the project team, not legal experts.",
     "Exact cosine offline, not Neo4j ANN.",
     "Native window limits differ; compare complete configurations."
+  ],
+  "relabelled_from": [
+    "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a"
   ]
 }

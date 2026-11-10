@@ -25,10 +25,18 @@
   "requires_human_review": true,
   "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
   "table_or_appendix_questions": 2,
-  "label_version": "v1",
-  "pooling_rows": 0,
+  "label_version": "v2",
+  "pooling_rows": 801,
   "pooling_pending": 0,
-  "label_hash": "ff662a8446d93bf26684af96b820064950b7dfcc20f4faf34100d0ec0fb7f067",
-  "dev_question_hash": "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a",
-  "test_question_hash": "a651ac0b8572171d311f3854141e689fbaa66c35550ef4eff505013862ad8d1b"
+  "pooling_label_sources": {
+    "human": 53,
+    "draft_confirmed": 748
+  },
+  "pooling_draft_agreement": {
+    "compared": 762,
+    "differs": 1
+  },
+  "label_hash": "531276dc87c3790bf0160e54867cc157b4b52d157a4585abc650504a78d7f68a",
+  "dev_question_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
+  "test_question_hash": "d0815078c2749af432a696c297198b20013657f0a8fb155a981b1814f5e0c642"
 }
