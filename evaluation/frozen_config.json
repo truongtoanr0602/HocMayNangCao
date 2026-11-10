@@ -1,0 +1,58 @@
+{
+  "frozen_at": "2026-11-10T10:36:30.460115+00:00",
+  "selected_model": "e5-base",
+  "models": [
+    "e5-small",
+    "e5-base",
+    "vn-embedding",
+    "bge-m3"
+  ],
+  "revisions": {
+    "e5-small": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+    },
+    "e5-base": {
+      "model_id": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a"
+    },
+    "vn-embedding": {
+      "model_id": "AITeamVN/Vietnamese_Embedding",
+      "revision": "dea33aa1ab339f38d66ae0a40e6c40e0a9249568"
+    },
+    "bge-m3": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+    }
+  },
+  "text_version": "node-text-v1",
+  "pipeline": "p1",
+  "abstention_thresholds": {
+    "e5-small": 0.8877882957458496,
+    "e5-base": 0.8383660912513733,
+    "vn-embedding": 0.46995753049850464,
+    "bge-m3": 0.5793407559394836,
+    "e5-small/p1-budget": 0.8877882957458496,
+    "e5-small/p2": 0.8877882957458496,
+    "e5-small/router-p2": 0.8877882957458496,
+    "e5-base/p1-budget": 0.8383660912513733,
+    "e5-base/p2": 0.8383660912513733,
+    "e5-base/router-p2": 0.8383660912513733,
+    "vn-embedding/p1-budget": 0.46995753049850464,
+    "vn-embedding/p2": 0.46995753049850464,
+    "vn-embedding/router-p2": 0.46995753049850464,
+    "bge-m3/p1-budget": 0.5793407559394836,
+    "bge-m3/p2": 0.5793407559394836,
+    "bge-m3/router-p2": 0.5793407559394836,
+    "e5-small/node-text-v2": 0.8805349469184875,
+    "e5-base/node-text-v2": 0.8339008092880249,
+    "vn-embedding/node-text-v2": 0.44151753187179565,
+    "bge-m3/node-text-v2": 0.5793407559394836
+  },
+  "rationale": "Quy tắc #5 (chốt trước khi xem kết quả): chỉ số chính group Recall@5 trên dev (nhãn v2, 18 câu có đáp án); chênh nằm trong CI 95% paired bootstrap thì chọn model nhẹ/nhanh hơn. vn-embedding cao nhất (1.000) nhưng e5-base (0.917, CI vn−e5-base [0.000, +0.222]) và bge-m3 (0.889, CI [0.000, +0.278]) không kém có ý nghĩa; chỉ e5-small kém có ý nghĩa (CI [−0.389, −0.056]). Nhẹ nhất trong nhóm không kém: e5-base (768 chiều, encode 62 s so với 206–215 s trên T4). #6: text Điều v2 không đổi Recall@5 của e5-base (0.917 = 0.917, CI [0, 0]) → giữ v1. Pipeline: P2 và router+P2 không đổi Recall@5 của e5-base (0.917) → giữ P1; P2/router+P2 vẫn được báo cáo trên test.",
+  "label_version": "v2",
+  "label_hash": "531276dc87c3790bf0160e54867cc157b4b52d157a4585abc650504a78d7f68a",
+  "dev_question_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
+  "test_question_hash": "d0815078c2749af432a696c297198b20013657f0a8fb155a981b1814f5e0c642",
+  "replaced_previous_freeze": null
+}

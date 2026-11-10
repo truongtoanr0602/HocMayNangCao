@@ -162,9 +162,12 @@ def run(args):
     if not questions or len(splits) != 1 or not splits <= {'dev', 'test'}:
         raise ValueError('Question file must hold exactly one split: dev or test')
     split = splits.pop()
+    pinned_revision = None
     if split == 'test' and not args.pool_only:
         # Raises unless the configuration was frozen on dev for exactly this test file and model.
-        check_frozen(args.frozen_config, questions, args.model)
+        frozen = check_frozen(args.frozen_config, questions, args.model)
+        # Test must use the exact weights chosen on dev, even if the hub has moved on since.
+        pinned_revision = frozen.get('revisions', {}).get(args.model, {}).get('revision')
     if len({q['question_id'] for q in questions}) != len(questions):
         raise ValueError('Duplicate question IDs')
     ids = [r['node_id'] for r in records]
@@ -190,9 +193,11 @@ def run(args):
         if tuple(int(x) for x in torch.__version__.split('+')[0].split('.')[:2]) < (2, 6):
             raise ValueError('Loading .bin weights needs torch>=2.6 (weights_only loading)')
         patterns.append('pytorch_model.bin')
-    model_path = snapshot_download(model_id, allow_patterns=patterns,
+    model_path = snapshot_download(model_id, revision=pinned_revision, allow_patterns=patterns,
                                    ignore_patterns=['onnx/*', 'openvino/*', '*.py'])
     revision = Path(model_path).name
+    if pinned_revision and revision != pinned_revision:
+        raise ValueError(f'Resolved revision {revision} differs from frozen {pinned_revision}')
     weights_format = ('safetensors' if any(Path(model_path).glob('*.safetensors'))
                       else 'pytorch_model.bin (weights_only)')
     model = SentenceTransformer(model_path, device=args.device, trust_remote_code=False)
@@ -223,6 +228,12 @@ def run(args):
     manifest_path = destination / 'manifest.json'
     cache_hit = (vector_path.exists() and manifest_path.exists()
                  and json.loads(manifest_path.read_text(encoding='utf-8'))['cache_key'] == cache_key)
+    if args.require_cache and not cache_hit:
+        # Explain which settings differ so the environment can be fixed before anything is encoded.
+        stored = (json.loads(manifest_path.read_text(encoding='utf-8')).get('config', {})
+                  if manifest_path.exists() else {})
+        differing = sorted(k for k in set(config) | set(stored) if config.get(k) != stored.get(k))
+        raise ValueError(f'--require-cache: no cached node vectors for this configuration; differing: {differing}')
     if cache_hit:
         manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
         vectors = np.load(vector_path, allow_pickle=False)
@@ -376,6 +387,8 @@ def main():
                         help='Padded tokens per batch; bounds RAM for long-context models')
     parser.add_argument('--pool-only',action='store_true',
                         help='Write blind top-10 node IDs (no scores/metrics) for label pooling; any split')
+    parser.add_argument('--require-cache',action='store_true',
+                        help='Fail instead of re-encoding nodes when the cached vectors do not match')
     parser.add_argument('--frozen-config',type=Path,default=Path('evaluation/frozen_config.json'),
                         help='Required to score the test split')
     parser.add_argument('--max-seq',type=int,default=None,

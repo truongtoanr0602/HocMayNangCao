@@ -50,7 +50,7 @@ def test_reviewed_pool_adds_verbatim_evidence_and_promotes_labels_to_v2():
     assert build_questions.apply_pooling(qs, NODES, rows) == ("v2", 0)
     group = qs[0]["evidence_groups"][0]
     assert group["acceptable_node_ids"] == ["gold", "n1"]
-    assert group["pooled_additions"] == [{"node_id": "n1", "evidence_quote": "nghỉ 05 ngày"}]
+    assert group["pooled_additions"] == [{"node_id": "n1", "evidence_quote": "nghỉ 05 ngày", "label_source": "human"}]
     assert build_questions.apply_pooling(questions(), NODES, rows + [
         {"question_id": "q1", "node_id": "x", "decision": None}]) == ("v1", 1)
 
@@ -83,3 +83,22 @@ def test_test_split_requires_matching_frozen_config(tmp_path):
     with pytest.raises(ValueError, match="differ"):
         check_frozen(frozen, questions(), "e5-small")
     assert [record_test_run(tmp_path, "e5-small") for _ in range(2)] == [1, 2]
+
+
+def test_colab_bundle_refuses_vectors_from_another_environment(tmp_path, monkeypatch):
+    bundle = load("build_colab_bundle")
+    monkeypatch.setattr(bundle, "ROOT", tmp_path)
+    for base in bundle.CORPORA:
+        (tmp_path / base / "m").mkdir(parents=True)
+        (tmp_path / base / "m" / "manifest.json").write_text(
+            json.dumps({"config": {"device": "cuda", "revision": "r1"}}), encoding="utf-8")
+    (tmp_path / "legal_kg").mkdir()
+    frozen = {"models": ["m"], "revisions": {"m": {"revision": "r1"}}}
+    assert sum(p.name == "node_vectors.npy" for p in bundle.bundle_files(frozen)) == 2
+    frozen["revisions"]["m"]["revision"] = "r2"
+    with pytest.raises(SystemExit, match="revision"):
+        bundle.bundle_files(frozen)
+    (tmp_path / bundle.BENCHMARK / "m" / "manifest.json").write_text(
+        json.dumps({"config": {"device": "cpu", "revision": "r2"}}), encoding="utf-8")
+    with pytest.raises(SystemExit, match="GPU"):
+        bundle.bundle_files(frozen)
