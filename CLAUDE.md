@@ -32,6 +32,7 @@ python -m legal_kg.cli search --title "BLLĐ 2019"
 python -m legal_kg.embedding_text                     # -> output/kg/embedding_text/node_texts.jsonl
 python -m legal_kg.embedding_benchmark --model e5-small   # e5-base, bge-m3, vn-embedding, minilm; dev only
 python -m legal_kg.retrieval_eval                     # rescore saved runs -> comparison.md (bootstrap CI, thresholds)
+python -m legal_kg.relabel_runs --old <old dev.jsonl>  # after a label-only change: rehash dev runs, recompute metrics
 python -m legal_kg.kg_expansion --run output/kg/embedding_benchmark/e5-small   # P1-budget / P2 / router-P2 runs
 python evaluation/build_questions.py                  # regenerates evaluation/*.jsonl from SEEDS (+ pooling review)
 # Full evaluation protocol (pooling, freeze, single test run): evaluation/README.md

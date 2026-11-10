@@ -1,8 +1,8 @@
-# Bộ câu hỏi đánh giá embedding node — phiên bản nháp v1
+# Bộ câu hỏi đánh giá embedding node — nhãn v2 (đã duyệt pooling)
 
 ## Phạm vi
 
-40 câu hỏi viết dựa trên corpus cố định gồm 8 văn bản, không phải bộ tư vấn pháp luật hiện hành. Không gọi LLM, API hoặc dịch vụ ngoài để sinh nhãn. Không thay đổi graph hay Neo4j.
+40 câu hỏi viết dựa trên corpus cố định gồm 8 văn bản, không phải bộ tư vấn pháp luật hiện hành. Câu hỏi và nhãn gốc do nhóm viết, không dùng LLM. Riêng bước duyệt pooling, Claude được dùng để **soạn nháp gợi ý**: nháp không bao giờ tự thành nhãn; một dòng chỉ thành nhãn khi có người tự quyết định hoặc bấm xác nhận nháp, và mỗi nhãn ghi `label_source` (`human` / `draft_confirmed`). `summary.json` báo số nhãn theo nguồn và số lần người quyết định khác nháp; báo cáo phải nêu rõ cách gán nhãn này. Không thay đổi graph hay Neo4j.
 
 | Loại câu | Số lượng |
 |---|---:|
@@ -51,7 +51,7 @@ Các câu không trả lời được gồm thiếu dữ liệu nghiệp vụ/c�
 
 ## Giới hạn và bước duyệt
 
-Đây là bộ nhỏ, được viết sau khi đọc văn bản, chưa đại diện cho toàn bộ phân bố câu hỏi người dùng. Số câu giữa các văn bản chưa cân bằng, đặc biệt Nghị định 12/2022 mới xuất hiện trong một câu multi. Một số câu trong cùng Điều có từ ngữ gần nhau; đã giữ cùng split để giảm rò rỉ. Nhãn hợp lệ chưa được pooling từ nhiều bộ truy xuất nên kết quả có thể bị đánh thấp khi tìm một bằng chứng khác cũng đúng.
+Đây là bộ nhỏ, được viết sau khi đọc văn bản, chưa đại diện cho toàn bộ phân bố câu hỏi người dùng. Số câu giữa các văn bản chưa cân bằng, đặc biệt Nghị định 12/2022 mới xuất hiện trong một câu multi. Một số câu trong cùng Điều có từ ngữ gần nhau; đã giữ cùng split để giảm rò rỉ. Nhãn v2 đã pooling top-10 của 5 bộ truy xuất (4 model chung môi trường + minilm) cho cả 40 câu: duyệt 801 dòng, thêm 32 node đúng; bằng chứng đúng nằm ngoài mọi top-10 vẫn có thể bị bỏ sót.
 
 Trước khi công bố kết quả: duyệt questions_review.md, thêm bằng chứng thay thế có căn cứ, chốt phiên bản, sau đó chỉ điều chỉnh trên development. Nếu thay corpus/embedding_text phải kiểm tra lại toàn bộ nhãn và hash.
 
@@ -63,13 +63,13 @@ Phạm vi: chỉ KG + embedding node Điều/Khoản/Điểm; không BM25, khôn
 |---|---|---|
 | E0. Biên soạn ~120 câu | sửa `SEEDS`, rồi `python evaluation/build_questions.py --enforce-composition` | Cơ cấu 70 natural / 15 direct / 20 multi / 15 unanswerable, ≥ 10 câu bằng chứng trong bảng/Phụ lục (cờ tự gắn), dev/test chia đều theo nhóm Điều |
 | E1. Encode + chạy dev | Khuyến nghị GPU: mở `evaluation/colab_encode.ipynb` trên Colab (T4), upload `colab_bundle.zip`, tải `colab_results.zip` về và giải nén vào thư mục gốc. Trên CPU: `python -m legal_kg.embedding_benchmark --model <key> --threads 8` với key `e5-small`, `e5-base`, `bge-m3`, `vn-embedding` | Mọi model phải encode trong cùng môi trường (thiết bị nằm trong cache key, float32, tắt TF32); notebook chạy luôn text v2 và pool dev/test. Vector node được cache; đổi câu hỏi chỉ encode lại câu hỏi |
-| E2. Pooling mù | `--pool-only --questions evaluation/dev.jsonl` và `--pool-only --questions evaluation/test.jsonl` cho mỗi model, rồi `python evaluation/pool_candidates.py output/kg/embedding_benchmark/pool/*/*/pool.json` | Nhóm điền `decision`, `group_index`, `evidence_quote` trong `pooling_review.jsonl`; chạy lại `build_questions.py` → `label_version` = v2 khi duyệt hết |
+| E2. Pooling mù | `--pool-only --questions evaluation/dev.jsonl` và `--pool-only --questions evaluation/test.jsonl` cho mỗi model, rồi `python evaluation/pool_candidates.py output/kg/embedding_benchmark/pool/*/*/pool.json` và `python evaluation/build_pooling_page.py` | Nhóm duyệt trên trang dùng chung [Duyệt nhãn pooling](https://claude.ai/artifact/NiV9WdBgPurnibuLnUTxTT) (sinh từ `evaluation/pooling_review_page/`); quyết định lưu chung. Bấm "Tạo nháp cho mọi câu chưa có" để Claude soạn gợi ý (collection `drafts`, prompt trong `draft.js`, ghi model đã trả lời); người duyệt xác nhận hoặc sửa từng dòng, hoặc xác nhận hàng loạt các nháp "không liên quan" của một câu sau khi đọc lướt. Đưa về repo: `python evaluation/import_pooling_decisions.py <file tải từ trang hoặc bản đọc từ kho>`, rồi `build_questions.py` → `label_version` = v2 khi duyệt hết; sau đó `python -m legal_kg.relabel_runs --old <dev.jsonl cũ>` gắn các run dev sang nhãn mới (chỉ khi chỉ trường nhãn thay đổi) và chạy lại `retrieval_eval`. Câu bị báo "cần sửa" giữ ở trạng thái chờ đến khi sửa `SEEDS` |
 | E3. Chọn model M | `python -m legal_kg.retrieval_eval` | Recall nhóm @5, CI 95% paired bootstrap; chênh trong CI → chọn model nhẹ/nhanh hơn |
 | E4. Text Điều v2 | `python -m legal_kg.embedding_text --article-mode v2`, rồi benchmark M với `--corpus output/kg/embedding_text_v2/node_texts.jsonl --output output/kg/embedding_benchmark/text-v2` | So v1/v2 bằng `retrieval_eval --runs …` |
 | E5. P2 + router | `python -m legal_kg.kg_expansion --run output/kg/embedding_benchmark/<M>` | Sinh `p1-budget`, `p2`, `router-p2` cùng ngân sách 10 node / 12.000 ký tự |
 | E6. Ngưỡng từ chối | có sẵn trong báo cáo `retrieval_eval` | Chọn trên dev: từ chối nhầm ≤ 10% |
 | E7. Chốt | `python evaluation/freeze_config.py --selected-model … --models … --text-version … --pipeline … --comparisons … --rationale "…"` | Cần nhãn v2; ghi `evaluation/frozen_config.json` |
-| E8. Test một lần | benchmark với `--questions evaluation/test.jsonl`, rồi `retrieval_eval --questions evaluation/test.jsonl --frozen-config evaluation/frozen_config.json --runs …` | Bị chặn nếu chưa chốt hoặc hash không khớp; số lần chạy test ghi trong `output/kg/embedding_benchmark/test/test_runs.json` |
+| E8. Test một lần | `python evaluation/build_colab_bundle.py` → mở `evaluation/colab_test.ipynb` trên Colab T4, upload `colab_test_bundle.zip`, tải `colab_test_results.zip` về và giải nén vào thư mục gốc (benchmark chạy với `--questions evaluation/test.jsonl --require-cache`: revision model ghim theo file chốt, vector node dùng lại đúng bản dev); `python -m legal_kg.kg_expansion --run output/kg/embedding_benchmark/test/<model> --questions evaluation/test.jsonl`; rồi `retrieval_eval --questions evaluation/test.jsonl --frozen-config evaluation/frozen_config.json --runs …` | Bị chặn nếu chưa chốt hoặc hash không khớp; số lần chạy test ghi trong `output/kg/embedding_benchmark/test/test_runs.json` |
 | E9. Neo4j | `python -m legal_kg.cli load-embeddings --run output/kg/embedding_benchmark/<M>` rồi `python -m legal_kg.cli check-ann --run …` | Cần `NEO4J_PASSWORD` trong biến môi trường tiến trình |
 
 Đổi trường câu hỏi hoặc nhãn làm đổi hash bộ câu hỏi; các run cũ khi đó bị `retrieval_eval` từ chối và cần chạy lại bước encode câu hỏi (vector node vẫn dùng cache).

@@ -283,8 +283,16 @@ def render_markdown(report: dict, questions: list[dict], title: str) -> str:
               "- Recall nhóm cho phép node tổ tiên nếu chứa nguyên văn bằng chứng; node chính là chỉ số khắt khe hơn.",
               "- Câu không trả lời được không tính vào Recall/MRR; chỉ dùng cho ngưỡng từ chối.",
               "- CI 95% là paired bootstrap trên cùng câu hỏi, 10.000 mẫu, seed cố định.",
-              "- Nhãn do nhóm biên soạn và duyệt, chưa phải thẩm định của chuyên gia pháp lý.", ""]
-    return "\n".join(lines)
+              "- Nhãn do nhóm biên soạn và duyệt, chưa phải thẩm định của chuyên gia pháp lý."]
+    pooled = [a.get("label_source", "human") for q in questions for g in q.get("evidence_groups", [])
+              for a in g.get("pooled_additions", [])]
+    versions = sorted({q.get("label_version") for q in questions if q.get("label_version")})
+    if pooled:
+        lines.append(f"- Nhãn {', '.join(versions)}: thêm {len(pooled)} node đúng từ pooling mù; "
+                     f"{pooled.count('human')} do người duyệt tự quyết, "
+                     f"{pooled.count('draft_confirmed')} do người xác nhận nháp Claude. "
+                     "Nháp chưa xác nhận không bao giờ thành nhãn (xem `evaluation/summary.json`).")
+    return "\n".join(lines + [""])
 
 
 def main(argv=None) -> int:

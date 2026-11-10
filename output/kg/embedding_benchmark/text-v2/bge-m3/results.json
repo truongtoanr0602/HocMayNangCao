@@ -3,7 +3,7 @@
   "model": "bge-m3",
   "cache_hit": false,
   "cache_key": "41e31f7c89566b9af952bba931ef877d54160672e816f4d40ec19c57a10efe95",
-  "question_set_hash": "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a",
+  "question_set_hash": "9f6abe874ef1fa47035756919a086cca7ab75a46b6dddec8ee94fbf215d4a7c0",
   "candidate_count": 4534,
   "snapshot_id": "1d10ded4d2cfbf1b63efa639a7d8e36499eb0f99cf053e8ceefd3b1077b471c1",
   "graph_hash": "ca845a6b36a110807cac7881c688270721b74bc20a99410f121b26bdac85ee1f",
@@ -15,9 +15,9 @@
     "unanswerable_questions": 2,
     "by_k": {
       "1": {
-        "group_recall_macro": 0.6388888888888888,
+        "group_recall_macro": 0.8055555555555556,
         "primary_group_recall_macro": 0.5277777777777778,
-        "all_groups_hit_rate": 0.6111111111111112
+        "all_groups_hit_rate": 0.7777777777777778
       },
       "3": {
         "group_recall_macro": 0.8888888888888888,
@@ -35,7 +35,7 @@
         "all_groups_hit_rate": 0.9444444444444444
       }
     },
-    "single_group_mrr_at_max_k": 0.8229166666666666,
+    "single_group_mrr_at_max_k": 0.9166666666666666,
     "by_type": {
       "direct": {
         "answerable_questions": 3,
@@ -96,9 +96,9 @@
         "unanswerable_questions": 0,
         "by_k": {
           "1": {
-            "group_recall_macro": 0.6923076923076923,
+            "group_recall_macro": 0.9230769230769231,
             "primary_group_recall_macro": 0.5384615384615384,
-            "all_groups_hit_rate": 0.6923076923076923
+            "all_groups_hit_rate": 0.9230769230769231
           },
           "3": {
             "group_recall_macro": 1.0,
@@ -116,7 +116,7 @@
             "all_groups_hit_rate": 1.0
           }
         },
-        "single_group_mrr_at_max_k": 0.8461538461538461
+        "single_group_mrr_at_max_k": 0.9615384615384616
       }
     }
   },
@@ -13795,5 +13795,8 @@
     "Labels are reviewed by the project team, not legal experts.",
     "Exact cosine offline, not Neo4j ANN.",
     "Native window limits differ; compare complete configurations."
+  ],
+  "relabelled_from": [
+    "6f737bb26c6192197224ae15ac04f033afae64cde7190ff801bed480d4a6fe0a"
   ]
 }

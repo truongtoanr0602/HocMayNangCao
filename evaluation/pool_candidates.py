@@ -48,7 +48,9 @@ def collect(questions, pools, nodes, existing):
                          'node_text_truncated': len(node['body_text']) > EXCERPT,
                          'decision': previous.get('decision'), 'group_index': previous.get('group_index'),
                          'evidence_quote': previous.get('evidence_quote'),
-                         'reviewer_note': previous.get('reviewer_note')})
+                         'reviewer_note': previous.get('reviewer_note'),
+                         'label_source': previous.get('label_source'),
+                         'draft_suggestion': previous.get('draft_suggestion')})
     return rows
 
 
